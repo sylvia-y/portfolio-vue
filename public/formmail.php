@@ -1,4 +1,4 @@
-    <form name="contactForm" id="contactForm" action="php/contact.php" method="POST" autocomplete="off" class="clearfix">
+    <form name="contactForm" id="contactForm" action="https://formspree.io/f/xnpaerql" method="POST" autocomplete="off" class="clearfix">
 
 
 	<div id="contactForm_term">
