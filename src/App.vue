@@ -240,8 +240,41 @@ onMounted(() => {
               </div>
             </div>
             <div class="contact-form">
-              <iframe src="/formmail.php" frameborder="0" width="100%" height="100%"></iframe>
-            </div>
+  <form name="contactForm" id="contactForm" action="https://formspree.io/f/xnpaerql" method="POST" autocomplete="off" class="clearfix">
+    <div id="contactForm_term">
+      <div class="agree_text" readonly>
+        <fieldset class="contactForm_agree2">
+          <label for="agree">개인정보 제공 및 활용 동의서<br>본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보(이메일)를 제공할 것을 동의합니다.</label>
+          <input type="checkbox" name="agree" value="1" id="agree" required>
+        </fieldset>
+      </div>
+    </div>
+
+    <div id="contactForm_form" class="form_01">
+      <div class="tbl_frm01 tbl_wrap">
+        <ul>
+          <li>
+            <label for="contact_name" class="sound-only">이름 *</label>
+            <input type="text" class="frm_input full_input required" id="contact_name" name="contact_name" title="Name" placeholder="Name" required>
+          </li>
+          <li>
+            <label for="contact_email" class="sound-only">이메일 *</label>
+            <input type="email" class="frm_input full_input required" id="contact_email" name="_replyto" title="Email" placeholder="Email" required>
+          </li>
+          <li>
+            <label for="contact_subject" class="sound-only">제목 *</label>
+            <input type="text" class="frm_input full_input required" id="contact_subject" name="_subject" title="Subject" placeholder="Subject" required>
+          </li>
+        </ul>
+        <div class="contact-text">
+          <label for="contact_message" class="sound-only">내용 *</label>
+          <textarea id="contact_message" name="message" rows="3" title="Message" placeholder="저의 작업에 대해 궁금하신 점이 있으시면 언제든지 문의해 주세요." required></textarea>
+          <input id="contact_submit" type="submit" class="btn_submit" value="SEND MAIL">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
           </div>
         </div>
         <div class="ft-cover">
