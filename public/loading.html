@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+</head>
+<body>
+  <style>
+    #load {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.99;
+    background: white;
+    backdrop-filter: blur(5px);
+    z-index: 99;
+    text-align: center;
+    }
+    #load > img {
+        position: absolute;
+        width: 70px;
+        top: 46%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        z-index: 100;
+    }
+    #load > p {
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        z-index: 100;
+    }
+    @media screen and (max-width: 767px) {
+      #load > p {
+        top: 56%;
+      }
+    }
+  </style>
+  <div id="load">
+    <img src="../images/loading.gif" alt="loading">
+    <p>loading</p>
+  </div>
+  
+  <script >
+    const loading_page = document.getElementById("load");
+
+    window.onload = function(){
+      loading_page.style.display = 'none';
+    }
+
+  </script>
+
+</body>
+</html>

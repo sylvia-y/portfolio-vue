@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;400&amp;display=swa");
+/* 모바일만 ~767px */
+@media screen and (max-width: 767px) {
+  .gnb-util-wrap {
+    width: 100%;
+    top: 0;
+  }
+  
+  .gnb-util-wrap .m-button span {
+    width: 26px;
+  }
+  .gnb-util-wrap #yy-gnb {
+    width: 80%;
+    height: 90vh;
+    top: -10px;
+    right: 0;
+  }
+  .gnb-util-wrap #yy-gnb .depth1 {
+    margin: 8px 30px;
+  }
+  .gnb-util-wrap #yy-gnb .depth1 > a {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .gnb-util-wrap #yy-gnb .depth1 > a:before {
+    height: 2px;
+  }
+  .gnb-util-wrap .m-button {
+    top: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+  }
+  .gnb-util-wrap svg {
+    display: none;
+  }
+  #yy-ft .ft-wrap h2 {
+    padding: 0 2.4rem;
+    font-size: 14px;
+    text-align: center;
+  }
+  #yy-ft .ft-wrap p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .top-btn {
+    right: 2.2rem;
+    bottom: 2.2rem;
+    width: 5rem;
+    height:5rem;
+    font-size: 1.6rem;
+    
+  }
+}
+/* 태블릿부터 768px~ */
+/* 태블릿만 768px~1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gnb-util-wrap {
+    width: 100%;
+    top: 0;
+  }
+  .gnb-util-wrap #yy-gnb {
+    width: 90%;
+  }
+  .gnb-util-wrap #yy-gnb .depth1 > a {
+  }
+}
+/* PC부터 1024px~ */
+/* 작은 PC 1024px~1279px */
+/* PC 1280px~ */
+@media screen and (min-width: 1280px) {
+  .gnb-util-wrap #yy-gnb .depth1 {
+    padding: 15px;
+  }
+  .gnb-util-wrap #yy-gnb .depth1 > a:before {
+    margin-top: 0;
+  }
+}

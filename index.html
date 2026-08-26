@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="YY's Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YY's Portfolio</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../asset/img/header/logo/pwc_logo_favicon.ico"> -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23cfff49%22></rect><path fill=%22%23000000%22 d=%22M23.40 26.62L32.92 48.53L42.86 26.62L35.79 26.62L35.79 25.50L49.58 25.50L49.58 26.62L44.96 26.62L34.39 50L34.39 73.17L38.66 73.17L38.66 74.50L16.47 74.50L16.47 73.17L20.74 73.17L20.74 51.33L8.84 26.62L5.55 26.62L5.55 25.50L27.95 25.50L27.95 26.62L23.40 26.62ZM68.27 26.62L77.79 48.53L87.73 26.62L80.66 26.62L80.66 25.50L94.45 25.50L94.45 26.62L89.83 26.62L79.26 50L79.26 73.17L83.53 73.17L83.53 74.50L61.34 74.50L61.34 73.17L65.61 73.17L65.61 51.33L53.71 26.62L50.42 26.62L50.42 25.50L72.82 25.50L72.82 26.62L68.27 26.62Z%22></path></svg>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://use.typekit.net/skn8ash.css'>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/common_res.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main_res.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/count.js"></script>
+    <script type="module" src="/src/main.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        //pop-up
+        function openPopup(popup) {
+            $(popup).show().attr("aria-hidden", "false");
+            $(".close-btn").focus();
+        }
+
+        function closePopup(popup) {
+            $(popup).hide().attr("aria-hidden", "true");
+            $(".more-btn").focus();
+        }
+    </script>
+    <script src="/js/lang.js"></script>
+  </body>
+</html>

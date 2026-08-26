@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 미세먼지 경보</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const apiKey = '7MuKIvlFfGXtqyshW0oTk0jHmOlKsO36ssBTkMMVbMEQVoET2bswcDtnc76JteZh1SixrXHPGl5VFzZH%2FXAGLw%3D%3D';
+            const currentYear = new Date().getFullYear();
+            const apiUrl = `http://apis.data.go.kr/B552584/UlfptcaAlarmInqireSvc/getUlfptcaAlarmInfo?serviceKey=${apiKey}&returnType=json&numOfRows=100&pageNo=1&year=${currentYear}&itemCode=PM10`;
+            
+            $.getJSON(apiUrl, function(data) {
+                const items = data.response?.body?.items;
+                if (!items) {
+                    $('#fineDustData').html('<p>데이터가 없습니다.</p>');
+                    return;
+                }
+                
+                let groupedData = {};
+                $.each(items, function(index, item) {
+                    const [year, month, day] = item.dataDate.split('-');
+                    const dateKey = `${year}-${month}-${day}`;
+                    
+                    if (!groupedData[year]) {
+                        groupedData[year] = {};
+                    }
+                    if (!groupedData[year][month]) {
+                        groupedData[year][month] = {};
+                    }
+                    if (!groupedData[year][month][dateKey]) {
+                        groupedData[year][month][dateKey] = [];
+                    }
+                    groupedData[year][month][dateKey].push(item); // 날짜별 데이터 저장
+                });
+                
+                // 연도 및 월 선택 옵션 추가
+                let yearSelectHtml = '<label for="yearSelect">연도 선택: </label><select id="yearSelect">';
+                yearSelectHtml += '<option value="">연도를 선택하세요</option>';
+                for (let i = 0; i < 3; i++) {
+                    yearSelectHtml += `<option value="${currentYear - i}">${currentYear - i}</option>`;
+                }
+                yearSelectHtml += '</select>';
+                
+                let monthSelectHtml = '<label for="monthSelect">월 선택: </label><select id="monthSelect" disabled>';
+                monthSelectHtml += '<option value="">먼저 연도를 선택하세요</option>';
+                monthSelectHtml += '</select>';
+                
+                $('#filterSection').html(yearSelectHtml + monthSelectHtml);
+                
+                $('#yearSelect').change(function() {
+                    const selectedYear = $(this).val();
+                    let monthOptions = '<option value="">월을 선택하세요</option>';
+                    
+                    if (selectedYear && groupedData[selectedYear]) {
+                        $.each(groupedData[selectedYear], function(month) {
+                            const dateKeys = Object.keys(groupedData[selectedYear][month]);
+                            const dateList = dateKeys.join(', ');
+                            monthOptions += `<option value="${month}">${month}월</option>`;
+                        });
+                        $('#monthSelect').html(monthOptions).prop('disabled', false);
+                    } else {
+                        $('#monthSelect').html('<option value="">먼저 연도를 선택하세요</option>').prop('disabled', true);
+                    }
+                });
+                
+                $('#monthSelect').change(function() {
+                    const selectedYear = $('#yearSelect').val();
+                    const selectedMonth = $(this).val();
+                    let resultHtml = '<h2>실시간 미세먼지 경보 발령 현황</h2>';
+                    
+                    if (selectedYear && selectedMonth && groupedData[selectedYear][selectedMonth]) {
+                        resultHtml += `<h3>${selectedYear}-${selectedMonth}</h3><ul>`;
+                        $.each(groupedData[selectedYear][selectedMonth], function(date, items) {
+                            resultHtml += `<li><strong>${date}</strong>:`;
+                            $.each(items, function(index, item) {
+                                resultHtml += `<ul><li>지역: ${item.districtName}, 권역: ${item.moveName}, 항목: ${item.itemCode}, 경보단계: ${item.issueGbn}, 발령시간: ${item.issueTime}, 발령농도: ${item.issueVal}㎍/㎥</li></ul>`;
+                            });
+                            resultHtml += '</li>';
+                        });
+                        resultHtml += '</ul>';
+                    } else {
+                        resultHtml += '<p>선택한 기간의 데이터가 없습니다.</p>';
+                    }
+                    
+                    $('#fineDustData').html(resultHtml);
+                });
+            }).fail(function() {
+                $('#fineDustData').html('<p>오류 발생: API 요청 실패</p>');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="filterSection"></div>
+    <div id="fineDustData">데이터 로딩 중...</div>
+</body>
+</html>
