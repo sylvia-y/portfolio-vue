@@ -77,11 +77,10 @@ onMounted(() => {
       <section id="about" class="view about">
         <div class="about-cover">
           <div class="cover">
-            <h2><span>SOFTWARE DEVELOPER & FULL STACK DEVELOPER SOFTWARE DEVELOPER & FULL STACK DEVELOPER SOFTWARE DEVELOPER &
-                FULL STACK DEVELOPER
-                SOFTWARE DEVELOPER & FULL STACK DEVELOPER SOFTWARE DEVELOPER & FULL STACK DEVELOPER SOFTWARE DEVELOPER &
-                FULL STACK DEVELOPER
-              </span></h2>
+            <h2><span>SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER 
+            SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER 
+            SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER
+            </span></h2>
           </div>
           <div class="cover">
             <h2><span>CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE
@@ -97,15 +96,19 @@ onMounted(() => {
           <div class="about-box js-tilt-containe" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
             <div class="about-img"></div>
             <p data-key="about-desc">
-              <strong><span>YU YEONG KWAK</span></strong>
-              안녕하세요, <span>유연한 기술적 대응과 성장으로 가치를 더하는 개발자 곽유영</span>입니다.<br>
-              사범계열 교육 배경에서 다진 <span>사용자 중심 사고</span>와 <span>문제 정의 능력</span>을 바탕으로,<br>
-              프론트엔드와 백엔드 영역을 가리지 않고 요구사항을 유연하게 해결하는 개발자로 전향했습니다.<br>
-              단순한 기능 구현을 넘어 <span>유지보수와 확장성을 고려한 코드 구조</span>를 지속적으로 고민하며,<br>
-              시스템 체계의 안정성과 지속 가능성을 최우선으로 둡니다.<br>
-              저의 핵심 강점은 <span>직무 간 경계를 허무는 능동적인 협업 역량</span>입니다.<br>
-              <span>Notion 등 체계적인 협업 툴 활용</span>을 통해 투명한 업무 관리와 워크플로우 효율화를 실현하며,<br>
-              팀원 모두의 시너지를 극대화할 수 있는 비즈니스 가치를 창출하겠습니다.
+              <strong><span>YU YEONG KWAK</span></strong><br>
+              안녕하세요, <span>기술적 성장을 통해 가치 창출을 지향하는 곽유영</span>입니다.<br>
+              사범계열 교육 배경을 기반으로 <span>사용자 중심 사고</span>와 <span>문제 정의 능력</span>을 체화했으며,
+              업무 효율을 높이기 위한 기술 학습 과정에서 프로그래밍의 매력에 깊이 매료되어 개발자로 전향했습니다.<br>
+              저는 단순히 요구사항을 구현하는 것을 넘어,<br>
+              <span>코드 리팩토링을 통해 시스템의 지속 가능성을 최우선</span>하며<br>
+              더 나은 구조는 없는지 끊임없이 고민합니다.<br>
+              저의 <span>핵심 강점은 효율적인 협업 역량을 극대화</span>하는 것입니다.<br>
+              개발자는 다른 부서들과도 함께 일해야 하므로,<br>
+              <span>Notion과 같은 협업 툴</span>을 능숙하게 활용하여<br>
+              <span>투명한 태스크 관리와 워크플로우 효율화</span>를 실현합니다.<br>
+              기술적 숙련도와 더불어, <span>모두의 역량을 최대로 이끌어내는 협업 문화</span>를 통해<br>
+              서비스의 완성도를 높이고 나날이 성장하는 개발자로 기여하겠습니다.
             </p>
           </div>
           <div class="about-info" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
@@ -149,7 +152,7 @@ onMounted(() => {
                     <p>게임 방법 : 한 명이 게임을 할 단어를 입력하면,<br>
                       다른 사람이 주어진 기회 안에<br>알파벳을 하나씩 선택해가며 단어를 맞춥니다.</p>
                   </div>
-                  <a href="http://sylvia.dothome.co.kr/hangman" class="btn game-slider__button" target="_blank">
+                  <a href="https://portfolio-vue-tan.vercel.app/hangman" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>GO TO PAGE</span>
                   </a>
                 </div>
@@ -166,7 +169,7 @@ onMounted(() => {
                     <p>게임 방법 : 방향키로 이동을 하며 space bar를 눌러<br>상어를 향해 먹물을 쏏니다.</p>
                     <p>수정사항 : 방어 가능한 아이템을 추가할 예정입니다.</p>
                   </div>
-                  <a href="http://sylvia.dothome.co.kr/octopus" class="btn game-slider__button" target="_blank">
+                  <a href="https://portfolio-vue-tan.vercel.app/octopus" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span class="btn-text">GO TO PAGE</span>
                   </a>
                 </div>
@@ -183,7 +186,7 @@ onMounted(() => {
                     <p>게임 방법 : space bar와 방향키를 사용하여<br>블럭을 맞추면 되는 게임입니다.</p>
                     <p>수정사항 : space bar를 계속 누르고 있을 경우<br>오류가 생기는 부분을 수정할 예정입니다.</p>
                   </div>
-                  <a href="http://sylvia.dothome.co.kr/tetris" class="btn game-slider__button" target="_blank">
+                  <a href="https://portfolio-vue-tan.vercel.app/tetris" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>GO TO PAGE</span>
                   </a>
                 </div>
@@ -200,7 +203,7 @@ onMounted(() => {
                     <p>게임 방법 : space bar를 눌러 얼음이 다가올 때 점프를 합니다.</p>
                     <p>수정사항 : 펭귄의 점프 속도와 범위를 수정할 예정입니다.</p>
                   </div>
-                  <a href="http://sylvia.dothome.co.kr/penguin" class="btn game-slider__button" target="_blank">
+                  <a href="https://portfolio-vue-tan.vercel.app/penguin" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>GO TO PAGE</span>
                   </a>
                 </div>
