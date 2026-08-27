@@ -152,7 +152,7 @@ onMounted(() => {
                     <p>게임 방법 : 한 명이 게임을 할 단어를 입력하면,<br>
                       다른 사람이 주어진 기회 안에<br>알파벳을 하나씩 선택해가며 단어를 맞춥니다.</p>
                   </div>
-                  <a href="https://portfolio-vue-tan.vercel.app/hangman" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
+                  <a href="/hangman/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>GO TO PAGE</span>
                   </a>
                 </div>
@@ -169,7 +169,7 @@ onMounted(() => {
                     <p>게임 방법 : 방향키로 이동을 하며 space bar를 눌러<br>상어를 향해 먹물을 쏏니다.</p>
                     <p>수정사항 : 방어 가능한 아이템을 추가할 예정입니다.</p>
                   </div>
-                  <a href="https://portfolio-vue-tan.vercel.app/octopus" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
+                  <a href="/octopus/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span class="btn-text">GO TO PAGE</span>
                   </a>
                 </div>
@@ -186,7 +186,7 @@ onMounted(() => {
                     <p>게임 방법 : space bar와 방향키를 사용하여<br>블럭을 맞추면 되는 게임입니다.</p>
                     <p>수정사항 : space bar를 계속 누르고 있을 경우<br>오류가 생기는 부분을 수정할 예정입니다.</p>
                   </div>
-                  <a href="https://portfolio-vue-tan.vercel.app/tetris" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
+                  <a href="/tetris/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>GO TO PAGE</span>
                   </a>
                 </div>

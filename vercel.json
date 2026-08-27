@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/pinkfong", "destination": "/pinkfong/index.html" },
+    { "source": "/swarovski", "destination": "/swarovski/index.html" },
+    { "source": "/wj", "destination": "/wj/index.html" },
+    { "source": "/hangman", "destination": "/hangman/index.html" },
+    { "source": "/octopus", "destination": "/octopus/index.html" },
+    { "source": "/tetris", "destination": "/tetris/index.html" },
+    { "source": "/ranking", "destination": "/ranking/index.html" }
+  ]
+}

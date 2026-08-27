@@ -209,7 +209,7 @@ export default {
             </p>
           </div>
           <div class="project-btn">
-            <a href="https://portfolio-vue-tan.vercel.app/swarovski" class="btn" target="_blank" rel="noopener noreferrer">
+            <a href="/swarovski/" class="btn" target="_blank" rel="noopener noreferrer">
               <span>GO TO PAGE</span>
             </a>
             <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup1')" aria-controls="myPopup" aria-label="Open popup">
@@ -236,7 +236,7 @@ export default {
             </p>
           </div>
           <div class="project-btn">
-            <a href="https://portfolio-vue-tan.vercel.app/pinkfong" class="btn" target="_blank" rel="noopener noreferrer">
+            <a href="/pinkfong/" class="btn" target="_blank" rel="noopener noreferrer">
               <span>GO TO PAGE</span>
             </a>
             <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup2')" aria-controls="myPopup" aria-label="Open popup">
@@ -290,7 +290,7 @@ export default {
             </p>
           </div>
           <div class="project-btn">
-            <a href="https://portfolio-vue-tan.vercel.app/wj" class="btn" target="_blank" rel="noopener noreferrer">
+            <a href="/wj/" class="btn" target="_blank" rel="noopener noreferrer">
               <span>GO TO PAGE</span>
             </a>
             <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup4')" aria-controls="myPopup" aria-label="Open popup">
