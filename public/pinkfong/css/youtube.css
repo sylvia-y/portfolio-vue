@@ -1,0 +1,30 @@
+.intro-table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.intro-table {
+  min-width: 600px;
+}
+
+.intro-table thead {
+  background-color: #023586;
+  color: #fff;
+}
+
+.intro-table tbody {
+  background-color: #DBE1ED;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #023586;
+  text-align: center;
+}
+
+.intro-table tr {
+  height: 80px;
+}
+
+.intro-table th, .intro-table td {
+  width: 50%;
+  border: 2px solid #023586;
+}

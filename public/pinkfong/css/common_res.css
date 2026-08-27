@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* 모바일만 ~767px */
+@media screen and (max-width: 767px) {
+  .gnb-util-wrap {
+    max-width: 480px;
+  }
+}
+/* 태블릿부터 768px~ */
+/* 태블릿만 768px~1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gnb-util-wrap {
+    max-width: 650px;
+  }
+}
+/* PC부터 1024px~ */
+@media screen and (min-width: 1024px) {
+  .m-gnb-btn {
+    display: none;
+  }
+  #pinkfong-hd {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  #pinkfong-hd.active {
+    background-color: #fff !important;
+  }
+  #pinkfong-hd.active:before {
+    position: absolute;
+    top: 9.9rem;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 0.1rem;
+    background-color: #000;
+    opacity: 0.1;
+  }
+  #pinkfong-hd.active #pinkfong-gnb .depth1 > a {
+    color: #222;
+  }
+  #pinkfong-hd.active .depth2 {
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+  #pinkfong-hd.active .util-sns-wrap a {
+    color: #FF4DAB;
+  }
+  #pinkfong-hd.active .hd-sns:before {
+    background-color: #FF4DAB;
+  }
+  .pinkfong-logo a {
+    width: 20rem;
+    height: 9.9rem;
+    margin-right: 1rem;
+    background-position: center center;
+  }
+  .gnb-util-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: static;
+    width: calc(100% - 10rem);
+    height: auto;
+    background-color: transparent;
+  }
+  .gnb-util-wrap #pinkfong-gnb {
+    padding-top: 0;
+  }
+  .gnb-util-wrap #pinkfong-gnb ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 54rem;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1 {
+    position: relative;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1 > a {
+    padding: 0 2rem;
+    line-height: 9.9rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1 > a:after {
+    display: none;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1 .depth2 {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: transparent;
+    font-size: 1.8rem;
+    line-height: 4.2rem;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1 .depth2 a {
+    color: #666;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1:before {
+    position: absolute;
+    top: 9.8rem;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: #FF4DAB;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1.active:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1.active .depth2 a {
+    color: #222;
+  }
+  .gnb-util-wrap #pinkfong-gnb .depth1.active .depth2 a:hover {
+    color: #FF4DAB;
+  }
+  .gnb-util-wrap .util-sns-wrap {
+    position: static;
+    width: 30rem;
+    padding: 0;
+    margin-top: 3.4rem;
+    background-color: transparent;
+  }
+  .gnb-util-wrap .util-sns-wrap .hd-util a {
+    border: 0;
+    font-size: 1.8rem;
+  }
+}
+/* 작은 PC 1024px~1279px */
+/* PC 1280px~ */
+@media screen and (min-width: 1280px) {
+  #pinkfong-hd {
+    padding: 0 3rem;
+  }
+  .pinkfong-logo {
+    margin-right: 4rem;
+  }
+  .gnb-util-wrap .util-sns-wrap {
+    width: 34rem;
+  }
+  .gnb-util-wrap .util-sns-wrap .hd-sns a {
+    padding: 0 1.4rem;
+  }
+  .top-btn {
+    right: 4rem;
+    bottom: 4rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}

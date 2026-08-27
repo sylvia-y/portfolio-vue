@@ -1,0 +1,97 @@
+@charset 'utf-8';
+@charset 'UTF-8';
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {
+    .spt-txt{
+       display: none;
+    }
+}
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {
+    .main-banner { /*표시되는 슬라이드 2개*/
+        width: calc((100% * 7) / 2);
+    }
+    .mb-btn {
+        width: 48px;
+        margin: 0 5px;
+    }
+    .mb-control {
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+    }
+    .mb-prev {
+        left: 20px;
+    }
+    .mb-next {
+        right: 20px;
+    }
+    .main-holiday li {
+        float: left;
+        width: 46%;
+    }
+    .world-item {
+        margin-bottom: 40px;
+    }
+    .world-dl dd {
+        margin: 0.6em 0;
+    }
+    .world-summary {
+        display: block;
+    }
+    
+    .ed-item {
+        width: 33.3333%;
+    }
+}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .world-item a {
+        padding-top: 30%;
+    }
+    .world-dl {
+        padding-left: 33%;
+    }
+    .world-img {
+        width: 30%;
+    }
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {
+    #swsk-main > section {
+        padding: 80px 0;
+    }
+    #swsk-main > section h2 {
+        text-align: left;
+    }
+    #swsk-main .more-wrap {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        margin-top: 0;
+    }
+    .main-banner { /*표시되는 슬라이드 3개*/
+        width: calc((100% * 7) / 3);
+    }
+    .main-holiday li {
+        width: 32%;
+        margin: 0;
+        margin-right: 2%;
+    }
+    .main-holiday .holiday3 {
+        display: block;
+        margin-right: 0;
+    }
+    .world-item {
+        float: left;
+        width: 50%;
+    }
+    .world-subject {
+        line-height: 1.4;
+    }
+    .ed-item {
+        width: 16.6666%;
+    }
+}

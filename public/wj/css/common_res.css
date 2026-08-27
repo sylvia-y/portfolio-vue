@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+@charset 'UTF-8';
+/* 모바일만 ~767까지 */
+@media screen and (max-width: 767px) {
+    #nav-part1, #nav-part2 {
+        display: none;
+    }
+    .main-biz-list h3 {
+        font-size: 1.4em;
+        padding-top: 30px;
+    }
+    .main-biz-list p {
+        padding-top: 20px;
+    }
+    .slick-dots button {
+        width: 12px;
+    }
+  
+}
+/* 태블릿부터 768~ */
+@media screen and (min-width: 768px) {
+    .logo{
+        left: 20px;
+    }
+ 
+}
+/* 태블릿만 768부터~1023까지 */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .main-biz-list h3 {
+        font-size: 1.4em;
+        padding-top: 30px;
+    }
+}
+/* PC부터 1024부터~ */
+@media screen and (min-width: 1024px) {
+    .body {
+        font-size: 16px;
+    }
+    #nav-part1, #nav-part2 {
+        display: block;
+    }
+}

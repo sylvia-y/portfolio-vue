@@ -1,0 +1,153 @@
+@charset 'utf-8';
+/* 1. 초기화 */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:before, :after {
+    box-sizing: border-box;
+}
+header, main, footer, nav, section, article, aside {
+    display: block;
+}
+
+/* 2. 요소별 설정 */
+body {
+    background-color: #fff;
+    font-family: 'Gowun Batang', 'Hahmlet', sans-serif;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.6;
+}
+body.hidden {
+    overflow: hidden;
+}
+body.hidden .modal {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hahmlet', 'Gothic A1', sans-serif;
+    color: #000;
+}
+ul, ol {
+    list-style-type: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+input, button, textarea, select {
+    font-size: 1em;
+    color: #222;
+    font-family: 'Gothic A1', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+label, button {
+    cursor: pointer;
+}
+button {
+    border: 0;
+    background-color: transparent;
+}
+p {
+    margin: 1em 0;
+}
+
+/* 3. 공용클래스 설정 */
+.wrapper {
+    max-width: 1680px;
+    margin: auto;
+}
+.wrapper-s {
+    max-width: 1400px;
+    margin: auto;
+}
+.wrapper-ss {
+    max-width: 1200px;
+    margin: auto;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.blind, .sound-only {
+    position: absolute;
+    left: -9999em;
+}
+.table {
+    display: table;
+    width: 100%;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.relative {
+    position: relative;
+}
+.center {
+    text-align: center;
+}
+.auto {
+    margin: auto;
+}
+.pd0 {
+    padding: 0 !important;
+}
+.btn-more {
+    display: inline-block;
+    border-bottom: 1px solid #222;
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn-more:hover {
+    border-bottom-color: #000000;
+    color: #333;
+}
+
+/* 4. 문자, 배경 */
+.gowun {
+    font-family: 'Gowun Batang';
+}
+.hahm {
+    font-family: 'Hahmlet';
+}
+.go1 {
+    font-family: 'Gothic A1', 'Malgun Gothic', 'Dotum', sans-serif;
+}
+
+/* 컬럼설계 */
+.col-2 > * {float: left; width: 50%;}
+.col-3 > * {float: left; width: 33.3333%;}
+.col-4 > * {float: left; width: 25%;}
+.col-5 > * {float: left; width: 20%;}
+.col-6 > * {float: left; width: 16.6666%;}
+
+/* 너비 설계 */
+.w650 {max-width: 650px; margin: auto;}
+.w720 {max-width: 720px; margin: auto;}
+.w880 {max-width: 880px; margin: auto;}
+.w920 {max-width: 920px; margin: auto;}
+.w1080 {max-width: 1080px; margin: auto;}
+
+/* 여백설계 */
+.m40 {margin-bottom: 40px;}
+.m60 {margin-bottom: 60px;}
+.m80 {margin-bottom: 80px;}
+.m100 {margin-bottom: 100px;}
+.m120 {margin-bottom: 120px;}

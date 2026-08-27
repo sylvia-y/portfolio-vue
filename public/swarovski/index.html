@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swarovski</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../asset/img/header/logo/pwc_logo_favicon.ico">
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common_res.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_res.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body class="main">
+    <div id="skip" class="center">
+        <a href="#swsk-main">본문 바로가기</a>
+        <a href="#swsk-gnb">주 메뉴 바로가기</a>
+        <a href="#swsk-lnb">서브 메뉴 바로가기</a>
+    </div>
+    <header id="swsk-hd">
+        <div class="wrapper">
+            <h1 class="logo"><a href="index.html"><span class="blind">스와로브스키</span></a></h1>
+            <button class="m-gnb-btn m-gnb-open">
+                <span class="blind">모바일 메뉴 펼침 버튼</span>
+                <span class="line line1">선</span>
+                <span class="line line2">선</span>
+                <span class="line line3">선</span>
+            </button>
+            <div class="modal"><span class="blind">모달창</span></div>
+            <div class="swsk-gnb-wrap">
+                <h2 class="blind">주 메뉴와 SNS 메뉴</h2>
+                <div class="m-gnb-close-wrap">
+                    <button class="m-gnb-btn m-gnb-close">
+                        <span class="blind">모바일 메뉴 닫힘 버튼</span>
+                        <span class="line line1">선</span>
+                        <span class="line line2">선</span>
+                        <span class="line line3">선</span>
+                    </button>
+                </div>
+                <nav id="swsk-gnb" class="clearfix">
+                    <ol class="gnb1">
+                        <li class="depth1">
+                            <a href="sub.html">New In<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="sub.html">신상품</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">Jewelry<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">네크리스 & 펜던트</a></li>
+                                <li><a href="#">브레이슬릿</a></li>
+                                <li><a href="#">이어링</a></li>
+                                <li><a href="#">링</a></li>
+                                <li><a href="#">브로치</a></li>
+                                <li><a href="#">익스텐더</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">Watches<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">여성용 워치</a></li>
+                                <li><a href="#">소재별 쇼핑</a></li>
+                                <li><a href="#">컬러별 쇼핑</a></li>
+                                <li><a href="#">스위스 메이드 워치</a></li>
+                                <li><a href="#">워치 스트랩</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">Decorations<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">캐릭터</a></li>
+                                <li><a href="#">자연이 주는 영감</a></li>
+                                <li><a href="#">홈 데코레이션</a></li>
+                                <li><a href="#">크리스마스</a></li>
+                                <li><a href="#">아시아 심볼</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <ol class="gnb2">
+                        <li class="depth1">
+                            <a href="#">Accessories <img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">크리스털 펜</a></li>
+                                <li><a href="#">키홀더</a></li>
+                                <li><a href="#">핸드백</a></li>
+                                <li><a href="#">스마트폰 케이스</a></li>
+                                <li><a href="#">선글라스</a></li>
+                                <li><a href="#">Swarovski 마스크</a></li>
+                                <li><a href="#">디지털 액세서리</a></li>
+                                <li><a href="#">헤어 액세서리</a></li>
+                                <li><a href="#">바디 주얼리</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">Gifts<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">그녀를 위한 선물</a></li>
+                                <li><a href="#">그를 위한 선물</a></li>
+                                <li><a href="#">웨딩 기프트</a></li>
+                                <li><a href="#">생일 기프트</a></li>
+                                <li><a href="#">로맨틱 기프트</a></li>
+                                <li><a href="#">홀리데이 기프트</a></li>
+                                <li><a href="#">베스트셀러 기프트</a></li>
+                                <li><a href="#">귀중한 선물</a></li>
+                                <li><a href="#">기프트 카드</a></li>
+                                <li><a href="#">선물 서비스</a></li>
+                                <li><a href="#">법인구매</a></li>
+                                <li><a href="#">Crystal Society</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">World of Swarovski<img src="./images/icon/dia2.png" alt="보석아이콘"></a>
+                            <ul class="depth2">
+                                <li><a href="#">스포트라이트</a></li>
+                                <li><a href="#">스타일 월드</a></li>
+                                <li><a href="#">인사이드 스와로브스키</a></li>
+                                <li><a href="#">Swarovski 인기 제품</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </nav>
+                <nav class="hd-sns-wrap">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/SWAROVSKI.global/" target="_blank"
+                                class="fa-brands fa-facebook-f"><span class="blind">페이스북</span></a></li>
+                        <li><a href="https://www.instagram.com/swarovski/" target="_blank"
+                                class="fa-brands fa-instagram"><span class="blind">인스타그램</span></a></li>
+                        <li><a href="https://www.youtube.com/Swarovski" target="_blank"
+                                class="fa-brands fa-youtube"><span class="blind">유튜브</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button class="btn-sch"><span class="blind">검색하기</span></button>
+        </div>
+    </header>
+    <main id="swsk-main">
+        <section class="main-banner-container pd0">
+            <h2 class="blind">메인배너</h2>
+            <div class="main-banner-wrap">
+                <ol class="main-banner">
+                    <li class="mb-slide main-banner-slide1"><a href="#">
+                            <span>Holiday Magic</span>
+                            <span class="small_txt go1">축제시즌, 아름답게 빛나는 세 도시</span>
+                        </a></li>
+                    <li class="mb-slide main-banner-slide2"><a href="#">
+                            <span>Golden Goose</span>
+                            <span class="small_txt go1">당신의 창의력, 아름답게 빛나도록</span>
+                        </a></li>
+                    <li class="mb-slide main-banner-slide3"><a href="#">
+                            <span>Open the Wonder</span>
+                            <span class="small_txt go1">홀리데이의 마법이 베일을 벗다</span>
+                        </a></li>
+                    <li class="mb-slide main-banner-slide4"><a href="#">
+                            <span>Constella&Stella</span>
+                            <span class="small_txt go1">매혹적인 별자리가 된 크리스탈</span>
+                        </a></li>
+                    <li class="mb-slide main-banner-slide5"><a href="#">
+                            <span>Gift Card</span>
+                            <span class="small_txt go1">스와로브스키 기프트 카드와 함께 즐거움을 나누세요</span>
+                        </a></li>
+                </ol>
+            </div>
+            <div class="main-banner-pagination">
+                <button class="mb-btn active">1</button>
+                <button class="mb-btn">2</button>
+                <button class="mb-btn">3</button>
+                <button class="mb-btn">4</button>
+                <button class="mb-btn">5</button>
+            </div>
+            <div class="main-banner-controls">
+                <button class="mb-control mb-prev"><span class="blind">이전으로</span></button>
+                <button class="mb-control mb-next"><span class="blind">다음으로</span></button>
+            </div>
+        </section>
+        <section class="main-holiday-container ani-top">
+            <div class="wrapper main-holiday-wrap relative">
+                <h2>Last-Minute Holiday Gifts</h2>
+                <ul class="main-holiday clearfix go1">
+                    <li class="holiday1 ani-top">
+                        <a href="#">
+                            <dl>
+                                <dt>Gifts for her</dt>
+                                <dd>유쾌한 매력을 담은 크리스털 컷과 함께 그녀만의 자연스러운 광채와 진정한 개성이 한층 더 빛나게 해보세요.</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="holiday2 ani-top delay02">
+                        <a href="#">
+                            <dl>
+                                <dt>Gifts for him</dt>
+                                <dd>인더스트리얼 이어 커프와 링, 타임리스 네크리스와 워치까지. 모든 스타일에 어울리는 남성용 홀리데이 기프트가 준비되어 있습니다.</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="holiday3 ani-top delay04">
+                        <a href="#">
+                            <dl>
+                                <dt>Bestselling Gifts</dt>
+                                <dd>홀리데이에 최고의 기쁨을 선사할 Swarovski의 사랑받는 기프트를 둘러보세요. 이 아름다운 아이템들은 베스트셀러가 된 이유가 있습니다.</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more-wrap"><a href="#" class="btn-more">shop gifts</a></div>
+            </div>
+        </section>
+        <section class="main-world-container ani-top">
+            <div class="wrapper main-world-wrap relative">
+                <h2>World Of Swarovski</h2>
+                <ul class="main-world clearfix">
+                    <li class="world-item world-item1">
+                        <a href="#">
+                            <dl class="world-dl">
+                                <dt>카테고리</dt>
+                                <dd class="world-cate">World Of Swarovski</dd>
+                                <dt>제목</dt>
+                                <dd class="world-subject">벨라를 소개합니다</dd>
+                                <dt>요약</dt>
+                                <dd class="world-summary go1">다채로운 스타일을 선보이는 다재다능한 패션 아이콘</dd>
+                                <dt>대표사진</dt>
+                                <dd class="world-img">
+                                    <img src="images/03.world_of_swarovski/world_bella.jpg" alt="월드 이미지">
+                                    <span class="world-inner-txt gowun">World Of Swarovski</span>
+                                </dd>
+                                <dt>날짜</dt>
+                                <dd class="world-date">2022-11-01</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="world-item world-item1">
+                        <a href="#">
+                            <dl class="world-dl">
+                                <dt>카테고리</dt>
+                                <dd class="world-cate">World Of Swarovski</dd>
+                                <dt>제목</dt>
+                                <dd class="world-subject">스와로브스키의 이정표</dd>
+                                <dt>요약</dt>
+                                <dd class="world-summary go1">스와로브스키는 1895년부터 자선활동과 지속 가능성 증진에 힘써왔으며, 환경을 보호하고 전 세계와 지역
+                                    사회에 긍정적 영향력을 발휘하기 위해 지속적으로 투자해 왔습니다.</dd>
+                                <dt>대표사진</dt>
+                                <dd class="world-img">
+                                    <img src="images/03.world_of_swarovski/world_1895.jpg" alt="월드 이미지">
+                                    <span class="world-inner-txt gowun">World Of Swarovski</span>
+                                </dd>
+                                <dt>날짜</dt>
+                                <dd class="world-date">2022-11-01</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="world-item world-item1">
+                        <a href="#">
+                            <dl class="world-dl">
+                                <dt>카테고리</dt>
+                                <dd class="world-cate">World Of Swarovski</dd>
+                                <dt>제목</dt>
+                                <dd class="world-subject">페스티벌 패션의 귀환</dd>
+                                <dt>요약</dt>
+                                <dd class="world-summary go1">2년의 어두웠던 터널을 지나 비로소 빛나는 축제 시즌이 우리 곁으로 다가왔습니다.</dd>
+                                <dt>대표사진</dt>
+                                <dd class="world-img">
+                                    <img src="images/03.world_of_swarovski/world_festival.jpg" alt="월드 이미지">
+                                    <span class="world-inner-txt gowun">World Of Swarovski</span>
+                                </dd>
+                                <dt>날짜</dt>
+                                <dd class="world-date">2022-11-01</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="world-item world-item1">
+                        <a href="#">
+                            <dl class="world-dl">
+                                <dt>카테고리</dt>
+                                <dd class="world-cate">World Of Swarovski</dd>
+                                <dt>제목</dt>
+                                <dd class="world-subject">지속 가능성</dd>
+                                <dt>요약</dt>
+                                <dd class="world-summary go1">책임있는 행동은 1895년부터 Swarovski의 뿌리 깊은 가치였습니다.</dd>
+                                <dt>대표사진</dt>
+                                <dd class="world-img">
+                                    <img src="images/03.world_of_swarovski/world_pos.jpg" alt="월드 이미지">
+                                    <span class="world-inner-txt gowun">World Of Swarovski</span>
+                                </dd>
+                                <dt>날짜</dt>
+                                <dd class="world-date">2022-11-01</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <div class="more-wrap"><a href="#" class="btn-more">show more</a></div>
+            </div>
+        </section>
+        <section class="main-spotlight-container ani-top">
+            <div class="wrapper main-spotlight-wrap relative">
+                <h2>SPOTLIGHT</h2>
+                <ul class="main-spotlight main-spotlight1 clearfix go1">
+                    <li class="spt-item spt-item1">
+                        <div class="spt-div spt-div1">
+                            <p>대표사진</p>
+                            <span class="spt-img"><img src="images/04.spotlight/news_adidas.jpg" alt="프로모션"></span>
+                            <div class="spt-txt">
+                                <p>바로가기</p>
+                                <a href="#" class="spt-go">READ MORE</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="spt-item spt-item2">
+                        <div class="spt-div spt-div2">
+                            <p>대표사진</p>
+                            <span class="spt-img"><img src="images/04.spotlight/news_bmw.jpg" alt="프로모션"></span>
+                            <div class="spt-txt">
+                                <p>바로가기</p>
+                                <a href="#" class="spt-go">READ MORE</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="main-spotlight main-spotlight2 clearfix go1">
+                    <li class="spt-item spt-item3">
+                        <div class="spt-div spt-div3">
+                            <p>대표사진</p>
+                            <span class="spt-img"><img src="images/04.spotlight/art_performance.jpg" alt="프로모션"></span>
+                            <div class="spt-txt">
+                                <p>바로가기</p>
+                                <a href="#" class="spt-go">READ MORE</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="spt-item spt-item4 off">
+                        <div class="spt-div spt-div4 off">
+                            <p>대표사진</p>
+                            <span class="spt-img"><img src="images/04.spotlight/art_james.jpg" alt="프로모션"></span>
+                            <div class="spt-txt">
+                                <p>바로가기</p>
+                                <a href="#" class="spt-go">READ MORE</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more-wrap"><a href="#" class="btn-more">show more</a></div>
+            </div>
+        </section>
+        <section class="main-edition-container ani-top">
+            <div class="wrapper main-edition-wrap relative">
+                <h2>Last Chance to Shop Annual Editions 2022</h2>
+                <div class="main-edition clearfix">
+                    <a href="#" class="ed-item ed-item1">Annual Editions 2022 오너먼트</a>
+                    <a href="#" class="ed-item ed-item2">Annual Editions 2022 볼 오너먼트</a>
+                    <a href="#" class="ed-item ed-item3">Annual Editions 2022 벨 오너먼트</a>
+                    <a href="#" class="ed-item ed-item4">Annual Editions 2022 3D 오너먼트</a>
+                    <a href="#" class="ed-item ed-item5">Annual Editions 2022 오너먼트 세트</a>
+                    <a href="#" class="ed-item ed-item6">Festive 애뉴얼 에디션 2022 오너먼트 세트</a>
+                </div>
+                <div class="more-wrap"><a href="#" class="btn-more">show more</a></div>
+            </div>
+        </section>
+    </main>
+    <footer id="swsk-ft">
+        <section class="ft-sns-container">
+            <div class="ft-sns-wrap">
+                <h2 class="blind">SNS</h2>
+                <dl class="sns-dl">
+                    <dt>인스타그램 계정</dt>
+                    <dd class="sns-url gowun">@swarovski</dd>
+                    <dt>SNS명</dt>
+                    <dd class="sns-name">instagram</dd>
+                </dl>
+                <div class="ft-insta clearfix">
+                    <a href="#" class="insta-item insta-item1">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">Awaken the holiday magic with charming crystalline figurines and
+                                        fine porcelain tableware.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insta-item insta-item2">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">Make the night shimmer with a galaxy of crystals.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insta-item insta-item3">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">Make the night shimmer with a galaxy of crystals.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insta-item insta-item4">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">A starry galaxy of multi-length #SwarovskiConstella necklaces
+                                        and statement earrings will light up your smile.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insta-item insta-item5">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">Introducing the Aura Sandal by @aquazzura for Swarovski Creators
+                                        Lab.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="insta-item insta-item6">
+                        <div class="table">
+                            <div class="table-cell">
+                                <dl class="insta-item-dl">
+                                    <dt>좋아요</dt>
+                                    <dd class="sns-good"><i class="fa-regular fa-heart"></i>386</dd>
+                                    <dt>댓글수</dt>
+                                    <dd class="sns-comment"><i class="fa-regular fa-comment"></i>265</dd>
+                                    <dt>내용</dt>
+                                    <dd class="sns-txt">Find crystallized gifts for the holidays with the poser to
+                                        surprise and delight.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ft-bbs-container">
+            <div class="ft-bbs-wrap table">
+                <h2 class="blind">커뮤니티</h2>
+                <a href="/g5/bbs/board.php?bo_table=swsk_fqa" class="ft-bbs-item table-cell">
+                    <dl class="bbs-dl">
+                        <dt>도움이 필요하십니까?</dt>
+                        <dd class="cafe24">채팅으로 문의하기</dd>
+                    </dl>
+                </a>
+                <a href="#" class="ft-bbs-item table-cell">
+                    <dl class="bbs-dl">
+                        <dt>무료 배송</dt>
+                        <dd class="cafe24"> 모든 주문에 대해 기후 중립적인 배송 및 반품. 15만원 이상 구매 시 무료배송|</dd>
+                    </dl>
+                </a>
+                <a href="#" class="ft-bbs-item table-cell last">
+                    <dl class="bbs-dl">
+                        <dt>반품</dt>
+                        <dd class="cafe24"> 11월 1일부터 크리스마스를 거쳐 1월 31일까지 Swarovski.com에서 이루어진 주문에 대해 환불이 가능합니다.</dd>
+                    </dl>
+                </a>
+            </div>
+        </section>
+        <section class="ft-cs-container">
+            <h2 class="blind">브랜드 정보</h2>
+            <div class="ft-cs1-wrap clearfix">
+                <div class="ft-cs">
+                    <h3>CS & FAQ</h3>
+                    <ul class="go1">
+                        <li><a href="#">고객 서비스 개요</a></li>
+                        <li><a href="#">주문 상태</a></li>
+                        <li><a href="#">기프트 카드 잔액</a></li>
+                        <li><a href="#">배송</a></li>
+                        <li><a href="#">반품 및 교환</a></li>
+                        <li><a href="#">온라인 수선 문의</a></li>
+                        <li><a href="#">문의</a></li>
+                        <li><a href="#">COVID-19</a></li>
+                    </ul>
+                </div>
+                <div class="ft-about">
+                    <h3>About Us</h3>
+                    <ul class="go1">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">지속 가능성</a></li>
+                        <li><a href="#">채용 정보</a></li>
+                        <li><a href="#">법인구매</a></li>
+                        <li><a href="#">프로페셔널</a></li>
+                        <li><a href="#">사이트 맵</a></li>
+                        <li><a href="#">Kristallwelten</a></li>
+                    </ul>
+                </div>
+                <div class="ft-members">
+                    <h3>Membership</h3>
+                    <ul class="go1">
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">Swarovski Club</a></li>
+                        <li><a href="#">Swarovski Crystal Society (SCS)</a></li>
+                    </ul>
+                </div>
+                <div class="ft-sns-lab">
+                    <div class="ft-sns">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/loveswskbaguette/" target="_blank"
+                                    class="fa-brands fa-facebook-f"><span class="blind">페이스북</span></a></li>
+                            <li><a href="https://www.instagram.com/swskbaguette_kr/" target="_blank"
+                                    class="fa-brands fa-instagram"><span class="blind">인스타그램</span></a></li>
+                            <li><a href="https://www.youtube.com/user/loveswskbaguette" target="_blank"
+                                    class="fa-brands fa-youtube"><span class="blind">유튜브</span></a></li>
+                            <li><a href="https://www.tiktok.com/@swarovski" target="_blank"
+                                    class="fa-brands fa-tiktok"><span class="blind">틱톡</span></a></li>
+                            <li><a href="https://twitter.com/swarovski" target="_blank"
+                                    class="fa-brands fa-twitter"><span class="blind">트위터</span></a></li>
+                            <li><a href="https://www.pinterest.co.kr/swarovski/" target="_blank"
+                                    class="fa-brands fa-pinterest-p"><span class="blind">핀터레스트</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="ft-lab">
+                        <h3 class="blind">Creators Lab</h3>
+                        <div class="ft-lab-inner">
+                            <a href="#" class="lab-label">Creators Lab</a>
+                            <div class="lab-item">
+                                <a href="#" target="_blank">AQUAZZURA Aura 샌들 very pery</a>
+                                <a href="#" target="_blank">Golden Goose Super-Star 스니커즈 women pink</a>
+                                <a href="#" target="_blank">Golden Goose Super-Star 스니커즈 women white</a>
+                                <a href="#" target="_blank">Golden Goose Super-Star 스니커즈 men white</a>
+                                <a href="#" target="_blank">Golden Goose 스케이트보드</a>
+                                <a href="#" target="_blank">AQUAZZURA Aura 샌들 soft gold</a>
+                                <a href="#" target="_blank">Golden Goose Super-Star 스니커즈</a>
+                            </div>
+                        </div><!--ft-lab-inner-->
+                    </div><!--ft-lab-->
+                </div><!--ft-sns-brand-->
+            </div><!--ft-cs1-wrap-->
+            <div class="ft-cs2-wrap">
+                <a href="#"><strong>법적고지</strong></a>
+                <a href="#">저작권</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 보호</a>
+                <a href="#">쿠키 동의</a>
+                <a href="#">회사 정보</a>
+                <a href="#" class="last">REACH 정보</a>
+            </div>
+            <div class="ft-cs3-wrap" id="ft-cs3-wrap">Copyright ⓒ 2022 Swarovski. All rights reserved.
+                SWAROVSKI and the SWAN logo are registered and trademarks of Swarovski AG.
+                <p>이 사이트는 SWROVSKI와 실제 관련이 없으며<br>
+                    포트폴리오용으로 제작되었습니다.
+                </p>
+            </div>
+        </section>
+    </footer>
+    <a href="#" class="btn-black btn-top"><img src="images/icon/arrow-right-slider.svg" alt=""><span
+            class="blind">위로</span></a>
+    <a href="#ft-cs3-wrap" class="btn-black btn-end"><img src="images/icon/arrow-left-slider.svg" alt=""><span
+            class="blind">아래로</span></a>
+
+</body>
+
+</html>

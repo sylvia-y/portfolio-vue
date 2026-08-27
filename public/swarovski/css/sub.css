@@ -1,0 +1,180 @@
+@charset 'UTF-8';
+/* 서브 헤더 공통 */
+#swsk-sub-hd {
+    position: relative;
+}
+#swsk-sub-hd:before { /*서브 비주얼 이미지*/
+    content: '';
+    display: block;
+    height: 270px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub-hd-cs:before {
+    background-image: url('../images/sub_main/sub_main2.jpg');
+}
+.sub-hd-container {
+    height: 280px;
+}
+.sub-hd-wrap {
+    padding-bottom: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.sub-hd-wrap h2 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    font-size: 2em;
+}
+.world-menu {}
+.world-menu li {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.7em;
+}
+.world-menu li:after { /*동그라미*/
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 50%;
+    background-color: #999;
+    content: '';
+}
+.world-menu .last:after {
+    display: none;
+}
+.world-menu li a {
+    color: #999;
+}
+.world-menu li a:hover {
+    text-decoration: underline;
+}
+.world-menu strong {
+    color: #000;
+    font-weight: 400;
+}
+
+.lnb-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.15);
+    z-index: 98;
+}
+.lnb-container.fixed {
+    position: fixed;
+    bottom: inherit;
+}
+.lnb-wrap {}
+#swsk-lnb {}
+#swsk-lnb li {}
+#swsk-lnb .active {}
+#swsk-lnb li a {
+    display: block;
+    background-color: #fff;
+}
+#swsk-lnb .active a {
+    position: relative;
+    background-color: #DBE1ED;
+    color: #023586;
+}
+#swsk-lnb .active a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #023586;
+    content: '';
+}
+
+/* 서브 메인 공통 */
+#swsk-main {
+    padding: 80px 2%;
+}
+main img {
+    width: 100%;
+}
+.title-img {}
+main section h1, main article h1 {
+    margin-bottom: 60px;
+    font-size: 2.5em;
+    text-align: center;
+}
+main section h2, main section h3, main section h4 {
+    font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;
+    text-align: center;
+}
+main section h2 {
+    font-size: 2em;
+}
+main section h3 {
+    font-size: 1.5em;
+    margin: 3em 0;
+}
+main section h4 {
+    font-size: 1.2em;
+}
+
+
+.comment {
+    display: block;
+    margin-top: 1em;
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {}
+
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    #swsk-main article {
+        width: 650px;
+        margin: auto;
+    }
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {
+    #swsk-sub-hd:before {
+        height: 400px;
+    }
+    .sub-hd-container {
+        height: 360px;
+    }
+    #swsk-main {
+        padding: 150px 0;
+    }
+    main section h1, main article h1 {
+        margin-bottom: 100px;
+    }
+    .txt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding: 0 8%;
+        margin-bottom: 0;
+    }
+    .txt .table {
+        height: 100%;
+    }
+    .img {
+        padding-left: 50%;
+    }
+}

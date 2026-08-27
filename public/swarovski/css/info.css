@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+/* 브랜드 소개 */
+.swsk-new-container {}
+.swsk-new-wrap {}
+.swsk-new {}
+
+.swsk-msg-container {
+    /* position: relative; */
+    background: url('../images/sub_main/newin.jpg') center center / cover fixed no-repeat;
+    color: #fff;
+    /* z-index: 1; */
+}
+.swsk-msg-container1:before {
+    /* 부모 크기대로 바닥에(z-index: -1) 
+    50%투명도를 가진 검정박스 설계 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: -1;
+    content: '';
+}
+.swsk-msg-wrap {
+    height: 30vh;
+    min-height: 500px;
+    background-color: rgba(0,0,0,0.5);
+}
+.swsk-msg {
+    text-align: center;
+}
+.swsk-msg h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {}
+
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {}

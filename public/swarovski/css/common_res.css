@@ -1,0 +1,145 @@
+@charset 'UTF-8';
+/* 1. 모바일까지 ~767px */
+@media screen and (max-width: 767px) {
+    .depth1 > a > img {
+        float: right;
+        display: block;
+    }
+}
+
+/* 2. 태블릿부터 768px~ */
+@media screen and (min-width: 768px) {
+    .insta-item {
+        width: 33.3333%;
+        padding-top: 33.3333%;
+    }
+}
+
+/* 3. 태블릿만 768px~1279px */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .depth1 > a > img {
+        float: right;
+        display: block;
+    }
+
+}
+
+/* 4. PC부터 1280px~ */
+@media screen and (min-width: 1280px) {
+    .m-gnb-open, .m-gnb-close-wrap, .hd-sns-wrap {
+        display: none;
+    }
+    body {
+        font-size: 16px;
+    }
+    #swsk-hd > .wrapper {
+        height: 90px;
+    }
+    .logo {
+        width: 18%;
+    }
+    .swsk-gnb-wrap {
+        position: static;
+        width: inherit;
+        height: inherit;
+        background-color: transparent;
+        overflow: inherit;
+    }
+    #swsk-gnb > ol {
+        padding: 0;
+        border-bottom: 0;
+    }
+    .gnb1 {
+        float: left;
+    }
+    .gnb2 {
+        float: right;
+        margin-right: 60px;
+    }
+    .depth1 {
+        position: relative;
+        float: left;
+    }
+    .depth1 > a {
+        color: #000;
+        line-height: 90px;
+    }
+    .depth1:hover > a {
+        color: #000;
+    }
+    .depth1 > a:after {
+        display: none;
+    }
+    .depth2 { /* 서브메뉴 */
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 80px;
+        width: 180px;
+        padding: 20px 0;
+        margin-left: -90px;
+        line-height: 2.4;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+    .depth2 > img {
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 푸터 */
+    .insta-item {
+        width: 16.6666%;
+        padding-top: 16.6666%;
+    }
+    .ft-bbs-item {
+        float: left;
+        width: 33.3333%;
+        height: 180px;
+        padding: 40px 3% 0;
+        border-bottom: 0;
+    }
+    .ft-bbs-item:before { /*세로짝대기*/
+        position: absolute;
+        right: 0;
+        top: 50px;
+        width: 1px;
+        height: 80px;
+        background-color: #999;
+        content: '';
+    }
+    .ft-bbs-item.last:before {
+        display: none;
+    }
+    .bbs-dl:after { /* 파랑 화살표 */
+        right: 10%;
+    }
+    .ft-cs1-wrap > div {
+        width: 25%;
+    }
+    .ft-sns-brand {
+        clear: none;
+    }
+    .ft-sns h3 {
+        display: block;
+    }
+    .btn-black {
+        right: 50px;
+    }
+    .btn-top {
+        bottom: 100px;
+    }
+    
+    /* 메인 */
+    .ani-top {
+        transform: translateY(25%);
+    }
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

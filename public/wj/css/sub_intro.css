@@ -1,0 +1,246 @@
+@charset 'UTF-8';
+.wj-sub-hd {
+    position: relative;
+    height: 600px;
+}
+.sub-hd-bg { /*서브 비주얼 이미지*/
+    height: 500px;
+    background: url(../images/sub-main2.png) center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub-hd-container {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 100px;
+    
+}
+.sub-hd-wrap {
+    padding-bottom: 30px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+}
+.sub-hd-wrap h2 {
+    margin-bottom: 0.5em;
+    font-size: 2.4em;
+    color: #fff;
+}
+.intro-menu li {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.7em;
+}
+.intro-menu li:after { /*동그라미*/
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: '';
+}
+.intro-menu .last:after {
+    display: none;
+}
+.intro-menu li a {
+    color: #fff;
+}
+.intro-menu li a:hover {
+    text-decoration: underline;
+}
+.intro-menu strong {
+    color: #000;
+    font-weight: 400;
+}
+.lnb-container {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.lnb-container.fixed {
+    position: fixed;
+    bottom: inherit;
+}
+#wj-lnb {
+    text-align: center;
+}
+#wj-lnb li {
+    display: inline-block;
+    padding-left: 60px;
+
+}
+#wj-lnb li.active a{
+    position: relative;
+    color: #0048ce;
+}
+#wj-lnb li a {
+    display: block;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.2em;
+}
+#wj-lnb .active a:after {
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+    width: 110%;
+    height: 2px;
+    background-color: #0048ce;
+    content: '';
+}
+
+.wj-container h2 {
+    text-align: center;
+    margin: 120px 0 30px 0;
+}
+.intro-main-text {
+    color: #333;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.2em;
+    margin-bottom: 80px;
+}
+.wj-wrap {
+    width: 100%;
+    background-color: #ededed;
+    padding: 50px 0 100px 0;
+    text-align: center;
+}
+.wj-intro-main-wrap {
+    text-align: center;
+}
+.wj-intro-main-wrap h2{
+    color: #0048ce;
+}
+.wj-intro-main-wrap img{
+    width: 50%;
+    margin-bottom: 100px;
+}
+.wj-intro-wrap {
+    width: 100%;
+    padding: 30px 0;
+}
+.wj-intro-wrap h3 {
+    color: #0048ce;
+    font-size: 32px;
+}
+.intro-text {
+    color: #0048ce;
+    font-weight: 700;
+}
+.wj-intro-wrap li {
+    padding-bottom: 1em;
+}
+.intro-wrap1, .intro-wrap3 {
+    text-align: left;
+}
+.intro-wrap2, .intro-wrap4 {
+    text-align: right;
+}
+
+/* 서브 메인 공통 */
+main img {
+    width: 100%;
+}
+main section h1, main article h1 {
+    margin: 60px 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+main section h2, main section h3, main section h4 {
+    font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;
+}
+main section h2 {
+    font-size: 2em;
+}
+main section h3 {
+    font-size: 1.5em;
+}
+main section h4 {
+    font-size: 1.2em;
+}
+
+.txt-img-wrap {
+    position: relative;
+}
+.txt {
+    margin-bottom: 60px;
+    word-break: keep-all;
+    /* 
+    1. normal(default) : 영어는 단어구분, 한글은 문자마다 구분
+    2. keep-all(★★★) : 한글도 영어처럼 단어로 구분
+    3. break-all : 영어도 한글처럼 문자로 구분
+     */
+}
+
+.txt h3 {
+    margin-bottom: 1em;
+}
+.comment {
+    display: block;
+    margin-top: 1em;
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* 1. 모바일까지 */
+@media screen and (max-width: 767px) {}
+
+/* 2. 태블릿부터 */
+@media screen and (min-width: 768px) {}
+
+/* 3. 태블릿만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    /* #wj-main article {
+        width: 650px;
+        margin: auto;
+    } */
+}
+
+/* 4. PC부터 */
+@media screen and (min-width: 1280px) {
+    /* .sub-hd-bg {
+        height: 600px;
+    }
+    .sub-hd-container {
+        height: 200px;
+    }
+    #wj-main {
+        padding: 150px 0;
+    }
+    .lnb-container {
+        font-size: 1.3em;
+        line-height: 60px;
+    }
+    main h1 {
+        margin-bottom: 100px;
+    }
+    .txt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        padding: 0 8%;
+        margin-bottom: 0;
+    }
+    .txt .table {
+        height: 100%;
+    }
+    .img {
+        padding-left: 50%;
+    }
+    .even .txt {
+        left: inherit;
+        right: 0;
+    }
+    .even .img {
+        padding-left: 0;
+        padding-right: 50%;
+    } */
+}
