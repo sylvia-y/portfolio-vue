@@ -220,15 +220,32 @@ onMounted(() => {
         <div class="sec-contents sec-contact">
           <div class="contact-desc">
             <h3 class="ft-feat">
-              If you<br>have any<br>
-              questions,<br>
-              please<br>feel free<br>
-              to contact me.<br>
+              If you<br>have any<br>questions,<br>please<br>feel free<br>to contact me.<br>
             </h3>
             <h3>E-mail</h3>
             <h4>yududdl12@naver.com</h4>
-            <h3>Portfolio</h3>
-            <h4>http://sylvia.dothome.co.kr</h4>
+            <h3>Download (PDF)</h3>
+            <div style="margin-top:1rem;">
+              <a 
+                href="/YuyeongKwak_Resume_ko.pdf" download="Resume_ko.pdf"
+                target="_blank"
+                style="padding: 4px 10px; background:#cfff49; text-decoration: none; 
+                font-size: 1.5rem; border: 2px solid #000;
+                font-weight: bold; display: inline-flex; align-items: center; margin-right:1rem;"
+              >
+                📄이력서 (KO)
+              </a>
+              <a 
+                href="/YuyeongKwak_Resume_en.pdf" download="Resume_en.pdf"
+                target="_blank"
+                style="padding: 4px 10px; background:#cfff49; text-decoration: none; 
+                font-size: 1.5rem; border: 2px solid #000;
+                font-weight: bold; display: inline-flex; align-items: center;"
+              >
+                📄Resume (EN)
+              </a>
+            </div>
+
           </div>
           <div class="contents-box glass-box">
             <div class="tools">
