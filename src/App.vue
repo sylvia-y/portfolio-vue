@@ -15,6 +15,7 @@ onMounted(() => {
   script.async = true
   document.body.appendChild(script)
 })
+
 </script>
 
 <template>
@@ -35,16 +36,16 @@ onMounted(() => {
               <a href="#home">HOME</a>
             </li>
             <li class="depth1">
-              <a href="#about">ABOUT</a>
+              <a href="#tech">TECH STACK</a>
             </li>
             <li class="depth1">
-              <a href="#tech">tech</a>
+              <a href="#trouble">TROUBLESHOOTING</a>
             </li>
             <li class="depth1">
               <a href="#project">PROJECT</a>
             </li>
             <li class="depth1">
-              <a href="#game">game</a>
+              <a href="#lab">LAB</a>
             </li>
             <li class="depth1">
               <a href="#yy-ft">CONTACT</a>
@@ -63,63 +64,43 @@ onMounted(() => {
         <button @click="changeLang('ko')">한국어 (KR)</button>
         <button @click="changeLang('en')">English (US)</button>
       </div>
-      <section id="home" class="view home sec-main">
-        <div class="main-title area">
-          <img class="logo" src="/images/intro_logo.png" alt="인트로_로고">
-          <a class="scroll-link" href="#about">
-            <img src="/images/wheel.png" alt="scroll">
-          </a>
-        </div>
+      <section id="home" class="home sec-main">
+        
         <div class="intro_smile">
           <img class="smile_img" src="/images/intro_smile.png" alt="인트로_스마일">
         </div>
-      </section>
-      <section id="about" class="view about">
-        <div class="about-cover">
-          <div class="cover">
-            <h2><span>SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER 
-            SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER 
-            SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER SOFTWARE DEVELOPER
-            </span></h2>
-          </div>
-          <div class="cover">
-            <h2><span>CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE
-                NIMBLE
-                CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE NIMBLE CREATIVE
-                NIMBLE
+        <div class="intro_about" id="about" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+          <div class="about-cover">
+            <div class="cover">
+              <h2><span>FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER 
               </span></h2>
+            </div>
+            <div class="cover">
+              <h2><span>FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER FRONTEND · BACKEND ENGINEER
+              </span></h2>
+            </div>
           </div>
-        </div>
-        <h2 class="view__title">About</h2>
-
-        <div class="contents-box">
-          <div class="about-box js-tilt-containe" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+          <div class="about-box js-tilt-container" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
             <div class="about-img"></div>
-            <p data-key="about-desc">
-              <strong><span>YU YEONG KWAK</span></strong><br>
-              안녕하세요, <span>기술적 성장을 통해 가치 창출을 지향하는 곽유영</span>입니다.<br>
-              사범계열 교육 배경을 기반으로 <span>사용자 중심 사고</span>와 <span>문제 정의 능력</span>을 체화했으며,
-              업무 효율을 높이기 위한 기술 학습 과정에서 프로그래밍의 매력에 깊이 매료되어 개발자로 전향했습니다.<br>
-              저는 단순히 요구사항을 구현하는 것을 넘어,<br>
-              <span>코드 리팩토링을 통해 시스템의 지속 가능성을 최우선</span>하며<br>
-              더 나은 구조는 없는지 끊임없이 고민합니다.<br>
-              저의 <span>핵심 강점은 효율적인 협업 역량을 극대화</span>하는 것입니다.<br>
-              개발자는 다른 부서들과도 함께 일해야 하므로,<br>
-              <span>Notion과 같은 협업 툴</span>을 능숙하게 활용하여<br>
-              <span>투명한 태스크 관리와 워크플로우 효율화</span>를 실현합니다.<br>
-              기술적 숙련도와 더불어, <span>모두의 역량을 최대로 이끌어내는 협업 문화</span>를 통해<br>
-              서비스의 완성도를 높이고 나날이 성장하는 개발자로 기여하겠습니다.
-            </p>
+            <p data-key="about-desc"></p>
           </div>
-          <div class="about-info" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+          <div class="about-info" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
             <div data-key="about-info"></div>
           </div>
         </div>
+        
       </section>
       <section id="tech" class="view tech">
         <h2 class="view__title">Tech Stack</h2>
         <div class="contents-box">
-          <div class="tech-inner-wrap" data-key="tech-inner-wrap" style="width: 100%;"></div>
+            <div class="tech-inner-wrap" data-key="tech-inner-wrap" style="width: 100%;"></div>
+        </div>
+      </section>
+      <!-- Top 5 트러블슈팅 세트 추가 -->
+      <section id="trouble" class="view trouble">
+        <h2 class="view__title trouble-title" data-key="trouble-title">Troubleshooting Top 5</h2>
+        <div class="trouble-list"  data-key="trouble-section">
+          
         </div>
       </section>
       <section id="project" class="view project">
@@ -134,7 +115,7 @@ onMounted(() => {
         </div>
       </section>
       <section id="game" class="view game">
-        <h2 class="view__title">game</h2>
+        <h2 class="view__title">LAB</h2>
         <div class="scroll-txt">↓ SCROLL DOWN HERE </div>
         <div class="contents-box">
           <div class="game-slider">
@@ -301,13 +282,11 @@ onMounted(() => {
           <h2><span>Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!
               Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!
               Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!
-              Thank you for appreciating my portfolio!Thank you for appreciating my portfolio!Thank you for appreciating my portfolio
             </span></h2>
         </div>
       </section>
       <div class="ft-wrap">
-        <h2>본 페이지는 상업적 목적이 아닌
-          개인 포트폴리오용으로 제작되었습니다.</h2>
+        <h2>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</h2>
         <p> © 2026 YU-YEONG. All Rights Reserved.</p>
       </div>
     </footer>

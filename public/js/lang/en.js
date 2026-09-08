@@ -3,138 +3,116 @@ export default {
   "about-title": "About",
   "about-desc": `
     <strong><span>YU YEONG KWAK</span></strong><br>
-    Hello, I'm <span>Yuyeong Kwak</span>, a developer aiming to create value through technical growth.<br>
-    Based on my background in education, I have internalized <span>user-centered thinking</span> and <span>problem-definition skills</span>.
-    During my technical study to improve work efficiency, I was deeply fascinated by programming and transitioned into a developer.<br>
-    Beyond simply implementing requirements, I prioritize the <span>sustainability of systems through code refactoring</span><br>
-    and continuously explore better architectural choices.<br>
-    My <span>core strength lies in maximizing efficient collaboration</span>.<br>
-    Since developers work closely with various departments,<br>
-    I skillfully utilize <span>collaboration tools like Notion</span> to achieve<br>
-    <span>transparent task management and workflow optimization</span>.<br>
-    Along with technical proficiency, I aim to contribute as a developer who grows daily and elevates service completion<br>
-    through a <span>collaborative culture that brings out everyone's best capabilities</span>.
+    Hello, I'm Yu-Yeong Kwak, a <span>developer dedicated to discovering real-world service challenges and crafting better user experiences and development environments through technology.</span><br>
+    As a <span>developer with 4 years of experience</span>, I have built real-world production services and admin systems.<br>
+    I have hands-on experience in state management, SSR, REST APIs, and multi-language support built on React, Vue, and Remix.
+    <span>Recently, I have been expanding my domain into service development and automation using AI technology.</span>
   `,
   "about-info": `
     <div class="about_info_box">
       <p>2025.12 ~ 2026.05</p>
-      <p class="about_info_comp">WAVECODE Inc.<span>(Dev Team - Developer)</span></p>
+      <p class="about_info_comp">WAVECODE Inc. <span>(Dev Team - Developer)</span></p>
     </div>
     <div class="about_info_box">
       <p>2025.06 ~ 2025.09</p>
-      <p class="about_info_comp">DoubleDown Games (Malaysia)<span>(Optimization Team - Developer)</span></p>
+      <p class="about_info_comp">DoubleDown Games (Malaysia) <span>(Enhancement Team - Developer)</span></p>
     </div>
     <div class="about_info_box">
       <p>2024.05 ~ 2025.06</p>
-      <p class="about_info_comp">Chabot Insurance<span>(R&D Team - Developer)</span></p>
+      <p class="about_info_comp">Chabot Insurance <span>(R&D Team - Developer)</span></p>
     </div>
     <div class="about_info_box">
       <p>2023.11 ~ 2024.05</p>
-      <p class="about_info_comp">Edu Company<span>(Content Dev Team - Developer)</span></p>
+      <p class="about_info_comp">EduCompany <span>(Content Dev Team - Developer)</span></p>
     </div>
     <div class="about_info_box">
       <p>2022.09 ~ 2023.02</p>
-      <p class="about_info_comp">UI/UX Web Publishing & Frontend Course</p>
+      <p class="about_info_comp">UI/UX-based Web Publishing & Frontend Course</p>
     </div>
     <div class="about_info_box">
       <p>2021.03 ~ 2022.02</p>
-      <p class="about_info_comp">CBS Gifted Education Academy<span>(Creativity & Language Teacher)</span></p>
+      <p class="about_info_comp">CBS Gifted Education Academy <span>(Creativity & Language Teacher)</span></p>
     </div>
   `,
 
   /* ---------------- TECH STACK ---------------- */
   "tech-inner-wrap": `
     <!-- FRONT END -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="50">
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="50">
       <h3>FRONT END</h3>
-      <p class="front-end" data-aos="fade-up" data-aos-delay="650" data-aos-duration="300">
-        React component-based architecture design and Zustand global state management. High-volume data grid implementation using Tabulator and pnpm Monorepo environment.
+      <p class="front-end">
+        Designing component-based architecture in React and managing global state with Zustand. Implementing high-volume data grids using Tabulator and utilizing pnpm Monorepo environments.
       </p>
       <ul class="tech-wrap">
         <li>
-          <div class="tech-card"><div class="tech-img tech-img3"></div><h4>HTML5</h4><h4><span class="count9">90</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img4"></div><h4>CSS3</h4><h4><span class="count9">90</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img5"></div><h4>REACT</h4><h4><span class="count8">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img6"></div><h4>JAVASCRIPT</h4><h4><span class="count9">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img14"></div><h4>VUE</h4><h4><span class="count9">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img7"></div><h4>JQUERY</h4><h4><span class="count9">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img8"></div><h4>SASS</h4><h4><span class="count9">85</span>%</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img5"></div><h4>React</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img6"></div><h4>JavaScript</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img14"></div><h4>Vue</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img7"></div><h4>jQuery</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img8"></div><h4>Sass</h4></div>
         </li>
       </ul>
     </div>
 
     <!-- BACK END -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="200">
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="150">
       <h3>BACK END TECH</h3>
-      <p class="back-end" data-aos="fade-up" data-aos-delay="750" data-aos-duration="300">
-        PHP MVC-based system design and internal CRM/ERP maintenance. Server development and RESTful API implementation experience based on Java/Spring Boot.
+      <p class="back-end">
+        Designing PHP MVC-based systems and maintaining internal CRM/ERP platforms. Developing servers and building RESTful APIs using Java/Spring Boot.
       </p>
       <ul class="tech-wrap">
         <li>
-          <div class="tech-card"><div class="tech-img tech-img11"></div><h4>SQL</h4><h4><span class="count6">80</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img12"></div><h4>PHP</h4><h4><span class="count8">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img9"></div><h4>JAVA</h4><h4><span class="count6">70</span>%</h4></div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- SERVER SIDE TEMPLATE -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="200">
-      <h3>SERVER SIDE TEMPLATE</h3>
-      <p class="back-end" data-aos="fade-up" data-aos-delay="750" data-aos-duration="300">
-        Thymeleaf-based data grid construction and dynamic rendering in iGaming admin systems. SSR page development and maintenance in Spring MVC environments.
-      </p>
-      <ul class="tech-wrap">
-        <li>
-          <div class="tech-card"><div class="tech-img tech-img16"></div><h4>Thymeleaf</h4><h4><span class="count9">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img13"></div><h4>JSP</h4><h4><span class="count9">80</span>%</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img12"></div><h4>PHP</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img9"></div><h4>Java</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img16"></div><h4>Thymeleaf</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img13"></div><h4>JSP</h4></div>
         </li>
       </ul>
     </div>
 
     <!-- DATABASE & API -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="200">
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="250">
       <h3>DATABASE & API</h3>
-      <p class="back-end" data-aos="fade-up" data-aos-delay="750" data-aos-duration="300">
-        MySQL DB schema design and query optimization for complex joins/indexes. RESTful API integration and Frontend-Backend data binding.
+      <p class="back-end">
+        Designing MySQL database schemas and optimizing complex JOINs and index queries. Managing RESTful API communications and integrating Frontend-Backend data binding.
       </p>
       <ul class="tech-wrap">
         <li>
-          <div class="tech-card"><div class="tech-img tech-img17"></div><h4>MySQL</h4><h4><span class="count6">80</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img18"></div><h4>NoSQL</h4><h4><span class="count6">70</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img19"></div><h4>RDBMS</h4><h4><span class="count6">80</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img20"></div><h4>Rest APIs</h4><h4><span class="count6">85</span>%</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img17"></div><h4>MySQL</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img18"></div><h4>Redis</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img19"></div><h4>RDBMS</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img20"></div><h4>REST API</h4></div>
         </li>
       </ul>
     </div>
 
     <!-- DEVOPS & COWORK -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="200">
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="350">
       <h3>DEVOPS & COWORK</h3>
-      <p class="back-end" data-aos="fade-up" data-aos-delay="750" data-aos-duration="300">
-        Efficient version management using Git/GitLab and Lazygit. Understanding of Linux/AWS server environments and collaboration processes based on Notion.
+      <p class="back-end">
+        Managing version control using Git/GitLab and Lazygit. Understanding Linux/AWS server environments and managing collaborative workflows via Notion.
       </p>
       <ul class="tech-wrap">
         <li>
-          <div class="tech-card"><div class="tech-img tech-img21"></div><h4>Git/GitLab</h4><h4><span class="count6">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img22"></div><h4>AWS</h4><h4><span class="count8">70</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img23"></div><h4>Linux</h4><h4><span class="count6">70</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img24"></div><h4>Notion</h4><h4><span class="count6">85</span>%</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img21"></div><h4>Git/GitLab</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img22"></div><h4>AWS</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img23"></div><h4>Linux</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img24"></div><h4>Notion</h4></div>
         </li>
       </ul>
     </div>
 
     <!-- DESIGN -->
-    <div class="tech-inner" data-aos="zoom-out-down" data-aos-delay="350">
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="450">
       <h3>DESIGN</h3>
-      <p class="design" data-aos="fade-up" data-aos-delay="850" data-aos-duration="300">
-        UI/UX visual data interpretation, UI implementation, and visual asset alignment using Figma, Photoshop, and Illustrator.
+      <p class="design">
+        Interpreting UI/UX design assets, building layouts, and aligning visual assets using Figma, Photoshop, and Illustrator.
       </p>
       <ul class="tech-wrap">
         <li>
-          <div class="tech-card"><div class="tech-img tech-img1"></div><h4>PHOTOSHOP</h4><h4><span class="count9">85</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img2"></div><h4>ILLUSTRATOR</h4><h4><span class="count8">80</span>%</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img15"></div><h4>FIGMA</h4><h4><span class="count6">80</span>%</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img15"></div><h4>Figma</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img1"></div><h4>Photoshop</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img2"></div><h4>Illustrator</h4></div>
         </li>
       </ul>
     </div>
@@ -142,173 +120,398 @@ export default {
 
   /* ---------------- PROJECTS ---------------- */
   "project-section": `
-    <!-- REDIS RANKING -->
+    <!-- 01. Clinic Main Website & Admin System -->
     <div class="layer swiper-slide">
       <div class="item">
-        <h3 class="pro_title">[High-Performance Distributed System]<br>Real-Time Ranking Service via Redis Sorted Set & AWS Deployment</h3>
+        <h3 class="pro_title">[apps/snow-gangnam]<br>Clinic Official Website & Admin System</h3>
+        
         <div class="swiper-center">
-          <div class="project-img"><img src="./images/ranking_diagram.png" alt="Diagram"></div>
           <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Backend Logic 100% + Deployment & Ops 100%</strong>
-              <span>Duration</span><br><strong>Approx. 1 Day</strong>
-              <span>Tools</span><br><strong>HTML5 / CSS3 / jQuery</strong>
-              <span>Key Tech Stack</span><br><strong>Spring Boot 3.x / Java 17 / Redis (ZSET)</strong>
-              <span>Deployment</span><br><strong>AWS Lightsail (Ubuntu)</strong>
-              <span>Live Service (URL)</span><br><strong>http://43.203.227.162:8080/api/v1/ranking</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">Overview</span><br>
+              <strong>A comprehensive clinic web/admin platform featuring EMR chart integration, before-and-after treatment comparisons, event CRUD, multi-language support, and permission control.</strong><br><br>
+              <span class="badge">Role & Contribution</span><br>
+              <strong>Developer (100% Contribution)</strong><br><br>
+              <span class="badge">Tech Stack</span><br>
+              <strong>React, Remix, SCSS, TypeScript, Vite, CodeIgniter 4 (PHP), MySQL, Drizzle ORM</strong>
+            </div>
           </div>
+
           <div class="desc">
-            <p>
-              <span>Key Achievements</span><br>
-              <strong>1. Real-time ranking with O(log N) time complexity using Redis ZSET</strong><br>
-              <strong>2. Hands-on cloud deployment experience including nohup and firewall settings</strong><br>
-              <strong>3. Troubleshooting real-world issues such as Redis connection failures and port binding</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">🏗️ Architecture Flow: Remix(Vite) Bundle Isolation & Data Flow</span>
+              <div class="diagram-wrap">
+<pre>
+[Browser / Client]
+  │
+  ├─ 1. SSR HTML Request
+  │
+[Remix Server / Loader]
+  ├─ 2. Dynamic Import (await import('~/services/*.server')) ──> Bundles server-only modules
+  ├─ 3. PHP API (CodeIgniter 4) Communication (normalizePermissions)
+  └─ 4. Hydration Guard (Safe UI binding after Client Mount)
+</pre>
+              </div>
+            </div>
           </div>
-          <a href="./ranking/index.html" class="btn" target="_blank" rel="noopener noreferrer"><span>GO TO PAGE</span></a>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">💻 Core Code 1: Backend Permission Data Normalization Layer (PHP)</span><br>
+              <small>Logic designed to ensure data consistency by normalizing snake_case and kebab-case discrepancies between the database and session data using alias mapping and whitelist validation.</small>
+              <div class="code-block-wrap">
+<pre>
+public function normalizePermissions(array $rawPermissions): array {
+    $aliases = [
+        'before_after' => 'before-after',
+        'beforeAfter'   => 'before-after',
+        'event_list'   => 'event',
+    ];
+
+    $whitelist = ['before-after', 'event', 'reservation', 'chart'];
+    $normalized = [];
+
+    foreach ($rawPermissions as $key => $value) {
+        $standardKey = $aliases[$key] ?? $key;
+        if (in_array($standardKey, $whitelist, true)) {
+            $normalized[$standardKey] = (bool)$value;
+        }
+    }
+
+    return $normalized;
+}
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">💻 Core Code 2: Remix Vite Bundler Isolation & Hydration Guard (React / TypeScript)</span><br>
+              <small>Pattern that isolates server bundles via dynamic imports inside loaders and prevents UI mismatches between SSR and Client.</small>
+              <div class="code-block-wrap">
+<pre>
+import { useLoaderData } from '@remix-run/react';
+import { useState, useEffect } from 'react';
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const { getEventData } = await import('~/services/event.server'); 
+  const events = await getEventData(request);
+  return json({ events });
+};
+
+export default function EventComponent() {
+  const { events } = useLoaderData&lt;typeof loader&gt;();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return &lt;EventSkeleton /&gt;;
+
+  return (
+    &lt;div className="event-grid"&gt;
+      {events?.map((event) => (
+        &lt;div key={event.id} className="event-card"&gt;
+          {event.slide_images?.map((img, idx) => (
+            &lt;img key={idx} src={img.url} alt={event.title} className="event-img" /&gt;
+          ))}
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+</pre>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- EDU COMPANY -->
+    <!-- 02. REDIS RANKING -->
     <div class="layer swiper-slide">
       <div class="item">
-        <h3 class="pro_title">EDU-COMPANY</h3>
+        <h3 class="pro_title">[REDIS RANKING]<br>Sorted Set-Based Real-Time Ranking System</h3>
+        
         <div class="swiper-center">
-          <div class="project-img"><img src="./images/edu_mockup.png" alt="Edu Company Mockup"></div>
           <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Design 100% + Publishing 100%</strong>
-              <span>Duration</span><br><strong>Approx. 14 ~ 16 Days</strong>
-              <span>Tools</span><br><strong>HTML5 / CSS3 / jQuery</strong>
-              <span>Devices</span><br><strong>PC / TABLET / MOBILE</strong>
-              <span>Features</span><br><strong>Solely designed & built ~30 main and sub pages</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">Overview</span><br>
+              <strong>A system leveraging Redis Sorted Set (ZSET) in-memory operations to aggregate leaderboard scores and retrieve rankings in real-time with O(log(N)) efficiency under high-traffic environments.</strong><br><br>
+              <span class="badge">Role & Contribution</span><br>
+              <strong>Developer (100% Contribution)</strong><br><br>
+              <span class="badge">Tech Stack</span><br>
+              <strong>Java 17, Spring Boot 3.x, Redis (ZSET), Docker, AWS Lightsail</strong>
+            </div>
           </div>
-          <div class="project-btn">
-            <a href="http://www.educompany.co.kr" class="btn" target="_blank" rel="noopener noreferrer"><span>GO TO PAGE</span></a>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">🏗️ Data Structure & Pipeline</span>
+              <div class="diagram-wrap">
+<pre>
+[User Action / Score Event]
+  │
+[Spring Boot Service]
+  │──> ZADD leaderboards:daily &lt;score&gt; &lt;user_id&gt;  (Update Score)
+  │──> ZREVRANK leaderboards:daily &lt;user_id&gt;     (Real-time Rank Lookup)
+  └─> ZREVRANGEWithScores (Fetch Top N Ranking List)
+</pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SWAROVSKI -->
-    <div class="layer swiper-slide swiper-slide1">
+    <!-- 03. iGaming Admin Management System -->
+    <div class="layer swiper-slide">
       <div class="item">
-        <h3 class="pro_title">SWAROVSKI</h3>
+        <h3 class="pro_title">[DoubleDown Games]<br>iGaming Admin Management System</h3>
+        
         <div class="swiper-center">
-          <div class="project-img"><img src="./images/sw-mockup.png" alt="Swarovski Mockup"></div>
           <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Design 100% + Publishing 100%</strong>
-              <span>Duration</span><br><strong>Approx. 6 ~ 7 Days</strong>
-              <span>Tools</span><br><strong>HTML5 / CSS3 / jQuery</strong>
-              <span>Devices</span><br><strong>PC / TABLET / MOBILE</strong>
-              <span>Features</span><br><strong>Responsive banner layout adjusting count by screen resolution</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">Overview</span><br>
+              <strong>An overseas admin management platform designed to monitor and manage tens of thousands of real-time betting transactions and analytical data at a glance.</strong><br><br>
+              <span class="badge">Role</span><br>
+              <strong>Developer</strong><br><br>
+              <span class="badge">Tech Stack</span><br>
+              <strong>Vue.js, JavaScript, Tabulator.js, REST API</strong>
+            </div>
           </div>
-          <div class="project-btn">
-            <a href="/swarovski/" class="btn" target="_blank" rel="noopener noreferrer">
-              <span>GO TO PAGE</span>
-            </a>
-            <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup1')" aria-controls="myPopup" aria-label="Open popup">
-              <span>VIEW MORE</span>
-            </a>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">🏗️ Architecture Flow: Virtual DOM Data Grid Rendering</span>
+              <div class="diagram-wrap">
+<pre>
+[Large JSON Data (10,000+ Rows)]
+  │
+[Tabulator Virtual DOM Engine]
+  ├─ Renders only visible viewport rows (30–50 Rows) in DOM
+  ├─ Dynamic DOM Swap on scroll events (Prevents memory leaks)
+  └─ Format & Filter Pipe (Optimizes client-side computation)
+</pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PINKFONG -->
-    <div class="layer swiper-slide swiper-slide2">
+    <!-- 04. EduCompany Website & SEO -->
+    <div class="layer swiper-slide">
       <div class="item">
-        <h3 class="pro_title">PINKFONG</h3>
+        <h3 class="pro_title">[EduCompany]<br>Corporate Website & Search Engine Optimization (SEO)</h3>
+        
         <div class="swiper-center">
-          <div class="project-img"><img src="./images/pinkfong-mockup.png" alt="Pinkfong Mockup"></div>
           <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Design 100% + Publishing 100%</strong>
-              <span>Duration</span><br><strong>Approx. 7 ~ 8 Days</strong>
-              <span>Tools</span><br><strong>HTML5 / CSS3 / jQuery</strong>
-              <span>Devices</span><br><strong>PC / MOBILE</strong>
-              <span>Features</span><br><strong>Sub-page structures constructed using custom jQuery arrays</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">Overview</span><br>
+              <strong>Enhanced corporate web traffic by restructuring semantic markup and integrating search engine webmaster tools.</strong><br><br>
+              <span class="badge">Role</span><br>
+              <strong>Developer (100% Contribution)</strong><br><br>
+              <span class="badge">Tech Stack</span><br>
+              <strong>HTML5, CSS3, JavaScript, PHP, Naver Search Advisor</strong><br><br>
+              <a href="http://www.educompany.co.kr/" target="_blank" rel="noopener noreferrer" class="btn-gopage">
+                Go Page 🔗
+              </a>
+            </div>
           </div>
-          <div class="project-btn">
-            <a href="/pinkfong/" class="btn" target="_blank" rel="noopener noreferrer">
-              <span>GO TO PAGE</span>
-            </a>
-            <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup2')" aria-controls="myPopup" aria-label="Open popup">
-              <span>VIEW MORE</span>
-            </a>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">🏗️ Architecture Flow: Semantic Structuring & Search Index Tool Optimization</span>
+              <div class="diagram-wrap">
+<pre>
+[HTML5 Website Layout]
+  │
+  ├─ 1. Restructured semantic tag layout (&lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;)
+  ├─ 2. Generated standard sitemap.xml & robots.txt specifications
+  │
+[Naver Search Advisor (Webmaster Tools)]
+  ├─ 3. Site ownership verification (HTML Tag Injection) & sitemap submission
+  └─ 4. Crawling status monitoring & indexing request ──&gt; Boosted organic search traffic
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">💻 Core Code: Semantic HTML5 Layout Restructuring</span><br>
+              <small>Completely overhauled div-heavy unstructured layouts into semantic tags, helping search engine crawlers accurately parse document hierarchy and importance.</small>
+              <div class="code-block-wrap">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="description" content="Custom corporate education framework and solution company"&gt;
+  &lt;!-- Naver Search Advisor site verification tag --&gt;
+  &lt;meta name="naver-site-verification" content="Verification_Code_Here" /&gt;
+  &lt;title&gt;EduCompany | Corporate Education Solutions&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav aria-label="Main Menu"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/service"&gt;Services&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Innovating Corporate Education Frameworks&lt;/h1&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Customized Consulting&lt;/h2&gt;
+        &lt;p&gt;We offer structured training programs to enhance organizational capabilities.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; EduCompany. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">📄 Search Crawler Rules (robots.txt)</span><br>
+              <small>Established access rules and sitemaps so that Naver and major search crawlers correctly index updated content.</small>
+            </div>
+          </div>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">💡 Key Achievements</span><br>
+              <strong>- Semantic Markup Migration: Improved web accessibility and crawler readability by refactoring non-standard HTML tags</strong><br>
+              <strong>- Naver Search Advisor Integration: Registered site for Naver search indexing and tracked organic traffic growth through sitemap submission, robots.txt optimization, and index requests</strong>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PORTFOLIO -->
-    <div class="layer swiper-slide swiper-slide3">
+    <!-- 05. Swarovski Responsive Website -->
+    <div class="layer swiper-slide">
       <div class="item">
-        <h3 class="pro_title">PORTFOLIO</h3>
+        <h3 class="pro_title">[SWAROVSKI]<br>Swarovski Responsive Brand Website</h3>
+        
         <div class="swiper-center">
-          <div class="project-img"><img src="./images/react-mockup.png" alt="React Portfolio Mockup"></div>
           <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Design 100% + Publishing 100%</strong>
-              <span>Duration</span><br><strong>Approx. 8 ~ 9 Days</strong>
-              <span>Tools</span><br><strong>React</strong>
-              <span>Devices</span><br><strong>PC</strong>
-              <span>Features</span><br><strong>Integrated TODO-LIST feature with calendar in React</strong>
-            </p>
+            <div class="desc-card">
+              <span class="badge">Overview</span><br>
+              <strong>A project implementing fluid responsive layouts adapted to device resolutions and viewports, with modularized responsive banner interactions.</strong><br><br>
+              <span class="badge">Role</span><br>
+              <strong>Developer (100% Publishing)</strong><br><br>
+              <span class="badge">Tech Stack</span><br>
+              <strong>HTML5, CSS3, JavaScript, jQuery</strong><br><br>
+              <a href="./swarovski/index.html" target="_blank" rel="noopener noreferrer" class="btn-gopage">
+                Go Page 🔗
+              </a>
+            </div>
           </div>
-          <div class="project-btn">
-            <a href="https://portfolio-vue-tan.vercel.app/portfolio" class="btn" target="_blank" rel="noopener noreferrer">
-              <span>GO TO PAGE</span>
-            </a>
-            <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup3')" aria-controls="myPopup" aria-label="Open popup">
-              <span>VIEW MORE</span>
-            </a>
+
+          <div class="desc">
+            <div class="desc-card">
+              <span class="badge">💡 Key Features</span><br>
+              <strong>- Breakpoint Adaptability: Designed media query-driven responsive UI</strong><br>
+              <strong>- Banner Control: Dynamically adjusted display grid and banner count based on viewport width and resolution</strong>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- WOONGJIN -->
-    <div class="layer swiper-slide swiper-slide4">
-      <div class="item">
-        <h3 class="pro_title">WOONGJIN</h3>
-        <div class="swiper-center">
-          <div class="project-img"><img src="./images/wj-mockup.png" alt="Woongjin Mockup"></div>
-          <div class="desc">
-            <p>
-              <span>Contribution</span><br><strong>Design 100% + Publishing 100%</strong>
-              <span>Duration</span><br><strong>Approx. 8 ~ 9 Days</strong>
-              <span>Tools</span><br><strong>HTML5 / CSS3 / jQuery</strong>
-              <span>Devices</span><br><strong>PC / TABLET / MOBILE</strong>
-              <span>Features</span><br><strong>Integrated Gnuboard for sub-pages (Business & Affiliate Inquiry)</strong>
-            </p>
-          </div>
-          <div class="project-btn">
-            <a href="/wj/" class="btn" target="_blank" rel="noopener noreferrer">
-              <span>GO TO PAGE</span>
-            </a>
-            <a class="more-btn btn" data-popup="myPopup" onclick="openPopup('#myPopup4')" aria-controls="myPopup" aria-label="Open popup">
-              <span>VIEW MORE</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- Security Notice -->
+    <div class="security-notice">
+      🔒 <strong>Security & Asset Protection Policy Notice:</strong> In compliance with security policy, technical capabilities for these projects are represented through self-architected key diagrams and problem-solving code snippets instead of live production screenshots.
     </div>
+  `,
+
+  /* ---------------- TROUBLESHOOTING ---------------- */
+  "trouble-title": "Trouble Shooting",
+  "trouble-section": `
+    <!-- Issue 1 -->
+    <article class="trouble-card">
+      <div class="trouble-card-inner">
+        <span>01</span>
+        <h3 class="trouble-card-title">Rendering Performance Optimization for Large Admin Data Grids</h3>
+      </div>
+      <p class="trouble-card-sub">[Problem]</p>
+      <p class="trouble-card-desc">Encountered main-thread blocking and severe memory leaks (UI lag) when rendering tens of thousands of analytics data rows directly into the DOM across admin platforms and chart systems.</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
+      <p class="trouble-card-desc">Implemented Tabulator Grid's Virtual DOM engine to dynamically render only the visible viewport rows. Achieved a ~70% reduction in initial render time and decreased DOM memory usage by over 60%.</p>
+    </article>
+
+    <!-- Issue 2 -->
+    <article class="trouble-card">
+      <div class="trouble-card-inner">
+        <span>02</span>
+        <h3 class="trouble-card-title">State Synchronization Inconsistency During Multi-Language & Global Config Changes</h3>
+      </div>
+      <p class="trouble-card-sub">[Problem]</p>
+      <p class="trouble-card-desc">Observed lost reactive state updates or lingering legacy language/permission data across child frontend components when switching languages or role-based menus.</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
+      <p class="trouble-card-desc">Structured language parameters and session state inside a centralized global store using Zustand. Applied the Selector pattern to trigger re-renders only on affected components upon state changes, securing overall data consistency.</p>
+    </article>
+
+    <!-- Issue 3 -->
+    <article class="trouble-card">
+      <div class="trouble-card-inner">
+        <span>03</span>
+        <h3 class="trouble-card-title">Mitigating API Response Delays Caused by Backend Database Bottlenecks</h3>
+      </div>
+      <p class="trouble-card-sub">[Problem]</p>
+      <p class="trouble-card-desc">Frequent timeout errors in CRM/ERP settlement and lookup APIs, caused by unindexed fields and heavy multi-table JOIN operations taking over 3 seconds to complete.</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
+      <p class="trouble-card-desc">Analyzed Slow Query logs to inspect execution plans, created missing composite indexes, and refactored subqueries into aggregated views—drastically reducing average response times to under 300ms.</p>
+    </article>
+
+    <!-- Issue 4 -->
+    <article class="trouble-card">
+      <div class="trouble-card-inner">
+        <span>04</span>
+        <h3 class="trouble-card-title">Shared UI Package Bundling Issues in pnpm Monorepo Environments</h3>
+      </div>
+      <p class="trouble-card-sub">[Problem]</p>
+      <p class="trouble-card-desc">Faced missing CSS styles and module resolution build failures between the shared component package (@repo/ui) and primary applications during monorepo setup.</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
+      <p class="trouble-card-desc">Standardized the 'exports' field in 'package.json', reconfigured TypeScript 'paths' mappings, and cleaned build pipelines, enabling sub-apps to seamlessly import shared modules within an isolated environment.</p>
+    </article>
+
+    <!-- Issue 5 -->
+    <article class="trouble-card">
+      <div class="trouble-card-inner">
+        <span>05</span>
+        <h3 class="trouble-card-title">Dynamic Script Loading & Lifecycle Binding Issues in SPA Environments</h3>
+      </div>
+      <p class="trouble-card-sub">[Problem]</p>
+      <p class="trouble-card-desc">Asynchronous timing gaps between Vue component mounting and external script loading ('/js/main.js', Swiper, AOS) caused broken scroll animations and slider initialization failures.</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
+      <p class="trouble-card-desc">Defined script onload callback handlers within the 'onMounted' lifecycle hook and refactored logic to trigger re-initialization events post-mount, ensuring reliable interactive behaviors.</p>
+    </article>
   `,
 
   /* ---------------- GAME ---------------- */
   "game-title": "Game",
   "game-desc": `
-    <b>HANGMAN GAME:</b> Implemented using React so multiple users can play the word-guessing game together.<br>
+    <b>HANGMAN GAME:</b> Built using React to allow multiple players to enjoy word-guessing games together.<br>
     <b>OCTOPUS GAME:</b> JS-based arcade game where an octopus shoots ink to eliminate sharks.<br>
-    <b>TETRIS GAME:</b> Classic Tetris built in pure JS. Focused on block manipulation logic and animation optimization.<br>
-    <b>PENGUIN GAME:</b> Rhythm-based jump game dodging ice blocks using spacebar inputs.<br><br>
-    All games were crafted considering JavaScript event loops, collision detection logic, and user input responsiveness.
+    <b>TETRIS GAME:</b> Pure JS Tetris implementation. Practical experience in block control logic and animation optimization.<br>
+    <b>PENGUIN GAME:</b> Rhythm-based jump game dodging ice hazards with the spacebar.<br><br>
+    All games were developed considering the JavaScript event loop, collision detection logic, and user input responsiveness.
   `
 };
