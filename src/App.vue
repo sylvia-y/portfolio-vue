@@ -221,23 +221,6 @@
                   </a>
                 </div>
               </div>
-              <div class="game-slider__item swiper-slide">
-                <div class="game-slider__img">
-                  <img src="/images/mockup/peng.jpg" alt="PENGUIN GAME">
-                </div>
-                <div class="game-slider__content">
-                  <span class="game-slider__code">JS를 사용하여 구현</span>
-                  <div class="game-slider__title">PENGUIN GAME</div>
-                  <div class="game-slider__text">
-                    <p>펭귄이 등장하는 얼음들을 점프하여 뛰어넘어가는 게임</p>
-                    <p>게임 방법 : space bar를 눌러 얼음이 다가올 때 점프를 합니다.</p>
-                    <p>수정사항 : 펭귄의 점프 속도와 범위를 수정할 예정입니다.</p>
-                  </div>
-                  <a href="https://portfolio-vue-tan.vercel.app/penguin" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
-                    <span>GO TO PAGE</span>
-                  </a>
-                </div>
-              </div>
             </div>
             <div class="game-slider__pagination"></div>
           </div>
