@@ -1,0 +1,11 @@
+date,product,quantity,price
+2026-09-01,React Book,2,30000
+2026-09-01,Vue Book,1,25000
+2026-09-02,React Book,3,30000
+2026-09-02,Python Book,2,28000
+2026-09-03,Vue Book,4,25000
+2026-09-03,Python Book,3,28000
+2026-09-04,React Book,5,30000
+2026-09-04,Vue Book,2,25000
+2026-09-05,Python Book,4,28000
+2026-09-05,React Book,3,30000

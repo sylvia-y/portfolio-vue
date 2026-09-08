@@ -120,115 +120,158 @@ export default {
 
   /* ---------------- PROJECTS ---------------- */
   "project-section": `
-    <!-- 01. 의원/클리닉 대표 웹사이트 & 관리자 시스템 -->
-    <div class="layer swiper-slide">
-      <div class="item">
-        <h3 class="pro_title">[apps/snow-gangnam]<br>의원/클리닉 대표 웹사이트 & 관리자 시스템</h3>
-        
-        <div class="swiper-center">
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">개요</span><br>
-              <strong>EMR 차트 연동, 시술 전후 비교, 이벤트 CRUD, 다국어 및 권한 제어를 포함한 클리닉 종합 웹/관리자 플랫폼</strong><br><br>
-              <span class="badge">역할 & 기여도</span><br>
-              <strong>개발자 (기여도 100%)</strong><br><br>
-              <span class="badge">주요 기술 스택</span><br>
-              <strong>React, Remix, SCSS, TypeScript, Vite, CodeIgniter 4 (PHP), MySQL, Drizzle ORM</strong>
-            </div>
-          </div>
+    <!-- 00. AI Sales Analyzer -->
+  <div class="layer swiper-slide sales-analyzer-slide">
+    <div class="item">
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">🏗️ 아키텍처 흐름: Remix(Vite) 번들 격리 & 데이터 흐름</span>
-              <div class="diagram-wrap">
+      <h3 class="pro_title">
+        [AI SALES ANALYZER]<br>
+        CSV 기반 매출 데이터 분석 시스템
+      </h3>
+
+      <div class="swiper-center">
+
+        <div class="desc">
+          <div class="desc-card">
+
+            <span class="badge">개요</span><br>
+
+            <strong>
+              CSV 파일을 업로드하면 Python과 Pandas를 활용해
+              매출 데이터를 자동 분석하고 시각화하는 데이터 분석 시스템
+            </strong>
+
+            <br><br>
+
+            <span class="badge">역할 & 기여도</span><br>
+
+            <strong>
+              개발자 (기여도 100%)
+            </strong>
+
+            <br><br>
+
+            <span class="badge">주요 기술 스택</span><br>
+
+            <strong>
+              Vue 3, Python, FastAPI, Pandas, Chart.js, OpenAI API
+            </strong>
+
+          </div>
+        </div>
+
+        <!-- Sales Analyzer 실제 실행 영역 -->
+        <div class="desc sales-analyzer-demo">
+          <div class="desc-card">
+
+            <span class="badge">💻 LIVE DEMO</span>
+
+            <div id="sales-analyzer-mount"></div>
+
+          </div>
+        </div>
+
+        <div class="desc">
+          <div class="desc-card">
+
+            <span class="badge">🏗️ 데이터 처리 흐름</span>
+
+            <div class="diagram-wrap">
 <pre>
-[Browser / Client]
-  │
-  ├─ 1. SSR HTML 요청
-  │
-[Remix Server / Loader]
-  ├─ 2. 동적 임포트 (await import('~/services/*.server')) ──> 서버 전용 모듈만 번들링
-  ├─ 3. PHP API (CodeIgniter 4) 통신 (normalizePermissions)
-  └─ 4. Hydration Guard (Client Mount 후 안전한 UI 바인딩)
+[CSV Upload]
+      │
+      ▼
+[FastAPI]
+      │
+      ▼
+[Python / Pandas]
+      │
+      ├─ 매출 계산
+      ├─ 일별 매출 집계
+      └─ 상품별 매출 집계
+      │
+      ▼
+[JSON REST API]
+      │
+      ▼
+[Vue 3]
+      │
+      ▼
+[Chart.js Visualization]
 </pre>
-              </div>
             </div>
-          </div>
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">💻 핵심 코드 1: 백엔드 권한 데이터 정규화 레이어 (PHP)</span><br>
-              <small>DB/세션 내 Snake Case와 Kebab Case 데이터 불일치 이슈를 별칭 맵과 화이트리스트 검증 기반으로 정규화하여 데이터 일관성을 확보한 로직입니다.</small>
-              <div class="code-block-wrap">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   <!-- 01. 의원/클리닉 대표 웹사이트 & 관리자 시스템 -->
+<div class="layer swiper-slide">
+  <div class="item">
+    <h3 class="pro_title">[apps/snow-gangnam]<br>의원/클리닉 대표 웹사이트 & 관리자 시스템</h3>
+    
+    <div class="swiper-center">
+      <!-- 1. 기본 정보 -->
+      <div class="desc">
+        <div class="desc-card">
+          <span class="badge">개요</span><br>
+          <strong>EMR 차트 연동, 시술 전후 비교, 다국어 및 권한 제어를 포함한 클리닉 종합 웹/관리자 플랫폼</strong><br><br>
+          <span class="badge">역할 & 기여도</span> <strong>개발자 (100%)</strong><br><br>
+          <span class="badge">주요 기술 스택</span> <strong>React, Remix, TypeScript, CodeIgniter 4 (PHP), MySQL</strong>
+        </div>
+      </div>
+
+      <!-- 2. 핵심 구현 1: 권한 정규화 -->
+      <div class="desc">
+        <div class="desc-card">
+          <span class="badge">💻 백엔드 권한 데이터 정규화 (PHP)</span><br>
+          <small>제각각이었던 DB/세션 권한 키 명칭을 별칭 맵 및 화이트리스트로 검증·표준화하여 보안과 데이터 일관성 확보</small>
+          <div class="code-block-wrap">
 <pre>
 public function normalizePermissions(array $rawPermissions): array {
-    $aliases = [
-        'before_after' => 'before-after',
-        'beforeAfter'   => 'before-after',
-        'event_list'   => 'event',
-    ];
-
+    $aliases = ['before_after' => 'before-after', 'beforeAfter' => 'before-after'];
     $whitelist = ['before-after', 'event', 'reservation', 'chart'];
-    $normalized = [];
-
+    
     foreach ($rawPermissions as $key => $value) {
         $standardKey = $aliases[$key] ?? $key;
-        if (in_array($standardKey, $whitelist, true)) {
-            $normalized[$standardKey] = (bool)$value;
-        }
+        if (in_array($standardKey, $whitelist, true)) $normalized[$standardKey] = (bool)$value;
     }
-
     return $normalized;
 }
 </pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">💻 핵심 코드 2: Remix Vite 번들러 격리 & Hydration Guard (React / TypeScript)</span><br>
-              <small>Loader 내 동적 임포트로 번들을 완전 격리하고, SSR과 Client 간 UI mismatch를 차단한 패턴입니다.</small>
-              <div class="code-block-wrap">
-<pre>
-import { useLoaderData } from '@remix-run/react';
-import { useState, useEffect } from 'react';
-
-export const loader = async ({ request }: LoaderFunctionArgs) => {
-  const { getEventData } = await import('~/services/event.server'); 
-  const events = await getEventData(request);
-  return json({ events });
-};
-
-export default function EventComponent() {
-  const { events } = useLoaderData&lt;typeof loader&gt;();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return &lt;EventSkeleton /&gt;;
-
-  return (
-    &lt;div className="event-grid"&gt;
-      {events?.map((event) => (
-        &lt;div key={event.id} className="event-card"&gt;
-          {event.slide_images?.map((img, idx) => (
-            &lt;img key={idx} src={img.url} alt={event.title} className="event-img" /&gt;
-          ))}
-        &lt;/div&gt;
-      ))}
-    &lt;/div&gt;
-  );
-}
-</pre>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
+      <!-- 3. 핵심 구현 2: 번들 격리 및 Hydration Guard -->
+      <div class="desc">
+        <div class="desc-card">
+          <span class="badge">💻 Remix 번들 격리 & Hydration Guard (React)</span><br>
+          <small>서버 모듈 동적 임포트로 번들을 분리하고, Client Mount 후 안전하게 UI를 바인딩하여 SSR 미스매치 차단</small>
+          <div class="code-block-wrap">
+<pre>
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const { getEventData } = await import('~/services/event.server'); // 서버 번들 격리
+  return json({ events: await getEventData(request) });
+};
+
+export default function EventComponent() {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => setIsClient(true), []); // 클라이언트 마운트 감지
+
+  if (!isClient) return &lt;EventSkeleton /&gt;;
+  return &lt;div className="event-grid"&gt;{/* 이벤트 목록 렌더링 */}&lt;/div&gt;;
+}
+</pre>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
 
     <!-- 02. REDIS RANKING -->
     <div class="layer swiper-slide">
@@ -334,52 +377,6 @@ export default function EventComponent() {
 [네이버 서치어드바이저 (Webmaster Tools)]
   ├─ 3. 사이트 소유 확인 (HTML Tag Injection) 및 사이트맵 제출
   └─ 4. 수집 현황 모니터링 & 색인 생성 요청 ──&gt; 네이버 검색 유입량 증대
-</pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">💻 핵심 코드: 시맨틱 HTML5 구조 재설계 (HTML5)</span><br>
-              <small>기존 div 위주의 비구조화된 레이아웃을 시맨틱 태그 구조로 전면 개편하여 검색 크롤러가 문서 구조를 명확히 파악하도록 개선했습니다.</small>
-              <div class="code-block-wrap">
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;meta name="description" content="기업 맞춤형 교육 프레임워크 및 솔루션 전문 기업"&gt;
-  &lt;!-- 네이버 서치어드바이저 사이트 소유 확인 태그 --&gt;
-  &lt;meta name="naver-site-verification" content="Verification_Code_Here" /&gt;
-  &lt;title&gt;에듀컴퍼니 | 기업 교육 솔루션&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;
-    &lt;nav aria-label="메인 메뉴"&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="/about"&gt;회사소개&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="/service"&gt;교육 서비스&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;
-
-  &lt;main&gt;
-    &lt;article&gt;
-      &lt;h1&gt;기업 교육 프레임워크 혁신&lt;/h1&gt;
-      &lt;section&gt;
-        &lt;h2&gt;맞춤형 컨설팅&lt;/h2&gt;
-        &lt;p&gt;조직의 역량 강화를 위한 체계적인 교육 프로그램을 제공합니다.&lt;/p&gt;
-      &lt;/section&gt;
-    &lt;/article&gt;
-  &lt;/main&gt;
-
-  &lt;footer&gt;
-    &lt;p&gt;&amp;copy; EduCompany. All rights reserved.&lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
 </pre>
               </div>
             </div>

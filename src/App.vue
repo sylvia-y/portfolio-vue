@@ -1,24 +1,69 @@
 <script setup>
-import { onMounted } from 'vue'
-
-// 인라인 이벤트 함수 핸들러
-const changeLang = (lang) => {
-  if (typeof window.changeLang === 'function') {
-    window.changeLang(lang)
+  import { onMounted, onUnmounted, createApp, nextTick } from 'vue'
+  import SalesAnalyzer from './components/SalesAnalyzer.vue'
+  
+  let salesAnalyzerApp = null
+  let observer = null
+  
+  const mountSalesAnalyzer = async () => {
+    await nextTick()
+    const el = document.getElementById('sales-analyzer-mount')
+    
+    if (!el) return false
+  
+    // 기존 앱 인스턴스 정리
+    if (salesAnalyzerApp) {
+      salesAnalyzerApp.unmount()
+      salesAnalyzerApp = null
+    }
+  
+    salesAnalyzerApp = createApp(SalesAnalyzer)
+    salesAnalyzerApp.mount(el)
+    return true
   }
-}
-
-onMounted(() => {
-  // /js/main.js 동적 로드 (public/js/main.js 기준)
-  const script = document.createElement('script')
-  script.src = '/js/main.js'
-  script.async = true
-  document.body.appendChild(script)
-})
-
-</script>
+  
+  // DOM 생성을 감지하여 요소가 들어오는 즉시 마운트
+  const startObserving = () => {
+    if (observer) observer.disconnect()
+  
+    observer = new MutationObserver(async () => {
+      const isMounted = await mountSalesAnalyzer()
+      if (isMounted && observer) {
+        observer.disconnect() // 성공적으로 마운트되면 감지 종료
+      }
+    })
+  
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    })
+  }
+  
+  const handleLangOrInit = () => {
+    startObserving()
+    mountSalesAnalyzer()
+  }
+  
+  onMounted(() => {
+    // main.js 동적 로드
+    const script = document.createElement('script')
+    script.src = '/js/main.js'
+    script.async = true
+    document.body.appendChild(script)
+  
+    // 초기 실행 및 언어 변경 이벤트 바인딩
+    handleLangOrInit()
+    window.addEventListener('langChanged', handleLangOrInit)
+  })
+  
+  onUnmounted(() => {
+    window.removeEventListener('langChanged', handleLangOrInit)
+    if (observer) observer.disconnect()
+  })
+  </script>
 
 <template>
+  
   <div id="yy-main">
     <div id="skip">
       <a href="#yy-main-container">본문 바로가기</a>
@@ -114,6 +159,10 @@ onMounted(() => {
           <div class="swiper-button-next"></div>
         </div>
       </section>
+      
+      
+
+
       <section id="game" class="view game">
         <h2 class="view__title">LAB</h2>
         <div class="scroll-txt">↓ SCROLL DOWN HERE </div>
