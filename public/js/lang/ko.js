@@ -44,7 +44,7 @@ export default {
         React / TypeScript 기반 컴포넌트 설계와
         Zustand·React Query를 활용한 상태 관리.
         SSR, Native WebSocket, 대용량 데이터 그리드 및
-        pnpm Monorepo 환경을 경험했습니다.
+        pnpm Monorepo 환경을 경험.
       </p>
       <ul class="tech-wrap">
         <li>
@@ -64,7 +64,7 @@ export default {
         Java / Spring Boot 기반 REST API 개발과
         PHP MVC / CodeIgniter 기반 서비스 유지보수 경험.
         서버 로직 구현부터 Frontend와의 API 연동까지
-        전체 데이터 흐름을 이해하고 개발했습니다.
+        전체 데이터 흐름을 이해 및 개발.
       </p>
       <ul class="tech-wrap">
         <li>
@@ -80,7 +80,8 @@ export default {
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="250">
       <h3>DATABASE & API</h3>
       <p class="back-end">
-        MySQL 기반 DB 스키마 설계 및 복잡한 Join/인덱스 쿼리 최적화. RESTful API 통신 및 Frontend-Backend 간 데이터 흐름 설계.
+        MySQL 기반 DB 스키마 설계 및 복잡한 Join/인덱스 쿼리 최적화. 
+        RESTful API 통신 및 Frontend-Backend 간 데이터 흐름 설계.
       </p>
       <ul class="tech-wrap">
         <li>
