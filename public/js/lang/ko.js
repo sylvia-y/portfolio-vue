@@ -5,8 +5,8 @@ export default {
     <strong><span>YU YEONG KWAK ( 곽 유 영 )</span></strong><br>
     안녕하세요, <span>실제 서비스의 문제를 발견하고 기술로 더 나은 사용자 경험과 개발 환경을 만드는</span> 개발자 곽유영입니다.<br>
     저는 <span>4년차 개발자</span>로 실제 서비스와 관리자 시스템을 개발해왔습니다.<br>
-    React / Vue / Remix를 기반으로 상태 관리, SSR, REST API, 실시간 통신, 다국어 환경 등을 경험했으며,
-    <span>최근에는 AI 기술을 활용한 자동화 및 서비스 개발 영역</span>으로 확장하고 있습니다.
+     React / Vue / Remix와 Java / Spring Boot / PHP를 기반으로 상태 관리, SSR, REST API, 실시간 통신, DB 설계 및 최적화를 경험했으며,
+    <span>최근에는 AI 기술을 활용한 자동화 및 서비스 개발</span>로 기술 영역을 확장하고 있습니다.
   `,
   "about-info": `
     <div class="about_info_box">
@@ -41,9 +41,10 @@ export default {
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="50">
       <h3>FRONT END</h3>
       <p class="front-end">
-        React / TypeScript 기반 컴포넌트 아키텍처 설계 및  Zustand·React Query를 활용한 상태 관리.
-        Native WebSocket 기반 실시간 통신과 Tabulator Virtual DOM을 활용한 대용량 데이터 그리드 구현,
-        pnpm Monorepo 환경을 경험
+        React / TypeScript 기반 컴포넌트 설계와
+        Zustand·React Query를 활용한 상태 관리.
+        SSR, Native WebSocket, 대용량 데이터 그리드 및
+        pnpm Monorepo 환경을 경험했습니다.
       </p>
       <ul class="tech-wrap">
         <li>
@@ -60,7 +61,10 @@ export default {
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="150">
       <h3>BACK END</h3>
       <p class="back-end">
-        PHP MVC 기반 시스템 설계 및 사내 CRM/ERP 유지보수. Java/Spring Boot 기반 서버 개발 및 RESTful API 구현.
+        Java / Spring Boot 기반 REST API 개발과
+        PHP MVC / CodeIgniter 기반 서비스 유지보수 경험.
+        서버 로직 구현부터 Frontend와의 API 연동까지
+        전체 데이터 흐름을 이해하고 개발했습니다.
       </p>
       <ul class="tech-wrap">
         <li>
@@ -82,13 +86,12 @@ export default {
         <li>
           <div class="tech-card"><div class="tech-img tech-img17"></div><h4>MySQL</h4></div>
           <div class="tech-card"><div class="tech-img tech-img18"></div><h4>Redis</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img19"></div><h4>RDBMS</h4></div>
           <div class="tech-card"><div class="tech-img tech-img20"></div><h4>REST API</h4></div>
         </li>
       </ul>
     </div>
 
-    <!-- DEVOPS & COWORK -->
+    <!-- DEVOPS & TOOLS -->
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="350">
       <h3>DEVOPS & COWORK</h3>
       <p class="back-end">
@@ -120,8 +123,8 @@ export default {
     </div>
   `,
 
-    /* ---------------- TROUBLESHOOTING ---------------- */
-    "trouble-title": "Trouble Shooting",
+    /* ---------------- Engineering Notes ---------------- */
+    "trouble-title": "Engineering Notes",
     "trouble-section": `
       <!-- Issue 1 -->
       <article class="trouble-card">
@@ -167,9 +170,9 @@ export default {
         <p class="trouble-card-desc">CRM/ERP 시스템 및 정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
         <p class="trouble-card-desc">
-        Slow Query 로그를 분석하여 쿼리 실행 계획을 점검하고, 
-        필요한 복합 인덱스 추가 및 서브쿼리 구조를 서브 집계 로직을 리팩토링하여
-        평균 응답 시간을 300ms 이하로 단축.</p>
+            Slow Query 로그를 분석하고 실행 계획을 점검하여
+          복합 인덱스를 추가하고 서브쿼리 및 집계 로직을 리팩토링.
+          평균 응답 시간 단축.</p>
       </article>
   
       <!-- Issue 4 -->
@@ -182,20 +185,6 @@ export default {
         <p class="trouble-card-desc">모노레포 구축 시 공통 컴포넌트 패키지(@repo/ui)와 메인 앱 간의 스타일 누락 및 빌드 시 모듈 해석(Module Resolution) 실패 현상 발생.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
         <p class="trouble-card-desc">'package.json' 내 'exports' 필드 표준화 및 TypeScript 'paths' 매핑 재설정, 빌드 파이프라인 정리를 통해 서브 앱에서 공통 모듈을 독립적이고 격리된 환경에서 원활히 참조하도록 세팅 완료.</p>
-      </article>
-  
-      <!-- Issue 5 -->
-      <article class="trouble-card">
-        <div class="trouble-card-inner">
-          <span>05</span>
-          <h3 class="trouble-card-title">SPA 환경 동적 스크립트 로딩 및 라이프사이클 바인딩 문제</h3>
-        </div>
-        <p class="trouble-card-sub">[문제상황]</p>
-        <p class="trouble-card-desc">
-        Vue 컴포넌트 마운트 시점과 외부 스크립트('/js/main.js', Swiper, AOS) 로드 시점 간의 비동기 차이로 인해 
-        스크롤 애니메이션 및 스와이퍼가 정상 동작하지 않는 현상 발생.</p>
-        <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">'onMounted' 라이프사이클 이벤트 내에서 script onload 콜백 핸들러를 정의하고 컴포넌트 마운트 완료 후 이벤트를 재초기화(Re-initialization)하도록 로직을 개편하여 인터랙션 동작의 안정성 확보.</p>
       </article>
     `,
     
@@ -352,7 +341,11 @@ export default {
           <div class="desc">
             <div class="desc-card">
               <span class="badge">개요</span><br>
-              <strong>Redis Sorted Set(ZSET) 인메모리 연산을 활용하여 대규모 트래픽 환경에서도 O(log(N)) 시간에 실시간 리더보드 점수 집계 및 순위를 반환하는 시스템</strong><br><br>
+              <strong> Redis Sorted Set(ZSET)을 활용하여
+  점수 업데이트와 순위 조회가 가능한
+  실시간 랭킹 시스템
+</strong>
+              <br><br>
               <span class="badge">역할 & 기여도</span><br>
               <strong>개발자 (기여도 100%)</strong><br><br>
               <span class="badge">주요 기술 스택</span><br>
@@ -370,7 +363,7 @@ export default {
 [Spring Boot Service]
   │──> ZADD leaderboards:daily &lt;score&gt; &lt;user_id&gt;  (Score 업데이트)
   │──> ZREVRANK leaderboards:daily &lt;user_id&gt;     (실시간 랭킹 조회)
-  └─> ZREVRANGEWITHSCORES (Top N 랭킹 리스트 집계)
+  └─> └─> ZREVRANGE leaderboards:daily 0 N-1 WITHSCORES (Top N 랭킹 리스트 집계)
 </pre>
               </div>
             </div>
@@ -379,7 +372,7 @@ export default {
       </div>
     </div>
 
-   <!-- 03. iGaming 플랫폼 & 어드민 관리 시스템 -->
+<!-- 03. iGaming 플랫폼 & 어드민 관리 시스템 -->
 <div class="layer swiper-slide">
   <div class="item">
 
@@ -397,8 +390,8 @@ export default {
           <span class="badge">개요</span><br>
 
           <strong>
-            대규모 실시간 베팅, 게임 결과 및 통계 데이터를
-            처리·관리하는 고성능 iGaming 플랫폼 및 어드민 시스템
+            대규모 실시간 게임·베팅 데이터를 처리하는
+            iGaming 플랫폼 및 어드민 시스템
           </strong>
 
           <br><br>
@@ -408,42 +401,40 @@ export default {
 
           <br><br>
 
-          <span class="badge">주요 기술 스택</span><br>
+          <span class="badge">기술 스택</span><br>
           <strong>
             React, TypeScript, Vite, Native WebSocket,
-            Zustand, React Query, Tailwind CSS,
-            Tabulator.js, REST API
+            Zustand, React Query, Tabulator.js
           </strong>
 
         </div>
       </div>
 
 
-      <!-- 02. 대용량 데이터 렌더링 -->
+      <!-- 02. 대용량 데이터 -->
       <div class="desc">
         <div class="desc-card">
 
-          <span class="badge">
-            🏗️ 아키텍처 흐름: Virtual DOM Data Grid Rendering
-          </span>
+          <span class="badge">🏗️ 대용량 데이터 렌더링</span>
 
           <div class="diagram-wrap">
 <pre>
-[대규모 JSON Data (10,000+ Rows)]
-
+[10,000+ Rows JSON Data]
         │
-
-[Tabulator Virtual DOM Engine]
-
-        ├─ 뷰포트 내 노출되는 영역만 DOM에 생성
-
-        ├─ Scroll Event에 따른
-        │  동적 DOM 교체로 메모리 사용량 최적화
-
-        └─ Format & Filter Pipeline을 통한
-           클라이언트 데이터 처리 최적화
+        ▼
+[Tabulator Virtual DOM]
+        │
+        ├─ 필요한 Row만 DOM 렌더링
+        ├─ 스크롤에 따른 동적 렌더링
+        └─ Format / Filter 처리
 </pre>
           </div>
+
+          <strong>
+            대규모 관리자 데이터를 Tabulator Virtual DOM으로
+            렌더링하여 UI 렌더링 부담을 줄이고
+            대용량 데이터 환경에 대응
+          </strong>
 
         </div>
       </div>
@@ -453,173 +444,91 @@ export default {
       <div class="desc">
         <div class="desc-card">
 
-          <span class="badge">
-            ⚡ 실시간 통신 아키텍처
-          </span>
+          <span class="badge">⚡ 실시간 통신 구조 개선</span>
 
           <div class="diagram-wrap">
 <pre>
-[기존 통신 방식]
-
 [SockJS / STOMP]
-        │
-        ▼
-[실시간 메시지 처리]
-
-
-            ↓ 아키텍처 개선
-
-
+        ↓
+  통신 구조 개선
+        ↓
 [Native WebSocket]
-        │
-        ▼
-[JSON Message Contract]
-        │
-        ├─ 게임 결과
-        ├─ 베팅 데이터
-        ├─ 통계 데이터
-        └─ 시스템 이벤트
-        │
-        ▼
-[Type 기반 Event Handler]
-        │
-        ▼
+        ↓
+[JSON Message]
+        ↓
+[Event Handler]
+        ↓
 [실시간 UI 업데이트]
 </pre>
           </div>
 
           <strong>
-            기존 SockJS/STOMP 기반 통신 방식을
-            Native WebSocket으로 전환하여 실시간 통신 구조를 단순화하고 게임 결과 및 베팅 데이터 처리를 직접 구현
-            게임 결과 및 베팅 데이터의 실시간 처리 성능을 최적화
+            기존 SockJS/STOMP 기반 통신을
+            Native WebSocket으로 전환하여
+            게임 결과·베팅 데이터를 직접 처리하고
+            실시간 통신 구조를 단순화
           </strong>
 
         </div>
       </div>
 
 
-      <!-- 04. 메시지 컨트랙트 & 이벤트 처리 -->
+      <!-- 04. 상태 관리 -->
       <div class="desc">
         <div class="desc-card">
 
-          <span class="badge">
-            🔄 메시지 컨트랙트 & 이벤트 처리
-          </span>
+          <span class="badge">🧩 상태 관리</span>
 
           <div class="diagram-wrap">
 <pre>
-[WebSocket Server]
-        │
-        │ JSON Message
-        ▼
-[Message Contract]
-        │
-        ├─ eventType
-        ├─ payload
-        └─ timestamp
-        │
-        ▼
-[onmessage Handler]
-        │
-        ├─ 이벤트 타입별 분기 처리
-        │
-        ├─ Payload 검증
-        │
-        ├─ 상태 업데이트
-        │
-        └─ 예외 상황 처리
-</pre>
-          </div>
+[REST API] ──→ [React Query] ──→ [UI]
+                  Server State
 
-          <strong>
-            서버와 클라이언트 간 명확한 JSON 메시지 규약을 정의하고,
-            onmessage 핸들러를 기반으로 이벤트 타입별 분기,
-            데이터 검증 및 예외 처리 로직을 구현
-          </strong>
-
-        </div>
-      </div>
-
-
-      <!-- 05. 상태 관리 & 성능 최적화 -->
-      <div class="desc">
-        <div class="desc-card">
-
-          <span class="badge">
-            🧩 상태 관리 & 성능 최적화
-          </span>
-
-          <div class="diagram-wrap">
-<pre>
-                [API Server]
-                     │
-                     ▼
-              [React Query]
-                     │
-                Server State
-                  & Cache
-                     │
-                     ▼
-                    [UI]
-
-
-               [WebSocket]
-                     │
-                     ▼
-                 [Zustand]
-                     │
+[WebSocket] ──→ [Zustand] ──→ [UI]
                  Client State
-                     │
-                     ▼
-                    [UI]
 </pre>
           </div>
 
           <strong>
-            Zustand를 활용한 경량 전역 상태 관리와
-            React Query를 통한 서버 상태 캐싱 및 동기화를 적용하여
-            효율적인 데이터 흐름과 빠른 페이지 전환 환경을 구축
+            React Query와 Zustand를 활용해
+            서버 상태와 클라이언트 상태를 분리하고
+            데이터 흐름을 효율적으로 관리
           </strong>
 
         </div>
       </div>
 
 
-      <!-- 06. 주요 역할 및 성과 -->
+      <!-- 05. 주요 역할 및 성과 -->
       <div class="desc">
         <div class="desc-card">
 
-          <span class="badge">주요 역할 및 성과</span>
+          <span class="badge">주요 역할</span>
 
           <br><br>
 
           <strong>
-            • 컴포넌트 기반 구조와 기능별 모듈화를 적용하여
-            대규모 트래픽과 지속적인 UI 변경에 유연하게 대응할 수 있는
-            확장 가능한 프론트엔드 아키텍처 설계
+            • React 기반 컴포넌트 및 기능별 모듈 구조 설계
           </strong>
 
           <br><br>
 
           <strong>
-            • SockJS/STOMP에서 Native WebSocket으로 통신 방식을 전환하여
-            불필요한 프로토콜 오버헤드를 줄이고
-            실시간 게임 및 베팅 데이터 처리 최적화
+            • 10,000+ Row 대용량 데이터 그리드 구현 및 최적화
           </strong>
 
           <br><br>
 
           <strong>
-            • 서버-클라이언트 간 JSON 메시지 컨트랙트를 정의하고
-            이벤트 타입별 분기 및 예외 처리 로직 구현
+            • SockJS/STOMP → Native WebSocket 전환 및
+            실시간 이벤트 처리 구현
           </strong>
 
           <br><br>
 
           <strong>
-            • Zustand와 React Query를 활용해
-            클라이언트 상태와 서버 상태를 분리하고
-            효율적인 상태 관리 및 사용자 경험 개선
+            • Zustand / React Query를 활용한
+            클라이언트·서버 상태 분리
           </strong>
 
         </div>
@@ -677,39 +586,7 @@ export default {
             <div class="desc-card">
               <span class="badge">💡 주요 개선 성과</span><br>
               <strong>- 시맨틱 마크업 전환: 비표준 태그 수정을 통해 웹 접근성 및 검색 크롤러의 문서 구조 파악 용이성 확보</strong><br>
-              <strong>- 네이버 서치어드바이저 연동: 사이트맵 제출, robots.txt 최적화, 수집 요청 관리를 통해 네이버 검색 색인 등록 및 자연 유입량(Organic Traffic) 증가 추이 모니터링</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 05. 스와로브스키 반응형 웹사이트 -->
-    <div class="layer swiper-slide">
-      <div class="item">
-        <h3 class="pro_title">[SWAROVSKI]<br>스와로브스키 반응형 브랜드 웹사이트</h3>
-        
-        <div class="swiper-center">
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">개요</span><br>
-              <strong>디바이스 해상도 및 뷰포트 크기에 유연하게 대응하도록 분기 레이아웃을 구현하고, 반응형 배너 인터랙션을 모듈화한 프로젝트</strong><br><br>
-              <span class="badge">역할</span><br>
-              <strong>개발자 (퍼블리싱 100%)</strong><br><br>
-              <span class="badge">주요 기술 스택</span><br>
-              <strong>HTML5, CSS3, JavaScript, jQuery</strong><br><br>
-              <!-- 스와로브스키 이동 링크 URL을 href에 넣으시면 됩니다 -->
-              <a href="./swarovski/index.html" target="_blank" rel="noopener noreferrer" class="btn-gopage">
-                Go Page 🔗
-              </a>
-            </div>
-          </div>
-
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">💡 핵심 특징</span><br>
-              <strong>- Breakpoint 대응: 미디어 쿼리 기반 Responsive UI 설계</strong><br>
-              <strong>- 배너 제어: 뷰포트 너비 및 해상도에 따른 노출 그리드/배너 수량 가변 조절</strong>
+              <strong>- 네이버 서치어드바이저 연동: 사이트맵 제출, robots.txt 최적화, 수집 요청 관리를 통해 네이버 검색 색인 등록</strong>
             </div>
           </div>
         </div>
@@ -743,7 +620,6 @@ export default {
       <p>다가오는 상어를 피해 먹물을 발사하며 몰입감 있는 플레이를 제공합니다.</p>
       <p><strong>HOW TO PLAY</strong><br>
         <code>방향키</code> 이동 / <code>Spacebar</code> 먹물 발사<br>
-        <small class="update-note">✨ 방어 아이템 및 난이도 업데이트 예정</small>
       </p>
     </div>
   `,
@@ -755,7 +631,6 @@ export default {
        <p>격자 배열 최적화와 블록 충돌 감지 로직을 구현하여 원작의 손맛을 살렸습니다.</p>
        <p><strong>HOW TO PLAY</strong><br>
          <code>방향키</code> 회전 및 이동 / <code>Spacebar</code> 하드 드롭<br>
-         <small class="update-note">⚡ 키 연속 입력 및 홀드 시스템 최적화 진행 중</small>
        </p>
      </div>
 `,

@@ -5,21 +5,17 @@ export default {
   "about-title": "About",
 
   "about-desc": `
-
     <strong><span>YU YEONG KWAK ( 곽 유 영 )</span></strong><br>
-
-    Hello, I'm Yu Yeong Kwak, a developer who <span>identifies problems in real-world services and creates better user experiences and development environments through technology.</span><br>
-    I am a <span>4-year experienced developer</span> who has developed real-world services and administrative systems.<br>
-    I have experience with state management, SSR, REST APIs, real-time communication, and multilingual environments using React / Vue / Remix,
-    and <span>have recently expanded my focus into service development and automation using AI technologies.</span>
-
+    Hello, I’m Yu Yeong Kwak, a developer who <span>identifies problems in real-world services and improves user experiences and development environments through technology.</span><br>
+    I am a <span>4-year developer</span> with experience developing production services and administrative systems.<br>
+    I have worked with React / Vue / Remix and Java / Spring Boot / PHP, covering state management, SSR, REST APIs, real-time communication, database design and optimization.
+    <span>Recently, I have been expanding my technical scope into AI-powered automation and service development.</span>
   `,
 
   "about-info": `
-
     <div class="about_info_box">
       <p>2025.12 ~ 2026.05</p>
-      <p class="about_info_comp">Wavecode Inc.<span>(Development Team - Developer)</span></p>
+      <p class="about_info_comp">Wavecode Co., Ltd.<span>(Development Team - Developer)</span></p>
     </div>
 
     <div class="about_info_box">
@@ -39,14 +35,13 @@ export default {
 
     <div class="about_info_box">
       <p>2022.09 ~ 2023.02</p>
-      <p class="about_info_comp">UI/UX-based Web Publishing & Frontend Development Course</p>
+      <p class="about_info_comp">UI/UX-based Web Publishing & Frontend Development Program</p>
     </div>
 
     <div class="about_info_box">
       <p>2021.03 ~ 2022.02</p>
-      <p class="about_info_comp">CBS Young Talent Education Academy<span>(Creativity & Language Teacher)</span></p>
+      <p class="about_info_comp">CBS Academy for Gifted Education<span>(Creativity & Language Teacher)</span></p>
     </div>
-
   `,
 
 
@@ -61,40 +56,28 @@ export default {
       <h3>FRONT END</h3>
 
       <p class="front-end">
-        React / TypeScript-based component architecture design and state management using Zustand and React Query.
-        Implemented large-scale data grids using Native WebSocket for real-time communication and Tabulator Virtual DOM,
-        with experience working in a pnpm Monorepo environment.
+        Component architecture with React / TypeScript and
+        state management using Zustand and React Query.
+        Experienced with SSR, Native WebSocket,
+        large-scale data grids, and pnpm Monorepo environments.
       </p>
 
       <ul class="tech-wrap">
+
         <li>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img5"></div>
-            <h4>React</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img5"></div><h4>React</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img6"></div>
-            <h4>JavaScript</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img6"></div><h4>JavaScript</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img14"></div>
-            <h4>Vue</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img14"></div><h4>Vue</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img7"></div>
-            <h4>TypeScript</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img7"></div><h4>TypeScript</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img8"></div>
-            <h4>Sass</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img8"></div><h4>Sass</h4></div>
 
         </li>
+
       </ul>
 
     </div>
@@ -107,34 +90,26 @@ export default {
       <h3>BACK END</h3>
 
       <p class="back-end">
-        System design and internal CRM/ERP maintenance based on PHP MVC.
-        Server-side development and RESTful API implementation using Java / Spring Boot.
+        Experience developing REST APIs with Java / Spring Boot
+        and maintaining services built with PHP MVC / CodeIgniter.
+        I have worked across the full data flow,
+        from implementing server-side logic to integrating APIs with the frontend.
       </p>
 
       <ul class="tech-wrap">
+
         <li>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img12"></div>
-            <h4>PHP</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img12"></div><h4>PHP</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img9"></div>
-            <h4>Java</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img9"></div><h4>Java</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img16"></div>
-            <h4>Thymeleaf</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img16"></div><h4>Thymeleaf</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img13"></div>
-            <h4>JSP</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img13"></div><h4>JSP</h4></div>
 
         </li>
+
       </ul>
 
     </div>
@@ -147,74 +122,54 @@ export default {
       <h3>DATABASE & API</h3>
 
       <p class="back-end">
-        MySQL-based database schema design and optimization of complex Join queries and indexes.
-        RESTful API integration and data flow design between Frontend and Backend.
+        MySQL database schema design and optimization of complex
+        JOIN queries and indexes. RESTful API communication
+        and data flow design between frontend and backend.
       </p>
 
       <ul class="tech-wrap">
+
         <li>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img17"></div>
-            <h4>MySQL</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img17"></div><h4>MySQL</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img18"></div>
-            <h4>Redis</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img18"></div><h4>Redis</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img19"></div>
-            <h4>RDBMS</h4>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-img tech-img20"></div>
-            <h4>REST API</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img20"></div><h4>REST API</h4></div>
 
         </li>
+
       </ul>
 
     </div>
 
 
-    <!-- DEVOPS & COWORK -->
+    <!-- DEVOPS & TOOLS -->
 
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="350">
 
-      <h3>DEVOPS & COLLABORATION</h3>
+      <h3>DEVOPS & COWORK</h3>
 
       <p class="back-end">
         Version control using Git / GitLab and Lazygit.
-        Experience with Linux / AWS server environments and collaboration workflows using Notion.
+        Familiar with Linux / AWS server environments
+        and collaborative workflows using Notion.
       </p>
 
       <ul class="tech-wrap">
+
         <li>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img21"></div>
-            <h4>Git/GitLab</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img21"></div><h4>Git/GitLab</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img22"></div>
-            <h4>AWS</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img22"></div><h4>AWS</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img23"></div>
-            <h4>Linux</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img23"></div><h4>Linux</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img24"></div>
-            <h4>Notion</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img24"></div><h4>Notion</h4></div>
 
         </li>
+
       </ul>
 
     </div>
@@ -227,29 +182,23 @@ export default {
       <h3>DESIGN</h3>
 
       <p class="design">
-        Interpreting UI/UX visual references and implementing interfaces using Figma, Photoshop, and Illustrator,
-        including visual asset alignment.
+        UI/UX visual reference interpretation and interface implementation
+        using Figma, Photoshop, and Illustrator, with a focus on
+        visual asset alignment and consistency.
       </p>
 
       <ul class="tech-wrap">
+
         <li>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img15"></div>
-            <h4>Figma</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img15"></div><h4>Figma</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img1"></div>
-            <h4>Photoshop</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img1"></div><h4>Photoshop</h4></div>
 
-          <div class="tech-card">
-            <div class="tech-img tech-img2"></div>
-            <h4>Illustrator</h4>
-          </div>
+          <div class="tech-card"><div class="tech-img tech-img2"></div><h4>Illustrator</h4></div>
 
         </li>
+
       </ul>
 
     </div>
@@ -257,9 +206,9 @@ export default {
   `,
 
 
-  /* ---------------- TROUBLESHOOTING ---------------- */
+  /* ---------------- Engineering Notes ---------------- */
 
-  "trouble-title": "Trouble Shooting",
+  "trouble-title": "Engineering Notes",
 
   "trouble-section": `
 
@@ -268,24 +217,29 @@ export default {
     <article class="trouble-card">
 
       <div class="trouble-card-inner">
+
         <span>01</span>
+
         <h3 class="trouble-card-title">
-          Large-Scale Admin Grid Data Rendering Performance Optimization
+          Large-Scale Admin Grid Rendering Performance Optimization
         </h3>
+
       </div>
 
       <p class="trouble-card-sub">[Problem]</p>
 
       <p class="trouble-card-desc">
-        When displaying tens of thousands of statistical data records in the admin platform and chart system,
-        severe UI blocking and memory degradation occurred due to rendering large amounts of data directly into the DOM.
+        Rendering tens of thousands of statistical records directly into the DOM
+        on an administrative platform and chart system caused blocking,
+        severe memory usage, and UI lag.
       </p>
 
-      <p class="trouble-card-sub">[Solution & Result]</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
 
       <p class="trouble-card-desc">
-        Applied Tabulator's Virtual DOM technology to dynamically render only the data visible within the viewport.
-        Achieved faster initial rendering and reduced DOM memory usage by more than 60%.
+        Applied Tabulator's Virtual DOM technology to dynamically render
+        only the data within the visible viewport.
+        Improved UI rendering performance in large-scale data environments.
       </p>
 
     </article>
@@ -296,28 +250,32 @@ export default {
     <article class="trouble-card">
 
       <div class="trouble-card-inner">
+
         <span>02</span>
+
         <h3 class="trouble-card-title">
-          State Synchronization Inconsistency During Multilingual and Global Setting Changes
+          State Synchronization Issues During Language & Global Setting Changes
         </h3>
+
       </div>
 
       <p class="trouble-card-sub">[Problem]</p>
 
       <p class="trouble-card-desc">
-        When switching languages and role-based menus,
-        responsive data updates between child components were sometimes lost,
-        leaving stale language or permission data in the frontend.
+        When switching languages or role-based menus,
+        reactive updates between frontend components were sometimes lost,
+        leaving stale language or permission-related data.
       </p>
 
-      <p class="trouble-card-sub">[Solution & Result]</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
 
       <p class="trouble-card-desc">
-        Managed language and user settings through Zustand-based global state,
-        and synchronized multilingual and session states between the client and server
-        by integrating Cookie and Redis Session.
-        Applied the Selector pattern so that only the required components re-rendered when state changed,
-        ensuring data consistency.
+        Managed language and user settings with Zustand-based global state,
+        and synchronized multilingual and session state between the client
+        and server using Cookie and Redis Session.
+        Applied the Selector pattern so that only the components
+        affected by state changes would re-render,
+        improving data consistency.
       </p>
 
     </article>
@@ -328,25 +286,29 @@ export default {
     <article class="trouble-card">
 
       <div class="trouble-card-inner">
+
         <span>03</span>
+
         <h3 class="trouble-card-title">
-          Improving API Response Delays Caused by Backend Database Bottlenecks
+          Improving API Response Latency Caused by Backend Database Bottlenecks
         </h3>
+
       </div>
 
       <p class="trouble-card-sub">[Problem]</p>
 
       <p class="trouble-card-desc">
-        API requests for CRM/ERP systems and settlement data required more than 3 seconds
-        due to complex Joins and missing indexes, frequently resulting in timeout errors.
+        CRM/ERP systems and settlement APIs took more than 3 seconds
+        to respond due to complex JOIN queries and missing indexes,
+        frequently resulting in timeout errors.
       </p>
 
-      <p class="trouble-card-sub">[Solution & Result]</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
 
       <p class="trouble-card-desc">
-        Analyzed Slow Query logs and reviewed query execution plans,
-        added required composite indexes, and refactored subquery and aggregation logic,
-        reducing the average response time to under 300ms.
+        Analyzed Slow Query logs and execution plans,
+        added composite indexes, and refactored subqueries
+        and aggregation logic to reduce average response time.
       </p>
 
     </article>
@@ -357,56 +319,31 @@ export default {
     <article class="trouble-card">
 
       <div class="trouble-card-inner">
+
         <span>04</span>
+
         <h3 class="trouble-card-title">
-          Shared UI Package Bundling Issue in a pnpm Monorepo Environment
+          Shared UI Package Bundling Issues in a pnpm Monorepo
         </h3>
+
       </div>
 
       <p class="trouble-card-sub">[Problem]</p>
 
       <p class="trouble-card-desc">
-        During the monorepo setup, style omissions and module resolution failures occurred
-        between the shared component package (@repo/ui) and the main application during the build process.
+        During monorepo setup, the shared component package (@repo/ui)
+        experienced missing styles and module resolution failures
+        when integrated with the main application.
       </p>
 
-      <p class="trouble-card-sub">[Solution & Result]</p>
+      <p class="trouble-card-sub">[Solution & Outcome]</p>
 
       <p class="trouble-card-desc">
         Standardized the 'exports' field in 'package.json',
         reconfigured TypeScript 'paths' mappings,
-        and cleaned up the build pipeline so that sub-applications could reliably reference
-        shared modules in an independent and isolated environment.
-      </p>
-
-    </article>
-
-
-    <!-- Issue 5 -->
-
-    <article class="trouble-card">
-
-      <div class="trouble-card-inner">
-        <span>05</span>
-        <h3 class="trouble-card-title">
-          Dynamic Script Loading and Lifecycle Binding Issues in an SPA Environment
-        </h3>
-      </div>
-
-      <p class="trouble-card-sub">[Problem]</p>
-
-      <p class="trouble-card-desc">
-        Due to asynchronous timing differences between React component mounting
-        and the loading of external scripts ('/js/main.js', Swiper, AOS),
-        scroll animations and the Swiper component did not work reliably.
-      </p>
-
-      <p class="trouble-card-sub">[Solution & Result]</p>
-
-      <p class="trouble-card-desc">
-        Defined a script onload callback handler within the 'useEffect' lifecycle,
-        then re-initialized the required events after component mounting was completed,
-        improving the stability of interactive behaviors.
+        and organized the build pipeline so that sub-applications
+        could reliably reference shared modules
+        in an independent and isolated environment.
       </p>
 
     </article>
@@ -425,8 +362,11 @@ export default {
       <div class="item">
 
         <h3 class="pro_title">
+
           [AI SALES ANALYZER]<br>
-          CSV-based Sales Data Analysis System
+
+          CSV-Based Sales Data Analysis System
+
         </h3>
 
         <div class="swiper-center">
@@ -438,8 +378,9 @@ export default {
               <span class="badge">Overview</span><br>
 
               <strong>
-                A data analysis system that automatically analyzes and visualizes
-                sales data using Python and Pandas after uploading a CSV file.
+                A data analysis system that automatically analyzes
+                and visualizes sales data using Python and Pandas
+                after a CSV file is uploaded.
               </strong>
 
               <br><br>
@@ -447,7 +388,7 @@ export default {
               <span class="badge">Role & Contribution</span><br>
 
               <strong>
-                Developer (100% Contribution)
+                Developer (100% contribution)
               </strong>
 
               <br><br>
@@ -504,7 +445,7 @@ export default {
 
       │
 
-      ├─ Sales Calculation
+      ├─ Revenue Calculation
 
       ├─ Daily Sales Aggregation
 
@@ -543,7 +484,7 @@ export default {
     </div>
 
 
-    <!-- 01. Clinic Website & Administrative System -->
+    <!-- 01. Clinic Website & Admin System -->
 
     <div class="layer swiper-slide">
 
@@ -567,22 +508,18 @@ export default {
 
               <strong>
                 A comprehensive clinic web and administrative platform
-                integrating EMR charts, before-and-after procedure comparisons,
+                featuring EMR chart integration, before-and-after treatment comparison,
                 multilingual support, and role-based access control.
               </strong>
 
               <br><br>
 
               <span class="badge">Role & Contribution</span>
-
-              <strong>
-                Developer (100%)
-              </strong>
+              <strong>Developer (100%)</strong>
 
               <br><br>
 
               <span class="badge">Tech Stack</span>
-
               <strong>
                 React, Remix, TypeScript, CodeIgniter 4 (PHP), MySQL
               </strong>
@@ -603,41 +540,24 @@ export default {
               </span><br>
 
               <small>
-                Separated server-side modules through dynamic imports
-                and safely bound the UI after client mount to prevent SSR mismatches.
+                Isolated server-only modules through dynamic imports
+                and safely bound UI after client mount to prevent SSR mismatches.
               </small>
 
               <div class="code-block-wrap">
 
                 <pre>
-
                 export const loader = async ({ request }: LoaderFunctionArgs) => {
-
-                  const { getEventData } =
-                    await import('~/services/event.server');
-
-                  return json({
-                    events: await getEventData(request)
-                  });
-
+                  const { getEventData } = await import('~/services/event.server'); // Server bundle isolation
+                  return json({ events: await getEventData(request) });
                 };
 
                 export default function EventComponent() {
-
                   const [isClient, setIsClient] = useState(false);
-
-                  useEffect(() => setIsClient(true), []);
-
-                  if (!isClient) return <EventSkeleton />;
-
-                  return (
-                    <div className="event-grid">
-                      {/* Render event list */}
-                    </div>
-                  );
-
+                  useEffect(() => setIsClient(true), []); // Detect client mount
+                  if (!isClient) return &lt;EventSkeleton /&gt;;
+                  return &lt;div className="event-grid"&gt;{/* Render event list */}&lt;/div&gt;;
                 }
-
                 </pre>
 
               </div>
@@ -654,12 +574,12 @@ export default {
             <div class="desc-card">
 
               <span class="badge">
-                🎨 Reservation Flow & My Page UI/UX Renewal (Before & After)
+                🎨 Reservation Flow & My Page UI/UX Redesign (Before & After)
               </span><br>
 
               <small>
-                Reorganized the complex calendar picker,
-                product selection, and reservation modification layouts into card-based structures
+                Reorganized complex calendar pickers, product selection,
+                and reservation modification layouts into card-based interfaces
                 to improve information visibility and reduce user drop-off.
               </small>
 
@@ -667,7 +587,7 @@ export default {
 
                 <img
                   src="/images/wavecode_ui.png"
-                  alt="Before and after UI improvement"
+                  alt="Before and after UI improvements"
                   style="max-width: 90%; height: auto; border-radius: 8px; border: 1px solid #eee;"
                 >
 
@@ -692,7 +612,7 @@ export default {
 
         <h3 class="pro_title">
           [REDIS RANKING]<br>
-          Real-time Ranking System Based on Sorted Set
+          Real-Time Ranking System with Sorted Sets
         </h3>
 
         <div class="swiper-center">
@@ -704,9 +624,9 @@ export default {
               <span class="badge">Overview</span><br>
 
               <strong>
-                A real-time leaderboard system using Redis Sorted Set (ZSET)
-                in-memory operations to calculate scores and return rankings
-                in O(log(N)) time even under high-traffic conditions.
+                A real-time ranking system using
+                Redis Sorted Set (ZSET) for score updates
+                and rank lookups.
               </strong>
 
               <br><br>
@@ -714,7 +634,7 @@ export default {
               <span class="badge">Role & Contribution</span><br>
 
               <strong>
-                Developer (100% Contribution)
+                Developer (100% contribution)
               </strong>
 
               <br><br>
@@ -734,9 +654,7 @@ export default {
 
             <div class="desc-card">
 
-              <span class="badge">
-                🏗️ Data Structure & Pipeline
-              </span>
+              <span class="badge">🏗️ Data Structure & Pipeline</span>
 
               <div class="diagram-wrap">
 
@@ -748,11 +666,11 @@ export default {
 
 [Spring Boot Service]
 
-  │──> ZADD leaderboards\:daily &lt;score&gt; &lt;user_id&gt;  (Score Update)
+  │──&gt; ZADD leaderboards:daily &lt;score&gt; &lt;user_id&gt;  (Score Update)
 
-  │──> ZREVRANK leaderboards\:daily &lt;user_id&gt;     (Real-time Ranking Lookup)
+  │──&gt; ZREVRANK leaderboards:daily &lt;user_id&gt;     (Real-Time Rank Lookup)
 
-  └─> ZREVRANGEWITHSCORES (Top N Leaderboard Aggregation)
+  └─&gt; └─&gt; ZREVRANGE leaderboards:daily 0 N-1 WITHSCORES (Top N Ranking List)
 
 </pre>
 
@@ -769,7 +687,7 @@ export default {
     </div>
 
 
-    <!-- 03. iGaming Platform & Administrative System -->
+    <!-- 03. iGaming Platform & Admin System -->
 
     <div class="layer swiper-slide">
 
@@ -777,7 +695,7 @@ export default {
 
         <h3 class="pro_title">
 
-          [DOUBLEDOWN GAMES]<br>
+          [DoubleDown Games]<br>
 
           iGaming Platform & Administrative System
 
@@ -795,18 +713,15 @@ export default {
               <span class="badge">Overview</span><br>
 
               <strong>
-                A high-performance iGaming platform and administrative system
-                designed to process and manage large-scale real-time betting,
-                game results, and statistical data.
+                An iGaming platform and administrative system
+                handling large-scale real-time game and betting data.
               </strong>
 
               <br><br>
 
               <span class="badge">Role</span><br>
 
-              <strong>
-                Frontend Developer
-              </strong>
+              <strong>Frontend Developer</strong>
 
               <br><br>
 
@@ -814,8 +729,7 @@ export default {
 
               <strong>
                 React, TypeScript, Vite, Native WebSocket,
-                Zustand, React Query, Tailwind CSS,
-                Tabulator.js, REST API
+                Zustand, React Query, Tabulator.js
               </strong>
 
             </div>
@@ -823,104 +737,82 @@ export default {
           </div>
 
 
-          <!-- 02. Large-Scale Data Rendering -->
+          <!-- 02. Large-Scale Data -->
 
           <div class="desc">
 
             <div class="desc-card">
 
-              <span class="badge">
-                🏗️ Architecture Flow: Virtual DOM Data Grid Rendering
-              </span>
+              <span class="badge">🏗️ Large-Scale Data Rendering</span>
 
               <div class="diagram-wrap">
 
 <pre>
 
-[Large-Scale JSON Data (10,000+ Rows)]
+[10,000+ Rows JSON Data]
 
         │
 
-[Tabulator Virtual DOM Engine]
+        ▼
 
-        ├─ Only visible rows within the viewport are created in the DOM
+[Tabulator Virtual DOM]
 
-        ├─ Dynamic DOM replacement based on
+        │
 
-        │  scroll events to optimize memory usage
+        ├─ Render only required rows into the DOM
 
-        └─ Client-side data processing optimization
+        ├─ Dynamic rendering based on scrolling
 
-           through the Format & Filter Pipeline
+        └─ Format / Filter processing
 
 </pre>
 
               </div>
+
+              <strong>
+                Reduced UI rendering overhead and handled
+                large-scale administrative data by using
+                Tabulator Virtual DOM.
+              </strong>
 
             </div>
 
           </div>
 
 
-          <!-- 03. Real-time Communication -->
+          <!-- 03. Real-Time Communication -->
 
           <div class="desc">
 
             <div class="desc-card">
 
-              <span class="badge">
-                ⚡ Real-time Communication Architecture
-              </span>
+              <span class="badge">⚡ Real-Time Communication Architecture</span>
 
               <div class="diagram-wrap">
 
 <pre>
 
-[Previous Communication Method]
-
 [SockJS / STOMP]
 
-        │
+        ↓
 
-        ▼
+  Communication Refactoring
 
-[Real-time Message Processing]
-
-
-
-            ↓ Architecture Improvement
-
-
+        ↓
 
 [Native WebSocket]
 
-        │
+        ↓
 
-        ▼
+[JSON Message]
 
-[JSON Message Contract]
+        ↓
 
-        │
+[Event Handler]
 
-        ├─ Game Results
+        ↓
 
-        ├─ Betting Data
-
-        ├─ Statistical Data
-
-        └─ System Events
-
-        │
-
-        ▼
-
-[Type-based Event Handler]
-
-        │
-
-        ▼
-
-[Real-time UI Update]
+[Real-Time UI Update]
 
 </pre>
 
@@ -928,8 +820,8 @@ export default {
 
               <strong>
                 Migrated from SockJS/STOMP-based communication
-                to Native WebSocket to reduce unnecessary protocol overhead
-                and optimize the real-time processing of game results and betting data.
+                to Native WebSocket to directly process game results
+                and betting data, simplifying the real-time communication architecture.
               </strong>
 
             </div>
@@ -937,68 +829,34 @@ export default {
           </div>
 
 
-          <!-- 04. Message Contract & Event Handling -->
+          <!-- 04. State Management -->
 
           <div class="desc">
 
             <div class="desc-card">
 
-              <span class="badge">
-                🔄 Message Contract & Event Handling
-              </span>
+              <span class="badge">🧩 State Management</span>
 
               <div class="diagram-wrap">
 
 <pre>
 
-[WebSocket Server]
+[REST API] ──→ [React Query] ──→ [UI]
 
-        │
+                  Server State
 
-        │ JSON Message
+[WebSocket] ──→ [Zustand] ──→ [UI]
 
-        ▼
-
-[Message Contract]
-
-        │
-
-        ├─ eventType
-
-        ├─ payload
-
-        └─ timestamp
-
-        │
-
-        ▼
-
-[onmessage Handler]
-
-        │
-
-        ├─ Event-type-based branching
-
-        │
-
-        ├─ Payload validation
-
-        │
-
-        ├─ State update
-
-        │
-
-        └─ Exception handling
+                 Client State
 
 </pre>
 
               </div>
 
               <strong>
-                Defined a clear JSON message contract between the server and client,
-                and implemented event-type-based branching,
-                data validation, and exception handling through the onmessage handler.
+                Separated server state and client state
+                using React Query and Zustand,
+                enabling more efficient data flow management.
               </strong>
 
             </div>
@@ -1006,119 +864,43 @@ export default {
           </div>
 
 
-          <!-- 05. State Management & Performance Optimization -->
+          <!-- 05. Key Responsibilities & Achievements -->
 
           <div class="desc">
 
             <div class="desc-card">
 
-              <span class="badge">
-                🧩 State Management & Performance Optimization
-              </span>
+              <span class="badge">Key Responsibilities</span>
 
-              <div class="diagram-wrap">
-
-<pre>
-
-                [API Server]
-
-                     │
-
-                     ▼
-
-              [React Query]
-
-                     │
-
-                Server State
-
-                 & Cache
-
-                     │
-
-                     ▼
-
-                    [UI]
-
-
-
-               [WebSocket]
-
-                     │
-
-                     ▼
-
-                 [Zustand]
-
-                     │
-
-                Client State
-
-                     │
-
-                     ▼
-
-                    [UI]
-
-</pre>
-
-              </div>
+              <br><br>
 
               <strong>
-                Applied lightweight global state management with Zustand
-                and server-state caching and synchronization with React Query,
-                establishing an efficient data flow and faster page transition experience.
+                • Designed React-based component and feature-level modular architecture
+              </strong>
+
+              <br><br>
+
+              <strong>
+                • Implemented and optimized a 10,000+ row large-scale data grid
+              </strong>
+
+              <br><br>
+
+              <strong>
+                • Migrated SockJS/STOMP → Native WebSocket
+                and implemented real-time event handling
+              </strong>
+
+              <br><br>
+
+              <strong>
+                • Separated client and server state
+                using Zustand / React Query
               </strong>
 
             </div>
 
           </div>
-
-
-          <!-- 06. Key Responsibilities & Achievements -->
-
-          <div class="desc">
-
-            <div class="desc-card">
-
-              <span class="badge">
-                Key Responsibilities & Achievements
-              </span>
-
-              <br><br>
-
-              <strong>
-                • Designed a scalable frontend architecture using
-                component-based structures and feature-based modularization
-                to flexibly respond to large-scale traffic and continuous UI changes.
-              </strong>
-
-              <br><br>
-
-              <strong>
-                • Migrated the communication method from SockJS/STOMP
-                to Native WebSocket to reduce unnecessary protocol overhead
-                and optimize real-time game and betting data processing.
-              </strong>
-
-              <br><br>
-
-              <strong>
-                • Defined a JSON message contract between the server and client
-                and implemented event-type-based branching and exception handling logic.
-              </strong>
-
-              <br><br>
-
-              <strong>
-                • Separated client state and server state using Zustand and React Query,
-                improving state management efficiency and overall user experience.
-              </strong>
-
-            </div>
-
-          </div>
-
 
         </div>
 
@@ -1134,7 +916,7 @@ export default {
       <div class="item">
 
         <h3 class="pro_title">
-          [EDUCOMPANY]<br>
+          [EduCompany]<br>
           Corporate Website & Search Engine Optimization (SEO)
         </h3>
 
@@ -1148,17 +930,16 @@ export default {
               <span class="badge">Overview</span><br>
 
               <strong>
-                Improved corporate website search visibility and organic traffic
-                through semantic markup restructuring and integration with webmaster tools.
+                Improved corporate website search visibility
+                through semantic markup restructuring
+                and integration with search engine webmaster tools.
               </strong>
 
               <br><br>
 
               <span class="badge">Role</span><br>
 
-              <strong>
-                Developer (100% Contribution)
-              </strong>
+              <strong>Developer (100% contribution)</strong>
 
               <br><br>
 
@@ -1189,7 +970,7 @@ export default {
             <div class="desc-card">
 
               <span class="badge">
-                🏗️ Architecture Flow: Semantic Structure & Search Crawler Optimization
+                🏗️ Architecture Flow: Semantic Structure & Search Indexing Optimization
               </span>
 
               <div class="diagram-wrap">
@@ -1200,21 +981,19 @@ export default {
 
   │
 
-  ├─ 1. Redesigned semantic structure using
-  │     &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;
+  ├─ 1. Restructured semantic tags:
+  │      &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt;
 
   ├─ 2. Created sitemap.xml & robots.txt
-  │     according to standard specifications
-
   │
 
 [Naver Search Advisor (Webmaster Tools)]
 
-  ├─ 3. Verified site ownership through
-  │     HTML Tag Injection and submitted sitemap
+  ├─ 3. Site ownership verification
+  │      (HTML Tag Injection) & Sitemap submission
 
   └─ 4. Monitored crawling status & requested indexing
-        ──&gt; Increased Naver search visibility
+         ──&gt; Improved Naver search visibility
 
 </pre>
 
@@ -1229,14 +1008,12 @@ export default {
 
             <div class="desc-card">
 
-              <span class="badge">
-                📄 Search Crawler Rules (robots.txt)
-              </span><br>
+              <span class="badge">📄 Search Crawler Rules (robots.txt)</span><br>
 
               <small>
-                Built access rules and sitemap configuration
-                so that Naver and major search engine crawlers
-                could correctly index the latest pages.
+                Built access rules and a sitemap so that Naver
+                and major search engine crawlers could correctly
+                discover and index the latest pages.
               </small>
 
             </div>
@@ -1248,121 +1025,25 @@ export default {
 
             <div class="desc-card">
 
-              <span class="badge">
-                💡 Key Improvements
-              </span><br>
+              <span class="badge">💡 Key Improvements</span><br>
 
               <strong>
-                - Semantic markup conversion:
-                Improved web accessibility and made it easier for search crawlers
-                to understand the document structure by replacing non-standard markup.
+                - Semantic markup conversion: Improved web accessibility
+                and made the document structure easier for search crawlers
+                to understand by replacing non-standard tags.
               </strong>
 
               <br>
 
               <strong>
-                - Naver Search Advisor integration:
-                Submitted the sitemap, optimized robots.txt,
-                managed crawling requests, and monitored trends
-                in Naver search indexing and organic traffic.
+                - Naver Search Advisor integration: Submitted the sitemap,
+                optimized robots.txt, and managed crawl requests
+                to improve Naver search indexing.
               </strong>
 
             </div>
 
           </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- 05. Swarovski Responsive Website -->
-
-    <div class="layer swiper-slide">
-
-      <div class="item">
-
-        <h3 class="pro_title">
-          [SWAROVSKI]<br>
-          Swarovski Responsive Brand Website
-        </h3>
-
-        <div class="swiper-center">
-
-
-          <div class="desc">
-
-            <div class="desc-card">
-
-              <span class="badge">Overview</span><br>
-
-              <strong>
-                Implemented responsive layouts that adapt flexibly
-                to different device resolutions and viewport sizes,
-                while modularizing responsive banner interactions.
-              </strong>
-
-              <br><br>
-
-              <span class="badge">Role</span><br>
-
-              <strong>
-                Developer (100% Publishing)
-              </strong>
-
-              <br><br>
-
-              <span class="badge">Tech Stack</span><br>
-
-              <strong>
-                HTML5, CSS3, JavaScript, jQuery
-              </strong>
-
-              <br><br>
-
-              <!-- Add the Swarovski project URL to href -->
-
-              <a
-                href="./swarovski/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-gopage"
-              >
-                Go Page 🔗
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="desc">
-
-            <div class="desc-card">
-
-              <span class="badge">
-                💡 Key Features
-              </span><br>
-
-              <strong>
-                - Breakpoint Support:
-                Responsive UI design based on media queries.
-              </strong>
-
-              <br>
-
-              <strong>
-                - Banner Control:
-                Dynamically adjusted the number of displayed grids and banners
-                based on viewport width and resolution.
-              </strong>
-
-            </div>
-
-          </div>
-
 
         </div>
 
@@ -1375,10 +1056,10 @@ export default {
 
     <div class="security-notice">
 
-      🔒 <strong>Security & Asset Protection Policy:</strong>
-      Due to security regulations, technical capabilities are demonstrated
-      through architecture diagrams and problem-solving code snippets
-      designed and written by me instead of exposing actual production screens.
+      🔒 <strong>Security & Asset Protection Notice:</strong>
+      Due to security policies, actual production screens are not publicly displayed.
+      Instead, key architecture diagrams and problem-solving code snippets
+      designed and written by me are provided to demonstrate my technical capabilities.
 
     </div>
 
@@ -1389,33 +1070,27 @@ export default {
 
   "lab-section-1": `
 
-    <span class="game-slider__code">
-      React · State Management
-    </span>
+    <span class="game-slider__code">React · State Management</span>
 
-    <div class="game-slider__title">
-      HANGMAN GAME
-    </div>
+    <div class="game-slider__title">HANGMAN GAME</div>
 
     <div class="game-slider__text">
 
       <p>
-        An exciting word-guessing game to enjoy with friends!
+        A thrilling word-guessing game to enjoy with friends!
       </p>
 
       <p>
         When the host enters a word,
-        input fields are dynamically generated in real time
+        input fields are dynamically generated
         based on the number of letters.
       </p>
 
       <p>
-
         <strong>HOW TO PLAY</strong><br>
 
-        Guess the letters one by one within the limited number of attempts
-        and complete the word.
-
+        Guess the letters one by one
+        and complete the word within the limited number of attempts.
       </p>
 
     </div>
@@ -1425,36 +1100,26 @@ export default {
 
   "lab-section-2": `
 
-    <span class="game-slider__code">
-      JavaScript · Canvas API
-    </span>
+    <span class="game-slider__code">JavaScript · Canvas API</span>
 
-    <div class="game-slider__title">
-      OCTOPUS GAME
-    </div>
+    <div class="game-slider__title">OCTOPUS GAME</div>
 
     <div class="game-slider__text">
 
       <p>
-        Defeat the sharks beneath the sea!
-        An arcade shooting game.
+        Defeat the sharks underwater in this arcade shooting game!
       </p>
 
       <p>
-        Avoid incoming sharks and fire ink attacks
-        for an immersive arcade gameplay experience.
+        Dodge approaching sharks and fire ink
+        for an immersive arcade-style experience.
       </p>
 
       <p>
-
         <strong>HOW TO PLAY</strong><br>
 
         <code>Arrow Keys</code> Move /
         <code>Spacebar</code> Fire Ink<br>
-
-        <small class="update-note">
-          ✨ Defensive items and difficulty updates coming soon
-        </small>
 
       </p>
 
@@ -1465,37 +1130,27 @@ export default {
 
   "lab-section-3": `
 
-    <span class="game-slider__code">
-      Vanilla JS · Game Logic
-    </span>
+    <span class="game-slider__code">Vanilla JS · Game Logic</span>
 
-    <div class="game-slider__title">
-      TETRIS GAME
-    </div>
+    <div class="game-slider__title">TETRIS GAME</div>
 
     <div class="game-slider__text">
 
       <p>
-        A reinterpretation of the classic!
-        Tetris implemented with pure JavaScript.
+        A classic reimagined with pure JavaScript.
       </p>
 
       <p>
-        Implemented optimized grid-array handling
+        Implemented grid-based optimization
         and block collision detection logic
-        to recreate the classic gameplay experience.
+        to recreate the core mechanics of the original game.
       </p>
 
       <p>
-
         <strong>HOW TO PLAY</strong><br>
 
         <code>Arrow Keys</code> Rotate & Move /
         <code>Spacebar</code> Hard Drop<br>
-
-        <small class="update-note">
-          ⚡ Continuous key input and hold system optimization in progress
-        </small>
 
       </p>
 

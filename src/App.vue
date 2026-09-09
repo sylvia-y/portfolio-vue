@@ -73,7 +73,7 @@
               <a href="#tech">TECH STACK</a>
             </li>
             <li class="depth1">
-              <a href="#trouble">TROUBLESHOOTING</a>
+              <a href="#notes">Engineering Notes</a>
             </li>
             <li class="depth1">
               <a href="#project">PROJECT</a>
@@ -129,8 +129,8 @@
             <div class="tech-inner-wrap" v-html="langData['tech-inner-wrap']" style="width: 100%;"></div>
         </div>
       </section>
-      <section id="trouble" class="view trouble">
-        <h2 class="view__title trouble-title">Troubleshooting Top 5</h2>
+      <section id="notes" class="view trouble">
+        <h2 class="view__title trouble-title">Engineering Notes</h2>
         <div class="trouble-list"  v-html="langData['trouble-section']">
           
         </div>
