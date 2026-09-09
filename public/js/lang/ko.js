@@ -5,7 +5,7 @@ export default {
     <strong><span>YU YEONG KWAK ( 곽 유 영 )</span></strong><br>
     안녕하세요, <span>실제 서비스의 문제를 발견하고 기술로 더 나은 사용자 경험과 개발 환경을 만드는</span> 개발자 곽유영입니다.<br>
     저는 <span>4년차 개발자</span>로 실제 서비스와 관리자 시스템을 개발해왔습니다.<br>
-    React / Vue / Remix를 기반으로 상태 관리, SSR, REST API, 다국어 환경 등을 경험했으며,
+    React / Vue / Remix를 기반으로 상태 관리, SSR, REST API, 실시간 통신, 다국어 환경 등을 경험했으며,
     <span>최근에는 AI 기술을 활용한 자동화 및 서비스 개발 영역</span>으로 확장하고 있습니다.
   `,
   "about-info": `
@@ -41,14 +41,16 @@ export default {
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="50">
       <h3>FRONT END</h3>
       <p class="front-end">
-        React 컴포넌트 기반 Architecture 설계 및 Zustand 전역 상태 관리. Tabulator 기반 대용량 데이터 그리드 구현 및 pnpm Monorepo 환경 활용.
+        React / TypeScript 기반 컴포넌트 아키텍처 설계 및  Zustand·React Query를 활용한 상태 관리.
+        Native WebSocket 기반 실시간 통신과 Tabulator Virtual DOM을 활용한 대용량 데이터 그리드 구현,
+        pnpm Monorepo 환경을 경험
       </p>
       <ul class="tech-wrap">
         <li>
           <div class="tech-card"><div class="tech-img tech-img5"></div><h4>React</h4></div>
           <div class="tech-card"><div class="tech-img tech-img6"></div><h4>JavaScript</h4></div>
           <div class="tech-card"><div class="tech-img tech-img14"></div><h4>Vue</h4></div>
-          <div class="tech-card"><div class="tech-img tech-img7"></div><h4>jQuery</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img7"></div><h4>TypeScript</h4></div>
           <div class="tech-card"><div class="tech-img tech-img8"></div><h4>Sass</h4></div>
         </li>
       </ul>
@@ -56,7 +58,7 @@ export default {
 
     <!-- BACK END -->
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="150">
-      <h3>BACK END TECH</h3>
+      <h3>BACK END</h3>
       <p class="back-end">
         PHP MVC 기반 시스템 설계 및 사내 CRM/ERP 유지보수. Java/Spring Boot 기반 서버 개발 및 RESTful API 구현.
       </p>
@@ -74,7 +76,7 @@ export default {
     <div class="tech-inner" data-aos="fade-up" data-aos-delay="250">
       <h3>DATABASE & API</h3>
       <p class="back-end">
-        MySQL 기반 DB 스키마 설계 및 복잡한 Join/인덱스 쿼리 최적화. RESTful API 통신 및 Frontend-Backend 데이터 바인딩 연동.
+        MySQL 기반 DB 스키마 설계 및 복잡한 Join/인덱스 쿼리 최적화. RESTful API 통신 및 Frontend-Backend 간 데이터 흐름 설계.
       </p>
       <ul class="tech-wrap">
         <li>
@@ -130,7 +132,8 @@ export default {
         <p class="trouble-card-sub">[문제상황]</p>
         <p class="trouble-card-desc">관리자 플랫폼 및 차트 시스템에서 수만 건 이상의 통계 데이터를 한 번에 DOM에 표현할 때 블로킹 현상과 심각한 메모리 저하(UI 랙) 발생.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 동적 렌더링하도록 전환. 초기 렌더링 속도 약 70% 단축 및 DOM 메모리 사용량 60% 이상 감소 달성.</p>
+        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 동적 렌더링하도록 전환. 
+        초기 렌더링 속도 단축 및 DOM 메모리 사용량 60% 이상 감소 달성.</p>
       </article>
   
       <!-- Issue 2 -->
@@ -140,9 +143,17 @@ export default {
           <h3 class="trouble-card-title">다국어 및 글로벌 설정 변경 시 상태 동기화 불일치</h3>
         </div>
         <p class="trouble-card-sub">[문제상황]</p>
-        <p class="trouble-card-desc">다국어 및 권한별 메뉴 전환 시 프론트엔드 내 하위 컴포넌트 간 반응형 데이터 업데이트가 유실되거나 이전 언어/권한 데이터가 잔재하는 문제 발생.</p>
+        <p class="trouble-card-desc">
+          다국어 및 권한별 메뉴 전환 시 
+          프론트엔드 내 하위 컴포넌트 간 반응형 데이터 업데이트가 유실되거나 이전 언어/권한 데이터가 잔재하는 문제 발생.
+        </p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">Zustand 기반의 중앙화된 전역 상태 스토어로 언어 파라미터 및 세션 데이터를 구조화하고, Selector 패턴을 도입하여 상태 변경 시 필요한 컴포넌트만 리렌더링되도록 구현하여 데이터 일관성 확보.</p>
+        <p class="trouble-card-desc">
+          Zustand 기반 전역 상태로 언어 및 사용자 설정을 관리하고,
+          Cookie와 Redis Session을 연동하여 클라이언트와 서버 간
+          다국어·세션 상태를 동기화. 상태 변경 시 필요한 컴포넌트만
+          리렌더링되도록 Selector 패턴을 적용하여 데이터 일관성을 확보.
+        </p>
       </article>
   
       <!-- Issue 3 -->
@@ -154,7 +165,10 @@ export default {
         <p class="trouble-card-sub">[문제상황]</p>
         <p class="trouble-card-desc">CRM/ERP 시스템 및 정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">Slow Query 로그를 분석하여 쿼리 실행 계획을 점검하고, 필요한 복합 인덱스 추가 및 서브쿼리 구조를 서브 집계 뷰 형태로 리팩토링하여 average response time을 300ms 이하로 대폭 단축.</p>
+        <p class="trouble-card-desc">
+        Slow Query 로그를 분석하여 쿼리 실행 계획을 점검하고, 
+        필요한 복합 인덱스 추가 및 서브쿼리 구조를 서브 집계 로직을 리팩토링하여
+        평균 응답 시간을 300ms 이하로 단축.</p>
       </article>
   
       <!-- Issue 4 -->
@@ -176,7 +190,9 @@ export default {
           <h3 class="trouble-card-title">SPA 환경 동적 스크립트 로딩 및 라이프사이클 바인딩 문제</h3>
         </div>
         <p class="trouble-card-sub">[문제상황]</p>
-        <p class="trouble-card-desc">Vue 컴포넌트 마운트 시점과 외부 스크립트('/js/main.js', Swiper, AOS) 로드 시점 간의 비동기 차이로 인해 스크롤 애니메이션 및 스와이퍼가 정상 동작하지 않는 현상 발생.</p>
+        <p class="trouble-card-desc">
+        Vue 컴포넌트 마운트 시점과 외부 스크립트('/js/main.js', Swiper, AOS) 로드 시점 간의 비동기 차이로 인해 
+        스크롤 애니메이션 및 스와이퍼가 정상 동작하지 않는 현상 발생.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
         <p class="trouble-card-desc">'onMounted' 라이프사이클 이벤트 내에서 script onload 콜백 핸들러를 정의하고 컴포넌트 마운트 완료 후 이벤트를 재초기화(Re-initialization)하도록 로직을 개편하여 인터랙션 동작의 안정성 확보.</p>
       </article>
@@ -218,7 +234,7 @@ export default {
             <span class="badge">주요 기술 스택</span><br>
 
             <strong>
-              Vue 3, Python, FastAPI, Pandas, Chart.js, OpenAI API
+              Vue 3, Python, FastAPI, Pandas, Chart.js
             </strong>
 
           </div>
@@ -287,52 +303,41 @@ export default {
         </div>
       </div>
 
-      <!-- 2. 핵심 구현 1: 권한 정규화 -->
-      <div class="desc">
-        <div class="desc-card">
-          <span class="badge">💻 백엔드 권한 데이터 정규화 (PHP)</span><br>
-          <small>제각각이었던 DB/세션 권한 키 명칭을 별칭 맵 및 화이트리스트로 검증·표준화하여 보안과 데이터 일관성 확보</small>
-          <div class="code-block-wrap">
-<pre>
-public function normalizePermissions(array $rawPermissions): array {
-    $aliases = ['before_after' => 'before-after', 'beforeAfter' => 'before-after'];
-    $whitelist = ['before-after', 'event', 'reservation', 'chart'];
-    
-    foreach ($rawPermissions as $key => $value) {
-        $standardKey = $aliases[$key] ?? $key;
-        if (in_array($standardKey, $whitelist, true)) $normalized[$standardKey] = (bool)$value;
-    }
-    return $normalized;
-}
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. 핵심 구현 2: 번들 격리 및 Hydration Guard -->
+      <!-- 2. 핵심 구현 1: 번들 격리 및 Hydration Guard -->
       <div class="desc">
         <div class="desc-card">
           <span class="badge">💻 Remix 번들 격리 & Hydration Guard (React)</span><br>
           <small>서버 모듈 동적 임포트로 번들을 분리하고, Client Mount 후 안전하게 UI를 바인딩하여 SSR 미스매치 차단</small>
           <div class="code-block-wrap">
-<pre>
-export const loader = async ({ request }: LoaderFunctionArgs) => {
-  const { getEventData } = await import('~/services/event.server'); // 서버 번들 격리
-  return json({ events: await getEventData(request) });
-};
+            <pre>
+            export const loader = async ({ request }: LoaderFunctionArgs) => {
+              const { getEventData } = await import('~/services/event.server'); // 서버 번들 격리
+              return json({ events: await getEventData(request) });
+            };
 
-export default function EventComponent() {
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => setIsClient(true), []); // 클라이언트 마운트 감지
+            export default function EventComponent() {
+              const [isClient, setIsClient] = useState(false);
+              useEffect(() => setIsClient(true), []); // 클라이언트 마운트 감지
 
-  if (!isClient) return &lt;EventSkeleton /&gt;;
-  return &lt;div className="event-grid"&gt;{/* 이벤트 목록 렌더링 */}&lt;/div&gt;;
-}
-</pre>
+              if (!isClient) return &lt;EventSkeleton /&gt;;
+              return &lt;div className="event-grid"&gt;{/* 이벤트 목록 렌더링 */}&lt;/div&gt;;
+            }
+            </pre>
           </div>
         </div>
       </div>
 
+      <!-- 3. 핵심 구현 2: UI/UX 리뉴얼 및 레이아웃 최적화 -->
+      <div class="desc">
+        <div class="desc-card">
+          <span class="badge">🎨 예약 Flow & 마이페이지 UI/UX 리뉴얼 (Before & After)</span><br>
+          <small>복잡했던 캘린더 Picker, 상품 선택 및 예약 변경 레이아웃을 카드형으로 정돈하여 정보 시인성 확보 및 이탈률 감소</small>
+          
+          <div class="img-wrap" style="margin-top: 12px; text-align: center;">
+            <img src="/images/wavecode_ui.png" alt="UI 개선 전후 비교" style="max-width: 90%; height: auto; border-radius: 8px; border: 1px solid #eee;">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -364,7 +369,7 @@ export default function EventComponent() {
 [Spring Boot Service]
   │──> ZADD leaderboards:daily &lt;score&gt; &lt;user_id&gt;  (Score 업데이트)
   │──> ZREVRANK leaderboards:daily &lt;user_id&gt;     (실시간 랭킹 조회)
-  └─> ZREVRANGEWithScores (Top N 랭킹 리스트 집계)
+  └─> ZREVRANGEWITHSCORES (Top N 랭킹 리스트 집계)
 </pre>
               </div>
             </div>
@@ -373,41 +378,255 @@ export default function EventComponent() {
       </div>
     </div>
 
-    <!-- 03. iGaming 어드민 관리 시스템 -->
-    <div class="layer swiper-slide">
-      <div class="item">
-        <h3 class="pro_title">[더블다운 게임즈]<br>iGaming 어드민 관리 시스템</h3>
-        
-        <div class="swiper-center">
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">개요</span><br>
-              <strong>수만 건의 실시간 베팅 및 통계 데이터를 한눈에 조회·관리하는 해외 어드민 시스템</strong><br><br>
-              <span class="badge">역할</span><br>
-              <strong>개발자</strong><br><br>
-              <span class="badge">주요 기술 스택</span><br>
-              <strong>Vue.js, JavaScript, Tabulator.js, REST API</strong>
-            </div>
-          </div>
+   <!-- 03. iGaming 플랫폼 & 어드민 관리 시스템 -->
+<div class="layer swiper-slide">
+  <div class="item">
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">🏗️ 아키텍처 흐름: Virtual DOM Data Grid Rendering</span>
-              <div class="diagram-wrap">
+    <h3 class="pro_title">
+      [더블다운 게임즈]<br>
+      iGaming 플랫폼 & 어드민 관리 시스템
+    </h3>
+
+    <div class="swiper-center">
+
+      <!-- 01. 개요 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">개요</span><br>
+
+          <strong>
+            대규모 실시간 베팅, 게임 결과 및 통계 데이터를
+            처리·관리하는 고성능 iGaming 플랫폼 및 어드민 시스템
+          </strong>
+
+          <br><br>
+
+          <span class="badge">역할</span><br>
+          <strong>프론트엔드 개발자</strong>
+
+          <br><br>
+
+          <span class="badge">주요 기술 스택</span><br>
+          <strong>
+            React, TypeScript, Vite, Native WebSocket,
+            Zustand, React Query, Tailwind CSS,
+            Tabulator.js, REST API
+          </strong>
+
+        </div>
+      </div>
+
+
+      <!-- 02. 대용량 데이터 렌더링 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">
+            🏗️ 아키텍처 흐름: Virtual DOM Data Grid Rendering
+          </span>
+
+          <div class="diagram-wrap">
 <pre>
-[Large JSON Data (10,000+ Rows)]
-  │
+[대규모 JSON Data (10,000+ Rows)]
+
+        │
+
 [Tabulator Virtual DOM Engine]
-  ├─ Viewport 내 노출되는 영역(30~50 Rows)만 DOM에 생성
-  ├─ Scroll Event 감지 시 DOM Dynamic Swap (Memory Leak 방지)
-  └─ Format & Filter Pipe (클라이언트 연산 최적화)
+
+        ├─ 뷰포트 내 노출되는 영역만 DOM에 생성
+
+        ├─ Scroll Event에 따른
+        │  동적 DOM 교체로 메모리 사용량 최적화
+
+        └─ Format & Filter Pipeline을 통한
+           클라이언트 데이터 처리 최적화
 </pre>
-              </div>
-            </div>
           </div>
+
         </div>
       </div>
+
+
+      <!-- 03. 실시간 통신 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">
+            ⚡ 실시간 통신 아키텍처
+          </span>
+
+          <div class="diagram-wrap">
+<pre>
+[기존 통신 방식]
+
+[SockJS / STOMP]
+        │
+        ▼
+[실시간 메시지 처리]
+
+
+            ↓ 아키텍처 개선
+
+
+[Native WebSocket]
+        │
+        ▼
+[JSON Message Contract]
+        │
+        ├─ 게임 결과
+        ├─ 베팅 데이터
+        ├─ 통계 데이터
+        └─ 시스템 이벤트
+        │
+        ▼
+[Type 기반 Event Handler]
+        │
+        ▼
+[실시간 UI 업데이트]
+</pre>
+          </div>
+
+          <strong>
+            기존 SockJS/STOMP 기반 통신 방식을
+            Native WebSocket으로 전환하여 실시간 통신 구조를 단순화하고 게임 결과 및 베팅 데이터 처리를 직접 구현
+            게임 결과 및 베팅 데이터의 실시간 처리 성능을 최적화
+          </strong>
+
+        </div>
+      </div>
+
+
+      <!-- 04. 메시지 컨트랙트 & 이벤트 처리 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">
+            🔄 메시지 컨트랙트 & 이벤트 처리
+          </span>
+
+          <div class="diagram-wrap">
+<pre>
+[WebSocket Server]
+        │
+        │ JSON Message
+        ▼
+[Message Contract]
+        │
+        ├─ eventType
+        ├─ payload
+        └─ timestamp
+        │
+        ▼
+[onmessage Handler]
+        │
+        ├─ 이벤트 타입별 분기 처리
+        │
+        ├─ Payload 검증
+        │
+        ├─ 상태 업데이트
+        │
+        └─ 예외 상황 처리
+</pre>
+          </div>
+
+          <strong>
+            서버와 클라이언트 간 명확한 JSON 메시지 규약을 정의하고,
+            onmessage 핸들러를 기반으로 이벤트 타입별 분기,
+            데이터 검증 및 예외 처리 로직을 구현
+          </strong>
+
+        </div>
+      </div>
+
+
+      <!-- 05. 상태 관리 & 성능 최적화 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">
+            🧩 상태 관리 & 성능 최적화
+          </span>
+
+          <div class="diagram-wrap">
+<pre>
+                [API Server]
+                     │
+                     ▼
+              [React Query]
+                     │
+                Server State
+                  & Cache
+                     │
+                     ▼
+                    [UI]
+
+
+               [WebSocket]
+                     │
+                     ▼
+                 [Zustand]
+                     │
+                 Client State
+                     │
+                     ▼
+                    [UI]
+</pre>
+          </div>
+
+          <strong>
+            Zustand를 활용한 경량 전역 상태 관리와
+            React Query를 통한 서버 상태 캐싱 및 동기화를 적용하여
+            효율적인 데이터 흐름과 빠른 페이지 전환 환경을 구축
+          </strong>
+
+        </div>
+      </div>
+
+
+      <!-- 06. 주요 역할 및 성과 -->
+      <div class="desc">
+        <div class="desc-card">
+
+          <span class="badge">주요 역할 및 성과</span>
+
+          <br><br>
+
+          <strong>
+            • 컴포넌트 기반 구조와 기능별 모듈화를 적용하여
+            대규모 트래픽과 지속적인 UI 변경에 유연하게 대응할 수 있는
+            확장 가능한 프론트엔드 아키텍처 설계
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • SockJS/STOMP에서 Native WebSocket으로 통신 방식을 전환하여
+            불필요한 프로토콜 오버헤드를 줄이고
+            실시간 게임 및 베팅 데이터 처리 최적화
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • 서버-클라이언트 간 JSON 메시지 컨트랙트를 정의하고
+            이벤트 타입별 분기 및 예외 처리 로직 구현
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • Zustand와 React Query를 활용해
+            클라이언트 상태와 서버 상태를 분리하고
+            효율적인 상태 관리 및 사용자 경험 개선
+          </strong>
+
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
 <!-- 04. 에듀컴퍼니 웹사이트 & SEO -->
     <div class="layer swiper-slide">
       <div class="item">
