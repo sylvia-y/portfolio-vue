@@ -1990,7 +1990,7 @@ section {
   }
 
   .about-box p {
-    font-size: clamp(14px, 1vw, 17px);
+    font-size: clamp(14px, 1vw, 18px);
   }
 }
 
@@ -2789,14 +2789,14 @@ section {
 
 /* Keep the closing marquee as a visual signature, not a giant wall of text. */
 .contact .ft-cover {
-  height: 80px;
+  height: 100px;
   margin: 10px 0 0;
   overflow: hidden;
 }
 
 .contact .ft-cover > h2,
 .contact .scroll-txt {
-  font-size: clamp(24px, 3vw, 46px) !important;
+  font-size: clamp(28px, 4vw, 60px) !important;
   line-height: 1;
 }
 

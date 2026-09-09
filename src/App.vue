@@ -293,7 +293,7 @@
       </section>
       <div class="ft-wrap">
         <h2>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</h2>
-        <p> © 2026 YU-YEONG. All Rights Reserved.</p>
+        <p> © 2026 YU YEONG KWAK. All Rights Reserved.</p>
       </div>
     </footer>
     <button class="top-btn">
