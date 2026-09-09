@@ -924,7 +924,7 @@ section {
 }
 
 .scroll-txt {
-  margin-top: 0.4em;
+  margin-top: 0.2em;
   z-index: 2;
   text-align: center;
   top: 0;
@@ -932,7 +932,7 @@ section {
   /* color: #fff; */
   /* -webkit-text-stroke: 1px #000; */
   color: #000;
-  font-size: 4em;
+  font-size:3em;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -1318,7 +1318,7 @@ section {
   .scroll-txt {
     margin-top: 0;
     padding: 20px 0;
-    font-size: 30px;
+    font-size: 2em;
     letter-spacing: 0.6px;
   }
   .contact {
@@ -1980,8 +1980,8 @@ section {
 
 @media screen and (min-width: 768px) {
   .about-box {
-    width: min(48%, 700px);
-    margin-top: 50px;
+    width: min(48%, 720px);
+    margin-top: 60px;
   }
 
   .about-box .about-img {
@@ -2565,14 +2565,14 @@ section {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
   align-items: stretch;
 }
 
 .tech-inner {
   width: 100%;
   margin: 0;
-  padding: 22px 18px 20px;
+  padding: 24px 22px 24px;
   border: 2px solid #000;
   border-radius: 16px;
   background: #fff;
@@ -2600,7 +2600,7 @@ section {
   padding: 0;
   color: #666;
   font-family: "GmarketSansMedium", sans-serif;
-  font-size: 12px !important;
+  font-size: 0.9em;
   line-height: 1.5;
   text-align: left;
 }
@@ -2636,8 +2636,8 @@ section {
 }
 
 .tech .tech-img {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   margin-bottom: 5px;
 }
 
@@ -2666,7 +2666,7 @@ section {
 
 .contact .sec-contact {
   width: min(1280px, calc(100% - 40px));
-  margin: 42px auto 70px;
+  margin: 62px auto 72px;
   padding: 0;
   display: grid;
   grid-template-columns: minmax(300px, .72fr) minmax(460px, 1.28fr);
@@ -2682,12 +2682,11 @@ section {
 .contact-desc .ft-feat {
   width: auto;
   max-width: 480px;
-  margin: 0 0 24px;
+  margin: 0 0 0.5em;
   color: #000;
   font-family: "yg-jalnan", sans-serif;
-  font-size: clamp(34px, 4vw, 58px) !important;
+  font-size: clamp(34px, 4vw, 66px) !important;
   line-height: 1.02;
-  letter-spacing: -.04em;
 }
 
 .contact-desc h3 {
@@ -2829,6 +2828,7 @@ section {
     margin: 0 7px;
     padding: 20px 12px 34px;
     border-width: 2px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
   }
 
   #yy-main .view__title {
