@@ -4,16 +4,20 @@ $(function () {
     //swiper
     let swiper = new Swiper('.swiper', {
         spaceBetween : 30,
-    pagination: {
-        el: '.swiper-pagination',
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },  
+        observer: true,        // DOM 변경 감지 후 재초기화
+        observeParents: true,  // 부모 엘리먼트 변경 감지
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },  
     });
 
     swiper = new Swiper('.game-slider', {
+        observer: true,        // DOM 변경 감지 후 재초기화
+        observeParents: true,  // 부모 엘리먼트 변경 감지
         spaceBetween: 30,
         effect: 'fade',
         loop: true,
