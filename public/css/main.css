@@ -714,6 +714,11 @@ section {
     box-sizing: border-box;
     margin-top: 10px;
 }
+.sales-input {    
+  background: #eee;
+  padding: 10px;
+  margin: 10px 20px 10px 0;
+}
 .analyzer-header h2 { font-size: 1.3rem; margin: 0 0 0.2rem; color: #fff; }
 .subtitle { font-size: 0.8rem; color: #9ca3af; margin: 0 0 1rem; }
 
@@ -757,13 +762,11 @@ section {
 .card-value.highlight { color: #818cf8; }
 
 /* 차트 영역 (최대 높이 300px 제한) */
-.charts-grid {
- 
-}
 .chart-box {
   border: 1px solid #ccc;
   border-radius: 8px; padding: 0.85rem;
-  max-height: 480px;
+  max-height: 450px;
+  margin: 2em 0;
 }
 .chart-box h4 { font-size: 0.85rem; margin: 0 0 0.5rem; }
 .canvas-wrapper {

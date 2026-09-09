@@ -142,6 +142,7 @@ const analyzeSales = async () => {
 
     <input
       type="file"
+      class="sales-input"
       accept=".csv"
       @change="handleFileChange"
     >
