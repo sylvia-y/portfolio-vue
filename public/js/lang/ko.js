@@ -501,14 +501,40 @@ export default function EventComponent() {
       <p class="trouble-card-desc">'onMounted' 라이프사이클 이벤트 내에서 script onload 콜백 핸들러를 정의하고 컴포넌트 마운트 완료 후 이벤트를 재초기화(Re-initialization)하도록 로직을 개편하여 인터랙션 동작의 안정성 확보.</p>
     </article>
   `,
-
-  /* ---------------- GAME ---------------- */
-  "game-title": "Game",
-  "game-desc": `
-    <b>HANGMAN GAME:</b> React를 사용하여 여러 명이 함께 단어 맞추기 게임을 즐길 수 있도록 구현.<br>
-    <b>OCTOPUS GAME:</b> JS 기반, 문어가 먹물을 발사해 상어를 제거하는 아케이드 게임.<br>
-    <b>TETRIS GAME:</b> 순수 JS로 구현된 테트리스. 블럭 조작 로직과 애니메이션 최적화 경험.<br>
-    <b>PENGUIN GAME:</b> 스페이스바로 점프하며 얼음을 피하는 리듬형 점프 게임.<br><br>
-    모든 게임은 JavaScript 이벤트 루프와 충돌 감지 로직, 사용자 입력 반응성을 고려해 제작되었습니다.
-  `
+  /* ---------------- LAB ---------------- */
+  "lab-section-1": `
+      <span class="game-slider__code">React · State Management</span>
+      <div class="game-slider__title">HANGMAN GAME</div>
+      <div class="game-slider__text">
+        <p>친구들과 함께 즐기는 스릴 넘치는 단어 추리 게임!</p>
+        <p>출제자가 단어를 입력하면 글자 수에 맞춰 실시간으로 동적 폼이 생성됩니다.</p>
+        <p><strong>HOW TO PLAY</strong><br>
+          제한된 기회 속에서 알파벳을 하나씩 유추하여 단어를 완성하세요.
+        </p>
+        </div>
+  `,
+  "lab-section-2": `
+    <span class="game-slider__code">JavaScript · Canvas API</span>
+    <div class="game-slider__title">OCTOPUS GAME</div>
+    <div class="game-slider__text">
+      <p>바닷속의 상어를 제압하라! 아케이드 슈팅 게임</p>
+      <p>다가오는 상어를 피해 먹물을 발사하며 몰입감 있는 플레이를 제공합니다.</p>
+      <p><strong>HOW TO PLAY</strong><br>
+        <code>방향키</code> 이동 / <code>Spacebar</code> 먹물 발사<br>
+        <small class="update-note">✨ 방어 아이템 및 난이도 업데이트 예정</small>
+      </p>
+    </div>
+  `,
+  "lab-section-3": `
+    <span class="game-slider__code">Vanilla JS · Game Logic</span>
+     <div class="game-slider__title">TETRIS GAME</div>
+     <div class="game-slider__text">
+       <p>클래식의 재해석! 순수 자바스크립트로 구현한 테트리스</p>
+       <p>격자 배열 최적화와 블록 충돌 감지 로직을 구현하여 원작의 손맛을 살렸습니다.</p>
+       <p><strong>HOW TO PLAY</strong><br>
+         <code>방향키</code> 회전 및 이동 / <code>Spacebar</code> 하드 드롭<br>
+         <small class="update-note">⚡ 키 연속 입력 및 홀드 시스템 최적화 진행 중</small>
+       </p>
+     </div>
+`,
 };

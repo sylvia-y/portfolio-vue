@@ -803,8 +803,6 @@ section {
   width: 100%;
 }
 
-
-
 .game > .contents-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -879,7 +877,6 @@ section {
 }
 .game .game-slider__content {
   padding-top: 1em;
-  padding-left: 25px;
 }
 .game .game-slider__content > * {
   opacity: 0;

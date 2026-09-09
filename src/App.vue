@@ -5,13 +5,36 @@
   let salesAnalyzerApp = null
   let observer = null
   
+  // 다국어 변경
+  const changeLang = async (lang) => {
+    try {
+      const module = await import(`/js/lang/${lang}.js`)
+      const data = module.default
+  
+      document.querySelectorAll('[data-key]').forEach((el) => {
+        const key = el.getAttribute('data-key')
+  
+        if (data[key]) {
+          el.innerHTML = data[key]
+        }
+      })
+  
+      localStorage.setItem('lang', lang)
+  
+      // 언어 변경 완료 이벤트
+      window.dispatchEvent(new CustomEvent('langChanged'))
+    } catch (error) {
+      console.error('언어 변경 실패:', error)
+    }
+  }
+  
   const mountSalesAnalyzer = async () => {
     await nextTick()
+  
     const el = document.getElementById('sales-analyzer-mount')
-    
+  
     if (!el) return false
   
-    // 기존 앱 인스턴스 정리
     if (salesAnalyzerApp) {
       salesAnalyzerApp.unmount()
       salesAnalyzerApp = null
@@ -19,17 +42,18 @@
   
     salesAnalyzerApp = createApp(SalesAnalyzer)
     salesAnalyzerApp.mount(el)
+  
     return true
   }
   
-  // DOM 생성을 감지하여 요소가 들어오는 즉시 마운트
   const startObserving = () => {
     if (observer) observer.disconnect()
   
     observer = new MutationObserver(async () => {
       const isMounted = await mountSalesAnalyzer()
+  
       if (isMounted && observer) {
-        observer.disconnect() // 성공적으로 마운트되면 감지 종료
+        observer.disconnect()
       }
     })
   
@@ -44,23 +68,37 @@
     mountSalesAnalyzer()
   }
   
-  onMounted(() => {
+  onMounted(async () => {
     // main.js 동적 로드
     const script = document.createElement('script')
     script.src = '/js/main.js'
     script.async = true
     document.body.appendChild(script)
   
-    // 초기 실행 및 언어 변경 이벤트 바인딩
+    // 초기 언어
+    const savedLang = localStorage.getItem('lang') || 'ko'
+    await changeLang(savedLang)
+  
+    // SalesAnalyzer 마운트
     handleLangOrInit()
+  
     window.addEventListener('langChanged', handleLangOrInit)
   })
   
   onUnmounted(() => {
     window.removeEventListener('langChanged', handleLangOrInit)
-    if (observer) observer.disconnect()
+  
+    if (observer) {
+      observer.disconnect()
+    }
+  
+    if (salesAnalyzerApp) {
+      salesAnalyzerApp.unmount()
+    }
   })
   </script>
+
+
 
 <template>
   
@@ -110,7 +148,6 @@
         <button @click="changeLang('en')">English (US)</button>
       </div>
       <section id="home" class="home sec-main">
-        
         <div class="intro_smile">
           <img class="smile_img" src="/images/intro_smile.png" alt="인트로_스마일">
         </div>
@@ -141,7 +178,6 @@
             <div class="tech-inner-wrap" data-key="tech-inner-wrap" style="width: 100%;"></div>
         </div>
       </section>
-      <!-- Top 5 트러블슈팅 세트 추가 -->
       <section id="trouble" class="view trouble">
         <h2 class="view__title trouble-title" data-key="trouble-title">Troubleshooting Top 5</h2>
         <div class="trouble-list"  data-key="trouble-section">
@@ -159,68 +195,46 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-      
-      
-
-
-      <section id="game" class="view game">
+      <section id="lab" class="view game">
         <h2 class="view__title">LAB</h2>
-        <div class="scroll-txt">↓ SCROLL DOWN HERE </div>
+        <div class="scroll-txt">↓ SCROLL DOWN HERE</div>
         <div class="contents-box">
           <div class="game-slider">
             <div class="game-slider__wrp swiper-wrapper">
+              <!-- HANGMAN GAME -->
               <div class="game-slider__item swiper-slide">
                 <div class="game-slider__img">
                   <img src="/images/mockup/hangman.jpg" alt="HANGMAN GAME">
                 </div>
-                <div class="game-slider__content">
-                  <span class="game-slider__code">REACT를 사용하여 구현</span>
-                  <div class="game-slider__title">HANGMAN GAME</div>
-                  <div class="game-slider__text">
-                    <p>여러명이 다 같이 할 수 있는 행맨게임</p>
-                    <p>게임 시작 시 입력한 단어의 글자 수에 맞춰 폼이 생성됩니다.</p>
-                    <p>게임 방법 : 한 명이 게임을 할 단어를 입력하면,<br>
-                      다른 사람이 주어진 기회 안에<br>알파벳을 하나씩 선택해가며 단어를 맞춥니다.</p>
-                  </div>
+                <div class="game-slider__content" data-key="lab-section-1">
                   <a href="/hangman/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
-                    <span>GO TO PAGE</span>
+                    <span>PLAY GAME</span>
                   </a>
                 </div>
               </div>
+              <!-- OCTOPUS GAME -->
               <div class="game-slider__item swiper-slide">
                 <div class="game-slider__img">
                   <img src="/images/mockup/octopus.jpg" alt="OCTOPUS GAME">
                 </div>
-                <div class="game-slider__content">
-                  <span class="game-slider__code">JS를 사용하여 구현</span>
-                  <div class="game-slider__title">OCTOPUS GAME</div>
-                  <div class="game-slider__text">
-                    <p>문어가 먹물을 쏴서 상어를 제거하는 게임</p>
-                    <p>게임 방법 : 방향키로 이동을 하며 space bar를 눌러<br>상어를 향해 먹물을 쏏니다.</p>
-                    <p>수정사항 : 방어 가능한 아이템을 추가할 예정입니다.</p>
-                  </div>
+                <div class="game-slider__content" data-key="lab-section-2">
                   <a href="/octopus/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
-                    <span class="btn-text">GO TO PAGE</span>
+                    <span class="btn-text">PLAY GAME</span>
                   </a>
                 </div>
               </div>
+              <!-- TETRIS GAME -->
               <div class="game-slider__item swiper-slide">
                 <div class="game-slider__img">
                   <img src="/images/mockup/tetris.jpg" alt="TETRIS GAME">
                 </div>
-                <div class="game-slider__content">
-                  <span class="game-slider__code">JS를 사용하여 구현</span>
-                  <div class="game-slider__title">TETRIS GAME</div>
-                  <div class="game-slider__text">
-                    <p>방향키로 블럭을 움직이는 테트리스 게임</p>
-                    <p>게임 방법 : space bar와 방향키를 사용하여<br>블럭을 맞추면 되는 게임입니다.</p>
-                    <p>수정사항 : space bar를 계속 누르고 있을 경우<br>오류가 생기는 부분을 수정할 예정입니다.</p>
-                  </div>
+                <div class="game-slider__content"  data-key="lab-section-3">
                   <a href="/tetris/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
-                    <span>GO TO PAGE</span>
+                    <span>PLAY GAME</span>
                   </a>
                 </div>
               </div>
+      
             </div>
             <div class="game-slider__pagination"></div>
           </div>
@@ -233,8 +247,14 @@
         <div class="sec-contents sec-contact">
           <div class="contact-desc">
             <h3 class="ft-feat">
-              If you<br>have any<br>questions,<br>please<br>feel free<br>to contact me.<br>
+              Let’s build<br>
+              something<br>
+              great together.<br>
             </h3>
+            <h4 class="ft-subtext" style="margin-bottom: 1.5rem; color: #666; word-break: keep-all;">
+              새로운 프로젝트, 협업 제안도 환영합니다.<br>
+              언제든 편하게 메일을 남겨주세요!
+            </h4>
             <h3>E-mail</h3>
             <h4>yududdl12@naver.com</h4>
             <h3>Download (PDF)</h3>
