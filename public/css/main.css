@@ -1958,7 +1958,7 @@ section {
   background: var(--portfolio-lime);
   color: #000;
   font-family: "yg-jalnan", "GmarketSansMedium", sans-serif;
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(18px, 1.4vw, 24px);
   line-height: 1;
   letter-spacing: .02em;
 }
@@ -2136,7 +2136,7 @@ section {
   .tech-inner p {
     height: auto !important;
     padding: 0 4px 12px;
-    font-size: 13px !important;
+    font-size: 13px;
     line-height: 1.65;
   }
 
@@ -2600,7 +2600,7 @@ section {
   padding: 0;
   color: #666;
   font-family: "GmarketSansMedium", sans-serif;
-  font-size: 11px !important;
+  font-size: 12px !important;
   line-height: 1.5;
   text-align: left;
 }
@@ -2619,8 +2619,8 @@ section {
 }
 
 .tech-card {
-  width: 72px;
-  min-height: 65px;
+  width: 78px;
+  min-height: 68px;
   padding: 7px 4px;
   border: 1px solid #d9d9d9;
   border-radius: 9px;
@@ -2866,7 +2866,7 @@ section {
   .tech-inner p {
     min-height: 34px;
     margin-bottom: 9px;
-    font-size: 9px !important;
+    font-size: 10px !important;
     line-height: 1.45;
   }
 

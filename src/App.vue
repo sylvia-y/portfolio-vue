@@ -26,7 +26,7 @@
   const changeLang = async (lang) => {
     try {
       const module = await import(`/js/lang/${lang}.js`)
-      langData.value = module.default // 반응형 변수에 담으면 화면이 알아서 업데이트됨
+      langData.value = module.default // 반응형 변수에 담으면 화면이 알아서 업데이트
       currentLang.value = lang
       localStorage.setItem('lang', lang)
   
@@ -197,7 +197,7 @@
     </main>
     <footer id="yy-ft" class="section sec-ft">
       <section class="view contact">
-        <h2 class="view__title">contact</h2>
+        <!-- <h2 class="view__title">contact</h2> -->
         <div class="sec-contents sec-contact">
           <div class="contact-desc">
             <h3 class="ft-feat">

@@ -113,7 +113,7 @@ button.close {
 /* 태블릿부터 768px~ */
 @media screen and (min-width: 768px){
 	#contactForm_term h3 { font-size: 2.8rem;}
-	.tbl_frm01 textarea {height: 20rem;}
+	.tbl_frm01 textarea {height: 15rem;}
 }
 
 /* 태블릿만 768px~1023px */
