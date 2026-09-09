@@ -1549,7 +1549,7 @@ section {
 @media screen and (min-width: 1024px) {
 
   .background {top: 58%; }
-  .pro_title {margin: 3em auto 0.4em;}
+  .pro_title {margin: 2em auto 0.4em;}
   .intro_smile img{
     width: 50%;
   }
@@ -1714,7 +1714,7 @@ section {
 
 /* PROJECT SWIPER */
 .project .pro_title {
-  font-size: clamp(26px, 2.4vw, 38px);
+  font-size: clamp(26px, 2.4vw, 36px);
 }
 
 .project .desc-card {
