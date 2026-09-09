@@ -18,7 +18,7 @@
 #contactForm_term dl dd {margin-left: 3em;}
 #contactForm .contactForm_agree2 {
   border: 0; 
-  font-size: 1.36rem; 
+  font-size: 1.2rem; 
   font-weight: 500; color: #fff; 
   border:1px solid #ccc;
   border-radius: 10px; padding: 0.8em ; 
@@ -28,7 +28,7 @@
 .tbl_frm01 {text-align: center;}
 .tbl_frm01 label {display: block; float: left; width: 20%; font-weight: bold; line-height: 1.6em;}
 .tbl_frm01 input {border-radius: 10px; padding: 0.3em; width: 100%; margin-bottom: 0.5em;}
-#contact_submit {border-radius: 10px; width: 16rem;background-color:#CFFF49;  color: #000; cursor: pointer;  font-family: 'yg-jalnan';}
+#contact_submit {border-radius: 10px; width: 16rem;cursor: pointer;  font-family: 'yg-jalnan';}
 .tbl_frm01 textarea {border-radius:10px; background-color: #fff; padding: 0.3em; width: 100%; margin-bottom: 0.5em; height: 15rem;border: 1px solid #EEE;} 
 #contactForm {}
 #contactForm .agree_text {display:block; width:100%; line-height:1.6em}

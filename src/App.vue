@@ -1,104 +1,55 @@
 <script setup>
-  import { onMounted, onUnmounted, createApp, nextTick } from 'vue'
+  import { ref, onMounted, nextTick, createApp } from 'vue'
   import SalesAnalyzer from './components/SalesAnalyzer.vue'
   
-  let salesAnalyzerApp = null
-  let observer = null
+  // 1. 언어 데이터 및 상태를 반응형 ref로 관리
+  const currentLang = ref(localStorage.getItem('lang') || 'ko')
+  const langData = ref({})
   
-  // 다국어 변경
+  let salesAnalyzerApp = null
+  
+  // SalesAnalyzer 마운트 함수
+  const mountSalesAnalyzer = async () => {
+    await nextTick() // DOM 업데이트 완료 대기
+    const el = document.getElementById('sales-analyzer-mount')
+    if (!el) return
+  
+    if (salesAnalyzerApp) {
+      salesAnalyzerApp.unmount()
+    }
+  
+    salesAnalyzerApp = createApp(SalesAnalyzer)
+    salesAnalyzerApp.mount(el)
+  }
+  
+  // 2. 다국어 로드 및 언어 변경 함수
   const changeLang = async (lang) => {
     try {
       const module = await import(`/js/lang/${lang}.js`)
-      const data = module.default
-  
-      document.querySelectorAll('[data-key]').forEach((el) => {
-        const key = el.getAttribute('data-key')
-  
-        if (data[key]) {
-          el.innerHTML = data[key]
-        }
-      })
-  
+      langData.value = module.default // 반응형 변수에 담으면 화면이 알아서 업데이트됨
+      currentLang.value = lang
       localStorage.setItem('lang', lang)
   
-      // 언어 변경 완료 이벤트
-      window.dispatchEvent(new CustomEvent('langChanged'))
+      // DOM에 ko.js 내용이 반영된 후 SalesAnalyzer 마운트
+      await mountSalesAnalyzer()
     } catch (error) {
       console.error('언어 변경 실패:', error)
     }
   }
   
-  const mountSalesAnalyzer = async () => {
-    await nextTick()
-  
-    const el = document.getElementById('sales-analyzer-mount')
-  
-    if (!el) return false
-  
-    if (salesAnalyzerApp) {
-      salesAnalyzerApp.unmount()
-      salesAnalyzerApp = null
-    }
-  
-    salesAnalyzerApp = createApp(SalesAnalyzer)
-    salesAnalyzerApp.mount(el)
-  
-    return true
-  }
-  
-  const startObserving = () => {
-    if (observer) observer.disconnect()
-  
-    observer = new MutationObserver(async () => {
-      const isMounted = await mountSalesAnalyzer()
-  
-      if (isMounted && observer) {
-        observer.disconnect()
-      }
-    })
-  
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-  }
-  
-  const handleLangOrInit = () => {
-    startObserving()
-    mountSalesAnalyzer()
-  }
-  
   onMounted(async () => {
     // main.js 동적 로드
-    const script = document.createElement('script')
-    script.src = '/js/main.js'
-    script.async = true
-    document.body.appendChild(script)
-  
-    // 초기 언어
-    const savedLang = localStorage.getItem('lang') || 'ko'
-    await changeLang(savedLang)
-  
-    // SalesAnalyzer 마운트
-    handleLangOrInit()
-  
-    window.addEventListener('langChanged', handleLangOrInit)
-  })
-  
-  onUnmounted(() => {
-    window.removeEventListener('langChanged', handleLangOrInit)
-  
-    if (observer) {
-      observer.disconnect()
+    if (!document.querySelector('script[src="/js/main.js"]')) {
+      const script = document.createElement('script')
+      script.src = '/js/main.js'
+      script.async = true
+      document.body.appendChild(script)
     }
   
-    if (salesAnalyzerApp) {
-      salesAnalyzerApp.unmount()
-    }
+    // 초기 언어 로드 및 마운트 실행
+    await changeLang(currentLang.value)
   })
   </script>
-
-
 
 <template>
   
@@ -164,10 +115,10 @@
           </div>
           <div class="about-box js-tilt-container" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
             <div class="about-img"></div>
-            <p data-key="about-desc"></p>
+            <p v-html="langData['about-desc']"></p>
           </div>
           <div class="about-info" data-aos="fade-right" data-aos-delay="2000" data-aos-duration="1000">
-            <div data-key="about-info"></div>
+            <div v-html="langData['about-info']"></div>
           </div>
         </div>
         
@@ -175,12 +126,12 @@
       <section id="tech" class="view tech">
         <h2 class="view__title">Tech Stack</h2>
         <div class="contents-box">
-            <div class="tech-inner-wrap" data-key="tech-inner-wrap" style="width: 100%;"></div>
+            <div class="tech-inner-wrap" v-html="langData['tech-inner-wrap']" style="width: 100%;"></div>
         </div>
       </section>
       <section id="trouble" class="view trouble">
-        <h2 class="view__title trouble-title" data-key="trouble-title">Troubleshooting Top 5</h2>
-        <div class="trouble-list"  data-key="trouble-section">
+        <h2 class="view__title trouble-title">Troubleshooting Top 5</h2>
+        <div class="trouble-list"  v-html="langData['trouble-section']">
           
         </div>
       </section>
@@ -188,7 +139,7 @@
         <h2 class="view__title">Project</h2>
         <div class="background"></div>
         <div class="contents-box swiper">
-          <div class="swiper-wrapper" data-key="project-section"></div>
+          <div class="swiper-wrapper" v-html="langData['project-section']"></div>
 
           <div class="swiper-pagination"></div>
           <div class="swiper-button-prev"></div>
@@ -206,7 +157,8 @@
                 <div class="game-slider__img">
                   <img src="/images/mockup/hangman.jpg" alt="HANGMAN GAME">
                 </div>
-                <div class="game-slider__content" data-key="lab-section-1">
+                <div class="game-slider__content">
+                  <div  v-html="langData['lab-section-1']"></div>
                   <a href="/hangman/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>PLAY GAME</span>
                   </a>
@@ -217,7 +169,8 @@
                 <div class="game-slider__img">
                   <img src="/images/mockup/octopus.jpg" alt="OCTOPUS GAME">
                 </div>
-                <div class="game-slider__content" data-key="lab-section-2">
+                <div class="game-slider__content">
+                  <div v-html="langData['lab-section-2']"></div>
                   <a href="/octopus/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span class="btn-text">PLAY GAME</span>
                   </a>
@@ -228,7 +181,8 @@
                 <div class="game-slider__img">
                   <img src="/images/mockup/tetris.jpg" alt="TETRIS GAME">
                 </div>
-                <div class="game-slider__content"  data-key="lab-section-3">
+                <div class="game-slider__content">
+                  <div  v-html="langData['lab-section-3']" ></div>
                   <a href="/tetris/" class="btn game-slider__button" target="_blank" rel="noopener noreferrer">
                     <span>PLAY GAME</span>
                   </a>

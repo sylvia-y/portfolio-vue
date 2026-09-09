@@ -118,6 +118,70 @@ export default {
     </div>
   `,
 
+    /* ---------------- TROUBLESHOOTING ---------------- */
+    "trouble-title": "Trouble Shooting",
+    "trouble-section": `
+      <!-- Issue 1 -->
+      <article class="trouble-card">
+        <div class="trouble-card-inner">
+          <span>01</span>
+          <h3 class="trouble-card-title">대용량 관리자 그리드 데이터 렌더링 성능 최적화</h3>
+        </div>
+        <p class="trouble-card-sub">[문제상황]</p>
+        <p class="trouble-card-desc">관리자 플랫폼 및 차트 시스템에서 수만 건 이상의 통계 데이터를 한 번에 DOM에 표현할 때 블로킹 현상과 심각한 메모리 저하(UI 랙) 발생.</p>
+        <p class="trouble-card-sub">[해결방법 및 성과]</p>
+        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 동적 렌더링하도록 전환. 초기 렌더링 속도 약 70% 단축 및 DOM 메모리 사용량 60% 이상 감소 달성.</p>
+      </article>
+  
+      <!-- Issue 2 -->
+      <article class="trouble-card">
+        <div class="trouble-card-inner">
+          <span>02</span>
+          <h3 class="trouble-card-title">다국어 및 글로벌 설정 변경 시 상태 동기화 불일치</h3>
+        </div>
+        <p class="trouble-card-sub">[문제상황]</p>
+        <p class="trouble-card-desc">다국어 및 권한별 메뉴 전환 시 프론트엔드 내 하위 컴포넌트 간 반응형 데이터 업데이트가 유실되거나 이전 언어/권한 데이터가 잔재하는 문제 발생.</p>
+        <p class="trouble-card-sub">[해결방법 및 성과]</p>
+        <p class="trouble-card-desc">Zustand 기반의 중앙화된 전역 상태 스토어로 언어 파라미터 및 세션 데이터를 구조화하고, Selector 패턴을 도입하여 상태 변경 시 필요한 컴포넌트만 리렌더링되도록 구현하여 데이터 일관성 확보.</p>
+      </article>
+  
+      <!-- Issue 3 -->
+      <article class="trouble-card">
+        <div class="trouble-card-inner">
+          <span>03</span>
+          <h3 class="trouble-card-title">백엔드 데이터베이스 병목으로 인한 API 응답 지연 개선</h3>
+        </div>
+        <p class="trouble-card-sub">[문제상황]</p>
+        <p class="trouble-card-desc">CRM/ERP 시스템 및 정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
+        <p class="trouble-card-sub">[해결방법 및 성과]</p>
+        <p class="trouble-card-desc">Slow Query 로그를 분석하여 쿼리 실행 계획을 점검하고, 필요한 복합 인덱스 추가 및 서브쿼리 구조를 서브 집계 뷰 형태로 리팩토링하여 average response time을 300ms 이하로 대폭 단축.</p>
+      </article>
+  
+      <!-- Issue 4 -->
+      <article class="trouble-card">
+        <div class="trouble-card-inner">
+          <span>04</span>
+          <h3 class="trouble-card-title">pnpm Monorepo 환경 내 Shared UI 패키지 번들링 이슈</h3>
+        </div>
+        <p class="trouble-card-sub">[문제상황]</p>
+        <p class="trouble-card-desc">모노레포 구축 시 공통 컴포넌트 패키지(@repo/ui)와 메인 앱 간의 스타일 누락 및 빌드 시 모듈 해석(Module Resolution) 실패 현상 발생.</p>
+        <p class="trouble-card-sub">[해결방법 및 성과]</p>
+        <p class="trouble-card-desc">'package.json' 내 'exports' 필드 표준화 및 TypeScript 'paths' 매핑 재설정, 빌드 파이프라인 정리를 통해 서브 앱에서 공통 모듈을 독립적이고 격리된 환경에서 원활히 참조하도록 세팅 완료.</p>
+      </article>
+  
+      <!-- Issue 5 -->
+      <article class="trouble-card">
+        <div class="trouble-card-inner">
+          <span>05</span>
+          <h3 class="trouble-card-title">SPA 환경 동적 스크립트 로딩 및 라이프사이클 바인딩 문제</h3>
+        </div>
+        <p class="trouble-card-sub">[문제상황]</p>
+        <p class="trouble-card-desc">Vue 컴포넌트 마운트 시점과 외부 스크립트('/js/main.js', Swiper, AOS) 로드 시점 간의 비동기 차이로 인해 스크롤 애니메이션 및 스와이퍼가 정상 동작하지 않는 현상 발생.</p>
+        <p class="trouble-card-sub">[해결방법 및 성과]</p>
+        <p class="trouble-card-desc">'onMounted' 라이프사이클 이벤트 내에서 script onload 콜백 핸들러를 정의하고 컴포넌트 마운트 완료 후 이벤트를 재초기화(Re-initialization)하도록 로직을 개편하여 인터랙션 동작의 안정성 확보.</p>
+      </article>
+    `,
+    
   /* ---------------- PROJECTS ---------------- */
   "project-section": `
     <!-- 00. AI Sales Analyzer -->
@@ -438,69 +502,7 @@ export default function EventComponent() {
     </div>
   `,
 
-  /* ---------------- TROUBLESHOOTING ---------------- */
-  "trouble-title": "Trouble Shooting",
-  "trouble-section": `
-    <!-- Issue 1 -->
-    <article class="trouble-card">
-      <div class="trouble-card-inner">
-        <span>01</span>
-        <h3 class="trouble-card-title">대용량 관리자 그리드 데이터 렌더링 성능 최적화</h3>
-      </div>
-      <p class="trouble-card-sub">[문제상황]</p>
-      <p class="trouble-card-desc">관리자 플랫폼 및 차트 시스템에서 수만 건 이상의 통계 데이터를 한 번에 DOM에 표현할 때 블로킹 현상과 심각한 메모리 저하(UI 랙) 발생.</p>
-      <p class="trouble-card-sub">[해결방법 및 성과]</p>
-      <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 동적 렌더링하도록 전환. 초기 렌더링 속도 약 70% 단축 및 DOM 메모리 사용량 60% 이상 감소 달성.</p>
-    </article>
 
-    <!-- Issue 2 -->
-    <article class="trouble-card">
-      <div class="trouble-card-inner">
-        <span>02</span>
-        <h3 class="trouble-card-title">다국어 및 글로벌 설정 변경 시 상태 동기화 불일치</h3>
-      </div>
-      <p class="trouble-card-sub">[문제상황]</p>
-      <p class="trouble-card-desc">다국어 및 권한별 메뉴 전환 시 프론트엔드 내 하위 컴포넌트 간 반응형 데이터 업데이트가 유실되거나 이전 언어/권한 데이터가 잔재하는 문제 발생.</p>
-      <p class="trouble-card-sub">[해결방법 및 성과]</p>
-      <p class="trouble-card-desc">Zustand 기반의 중앙화된 전역 상태 스토어로 언어 파라미터 및 세션 데이터를 구조화하고, Selector 패턴을 도입하여 상태 변경 시 필요한 컴포넌트만 리렌더링되도록 구현하여 데이터 일관성 확보.</p>
-    </article>
-
-    <!-- Issue 3 -->
-    <article class="trouble-card">
-      <div class="trouble-card-inner">
-        <span>03</span>
-        <h3 class="trouble-card-title">백엔드 데이터베이스 병목으로 인한 API 응답 지연 개선</h3>
-      </div>
-      <p class="trouble-card-sub">[문제상황]</p>
-      <p class="trouble-card-desc">CRM/ERP 시스템 및 정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
-      <p class="trouble-card-sub">[해결방법 및 성과]</p>
-      <p class="trouble-card-desc">Slow Query 로그를 분석하여 쿼리 실행 계획을 점검하고, 필요한 복합 인덱스 추가 및 서브쿼리 구조를 서브 집계 뷰 형태로 리팩토링하여 average response time을 300ms 이하로 대폭 단축.</p>
-    </article>
-
-    <!-- Issue 4 -->
-    <article class="trouble-card">
-      <div class="trouble-card-inner">
-        <span>04</span>
-        <h3 class="trouble-card-title">pnpm Monorepo 환경 내 Shared UI 패키지 번들링 이슈</h3>
-      </div>
-      <p class="trouble-card-sub">[문제상황]</p>
-      <p class="trouble-card-desc">모노레포 구축 시 공통 컴포넌트 패키지(@repo/ui)와 메인 앱 간의 스타일 누락 및 빌드 시 모듈 해석(Module Resolution) 실패 현상 발생.</p>
-      <p class="trouble-card-sub">[해결방법 및 성과]</p>
-      <p class="trouble-card-desc">'package.json' 내 'exports' 필드 표준화 및 TypeScript 'paths' 매핑 재설정, 빌드 파이프라인 정리를 통해 서브 앱에서 공통 모듈을 독립적이고 격리된 환경에서 원활히 참조하도록 세팅 완료.</p>
-    </article>
-
-    <!-- Issue 5 -->
-    <article class="trouble-card">
-      <div class="trouble-card-inner">
-        <span>05</span>
-        <h3 class="trouble-card-title">SPA 환경 동적 스크립트 로딩 및 라이프사이클 바인딩 문제</h3>
-      </div>
-      <p class="trouble-card-sub">[문제상황]</p>
-      <p class="trouble-card-desc">Vue 컴포넌트 마운트 시점과 외부 스크립트('/js/main.js', Swiper, AOS) 로드 시점 간의 비동기 차이로 인해 스크롤 애니메이션 및 스와이퍼가 정상 동작하지 않는 현상 발생.</p>
-      <p class="trouble-card-sub">[해결방법 및 성과]</p>
-      <p class="trouble-card-desc">'onMounted' 라이프사이클 이벤트 내에서 script onload 콜백 핸들러를 정의하고 컴포넌트 마운트 완료 후 이벤트를 재초기화(Re-initialization)하도록 로직을 개편하여 인터랙션 동작의 안정성 확보.</p>
-    </article>
-  `,
   /* ---------------- LAB ---------------- */
   "lab-section-1": `
       <span class="game-slider__code">React · State Management</span>
