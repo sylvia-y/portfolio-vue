@@ -44,7 +44,7 @@ section {
   height: 100%;
   padding: 3em;
 }
-.view__title {
+/* .view__title {
   display: inline-block;
   padding: 0.4rem 2rem;
   margin-left: 10px;
@@ -58,7 +58,7 @@ section {
   background:  #CFFF49;
   border: 4px solid #000;
   border-radius: 50px;
-}
+} */
 
 .title_desc {
   margin: 10px 20px 0;
@@ -890,7 +890,10 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 12px 0;
+  margin: 4px 0 0;
+  padding: 4px 14px;
+    border-radius: 20px;
+    border: 2px solid #000;
   text-decoration: none;
   font-weight: 700;
   -webkit-box-pack: center;
@@ -1953,8 +1956,6 @@ section {
   min-height: 42px;
   padding: 7px 18px;
   margin: 0 0 16px;
-  border: 3px solid #000;
-  border-radius: 999px;
   background: var(--portfolio-lime);
   color: #000;
   font-family: "yg-jalnan", "GmarketSansMedium", sans-serif;
@@ -1980,8 +1981,8 @@ section {
 
 @media screen and (min-width: 768px) {
   .about-box {
-    width: min(48%, 720px);
-    margin-top: 60px;
+    width: min(48%, 740px);
+    margin-top: 70px;
   }
 
   .about-box .about-img {
@@ -2024,7 +2025,6 @@ section {
     min-height: 38px;
     padding: 7px 15px;
     margin: 0 0 14px;
-    border-width: 2px;
     font-size: 18px;
     letter-spacing: 0;
   }
@@ -2531,8 +2531,6 @@ section {
   min-height: 42px;
   margin: 0 0 28px;
   padding: 7px 18px;
-  border: 3px solid var(--line);
-  border-radius: 999px;
   background: var(--lime);
   color: var(--ink);
   font-family: "yg-jalnan", "GmarketSansMedium", sans-serif;
@@ -2666,7 +2664,7 @@ section {
 
 .contact .sec-contact {
   width: min(1280px, calc(100% - 40px));
-  margin: 62px auto 72px;
+  margin: 80px auto 90px;
   padding: 0;
   display: grid;
   grid-template-columns: minmax(300px, .72fr) minmax(460px, 1.28fr);
