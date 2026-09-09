@@ -1704,7 +1704,7 @@ section {
 }
 
 .trouble-card-title {
-  font-size: clamp(18px, 1.5vw, 24px);
+  font-size: clamp(18px, 1.5vw, 20px);
 }
 
 .trouble-card-sub,
@@ -1766,6 +1766,10 @@ section {
 
 .game .game-slider__text p:nth-child(1) {
   font-size: clamp(16px, 1.2vw, 20px);
+}
+.play-text {
+  background: #ccc;
+  padding: 0 1rem;
 }
 
 /* CONTACT */
@@ -1990,7 +1994,7 @@ section {
   }
 
   .about-box p {
-    font-size: clamp(14px, 1vw, 18px);
+    font-size: clamp(14px, 1vw, 17px);
   }
 }
 

@@ -608,7 +608,7 @@ export default {
       <div class="game-slider__text">
         <p>친구들과 함께 즐기는 스릴 넘치는 단어 추리 게임!</p>
         <p>출제자가 단어를 입력하면 글자 수에 맞춰 실시간으로 동적 폼이 생성됩니다.</p>
-        <p><strong>HOW TO PLAY</strong><br>
+        <p><strong class="play-text">HOW TO PLAY</strong><br>
           제한된 기회 속에서 알파벳을 하나씩 유추하여 단어를 완성하세요.
         </p>
         </div>
@@ -619,7 +619,7 @@ export default {
     <div class="game-slider__text">
       <p>바닷속의 상어를 제압하라! 아케이드 슈팅 게임</p>
       <p>다가오는 상어를 피해 먹물을 발사하며 몰입감 있는 플레이를 제공합니다.</p>
-      <p><strong>HOW TO PLAY</strong><br>
+      <p><strong class="play-text">HOW TO PLAY</strong><br>
         <code>방향키</code> 이동 / <code>Spacebar</code> 먹물 발사<br>
       </p>
     </div>
@@ -630,7 +630,7 @@ export default {
      <div class="game-slider__text">
        <p>클래식의 재해석! 순수 자바스크립트로 구현한 테트리스</p>
        <p>격자 배열 최적화와 블록 충돌 감지 로직을 구현하여 원작의 손맛을 살렸습니다.</p>
-       <p><strong>HOW TO PLAY</strong><br>
+       <p><strong class="play-text">HOW TO PLAY</strong><br>
          <code>방향키</code> 회전 및 이동 / <code>Spacebar</code> 하드 드롭<br>
        </p>
      </div>
