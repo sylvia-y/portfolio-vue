@@ -9,9 +9,17 @@ app = FastAPI(
     version="1.0.0",
 )
 
+# 허용할 출처(Origin) 목록
+origins = [
+    "https://portfolio-vue-tan.vercel.app",  # Vercel 배포 주소
+    "http://localhost:5173",                 # Vue Vite 로컬 개발 주소
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -71,4 +79,5 @@ async def analyze_sales(file: UploadFile = File(...)):
         },
         "daily_sales": daily_sales,
         "product_sales": product_sales,
+        "status": "success", "message": "CORS 설정 완료"
     }
