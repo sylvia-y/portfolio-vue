@@ -385,7 +385,7 @@ section {
 .about-box {
   width: 50%;
   max-width: 640px;
-  margin-top: 80px;
+  margin-top: 70px;
   outline: 6px solid #000;
   backdrop-filter: blur(3px);
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
@@ -932,10 +932,8 @@ section {
   text-align: center;
   top: 0;
   font-family: 'yg-jalnan';
-  /* color: #fff; */
-  /* -webkit-text-stroke: 1px #000; */
-  color: #000;
-  font-size:3em;
+  color: #333;
+  font-size:2.8em;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -1986,11 +1984,11 @@ section {
 @media screen and (min-width: 768px) {
   .about-box {
     width: min(48%, 740px);
-    margin-top: 70px;
+    margin-top: 60px;
   }
 
   .about-box .about-img {
-    height: clamp(280px, 24vw, 480px);
+    height: clamp(280px, 23vw, 480px);
   }
 
   .about-box p {
@@ -2279,7 +2277,7 @@ section {
 
   .project .swiper-button-next,
   .project .swiper-button-prev {
-    top: 7% !important;
+    top: 4% !important;
     width: 32px;
     height: 32px;
   }
@@ -2355,7 +2353,7 @@ section {
   }
 
   .game > .contents-box {
-    width: 100%;
+    width: 70%;
     margin: 0 auto 22px;
   }
 
