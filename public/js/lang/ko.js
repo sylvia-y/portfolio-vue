@@ -132,8 +132,9 @@ export default {
         <p class="trouble-card-sub">[문제상황]</p>
         <p class="trouble-card-desc">관리자 플랫폼 및 차트 시스템에서 수만 건 이상의 통계 데이터를 한 번에 DOM에 표현할 때 블로킹 현상과 심각한 메모리 저하(UI 랙) 발생.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 동적 렌더링하도록 전환. 
-        초기 렌더링 속도 단축 및 DOM 메모리 사용량 60% 이상 감소 달성.</p>
+        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 
+        동적 렌더링하도록 전환. 
+        대용량 데이터 환경에서의 UI 렌더링 성능을 개선.</p>
       </article>
   
       <!-- Issue 2 -->
