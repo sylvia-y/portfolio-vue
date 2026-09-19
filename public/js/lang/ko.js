@@ -122,6 +122,20 @@ export default {
         </li>
       </ul>
     </div>
+
+    <!-- AI & WORKFLOW -->
+    <div class="tech-inner" data-aos="fade-up" data-aos-delay="550">
+      <h3>AI & WORKFLOW</h3>
+      <p class="back-end">
+        Cursor, Claude 기반 AI 워크플로우로 보일러플레이트 작성, 쿼리 분석 및 디버깅을 효율화하여 생산성 극대화
+      <ul class="tech-wrap">
+        <li>
+          <div class="tech-card"><div class="tech-img tech-img25"></div><h4>Cursor</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img26"></div><h4>Claude</h4></div>
+          <div class="tech-card"><div class="tech-img tech-img27"></div><h4>ChatGPT</h4></div>
+        </li>
+      </ul>
+    </div>
   `,
 
     /* ---------------- Engineering Notes ---------------- */
@@ -136,9 +150,11 @@ export default {
         <p class="trouble-card-sub">[문제상황]</p>
         <p class="trouble-card-desc">관리자 플랫폼 및 차트 시스템에서 수만 건 이상의 통계 데이터를 한 번에 DOM에 표현할 때 블로킹 현상과 심각한 메모리 저하(UI 랙) 발생.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">Tabulator 그리드의 Virtual DOM 기술을 적용하여 화면에 보이는 뷰포트 영역의 데이터만 
-        동적 렌더링하도록 전환. 
-        대용량 데이터 환경에서의 UI 렌더링 성능을 개선.</p>
+
+        <p class="trouble-card-desc">
+        Tabulator 그리드의 Virtual DOM 방식을 적용하여 
+        전체 데이터 중 화면 뷰포트에 보이는 영역만 동적으로 DOM에 렌더링하도록 전환. 
+        수만 건 데이터 조회 시 브라우저 메모리 점유율을 낮추고 UI 렌더링 지연을 해소.</p>
       </article>
   
       <!-- Issue 2 -->
@@ -154,11 +170,11 @@ export default {
         </p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
         <p class="trouble-card-desc">
-          Zustand 기반 전역 상태로 언어 및 사용자 설정을 관리하고,
-          Cookie와 Redis Session을 연동하여 클라이언트와 서버 간
-          다국어·세션 상태를 동기화. 상태 변경 시 필요한 컴포넌트만
-          리렌더링되도록 Selector 패턴을 적용하여 데이터 일관성을 확보.
+          Zustand를 활용해 클라이언트 중앙 상태를 구조화하고, 
+        Cookie와 Redis Session을 연동해 서버-클라이언트 간 세션·다국어 상태를 실시간 동기화. 
+        Selector 패턴을 적용하여 상태가 변경된 컴포넌트만 최소한으로 리렌더링되도록 개선하여 데이터 불일치 해결.
         </p>
+        
       </article>
   
       <!-- Issue 3 -->
@@ -168,86 +184,121 @@ export default {
           <h3 class="trouble-card-title">백엔드 데이터베이스 병목으로 인한 API 응답 지연 개선</h3>
         </div>
         <p class="trouble-card-sub">[문제상황]</p>
-        <p class="trouble-card-desc">CRM/ERP 시스템 및 정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
+        <p class="trouble-card-desc">CRM/ERP 시스템 및 
+        정산 조회 API 요청 시, 복잡한 Join과 인덱스 미적용으로 인해 
+        응답 시간이 3초 이상 소요되어 타임아웃 오류 빈발.</p>
         <p class="trouble-card-sub">[해결방법 및 성과]</p>
         <p class="trouble-card-desc">
-            Slow Query 로그를 분석하고 실행 계획을 점검하여
-          복합 인덱스를 추가하고 서브쿼리 및 집계 로직을 리팩토링.
-          평균 응답 시간 단축.</p>
+          Slow Query 로그 분석을 통해 병목 쿼리를 파악. 
+          자주 조회되는 조건에 인덱스를 추가하고 
+          불필요한 서브쿼리를 리팩토링하여 평균 API 응답 시간을 크게 단축.
+        </p>
       </article>
   
       <!-- Issue 4 -->
-      <article class="trouble-card">
-        <div class="trouble-card-inner">
-          <span>04</span>
-          <h3 class="trouble-card-title">pnpm Monorepo 환경 내 Shared UI 패키지 번들링 이슈</h3>
-        </div>
-        <p class="trouble-card-sub">[문제상황]</p>
-        <p class="trouble-card-desc">모노레포 구축 시 공통 컴포넌트 패키지(@repo/ui)와 메인 앱 간의 스타일 누락 및 빌드 시 모듈 해석(Module Resolution) 실패 현상 발생.</p>
-        <p class="trouble-card-sub">[해결방법 및 성과]</p>
-        <p class="trouble-card-desc">'package.json' 내 'exports' 필드 표준화 및 TypeScript 'paths' 매핑 재설정, 빌드 파이프라인 정리를 통해 서브 앱에서 공통 모듈을 독립적이고 격리된 환경에서 원활히 참조하도록 세팅 완료.</p>
-      </article>
+      <!-- Issue 4 -->
+<article class="trouble-card">
+    <div class="trouble-card-inner">
+        <span>04</span>
+        <h3 class="trouble-card-title">pnpm Workspace 기반 Monorepo 공통 패키지 관리 및 배포 구조 개선</h3>
+    </div>
+
+    <p class="trouble-card-sub">[문제상황]</p>
+    <p class="trouble-card-desc">
+        여러 병원 홈페이지를 하나의 Monorepo에서 관리하면서,
+        앱별 중복 코드가 증가하고 공통 UI 컴포넌트 및 CSS를 각 프로젝트에서
+        개별 관리해야 하는 문제가 발생.
+        또한 공통 패키지 변경 시 어떤 앱을 다시 빌드하고 배포해야 하는지 관리하기 어려운 상황이 발생.
+    </p>
+
+    <p class="trouble-card-sub">[해결방법 및 성과]</p>
+    <p class="trouble-card-desc">
+        pnpm Workspace를 기반으로 apps와 packages를 분리하고,
+        @repo/ui 등 공통 패키지를 Workspace 패키지로 구성하여
+        여러 앱에서 동일한 컴포넌트와 스타일을 공유할 수 있도록 구조화.
+        package.json의 exports를 활용해 공통 모듈의 import 경로를 표준화하고,
+        GitHub Actions의 paths-filter와 pnpm --filter를 연계하여
+        변경된 앱과 관련 공통 패키지만 선택적으로 빌드·배포하는 CI/CD 구조를 구축.
+    </p>
+</article>
     `,
     
-  /* ---------------- PROJECTS ---------------- */
-  "project-section": `
-    <!-- 00. AI Sales Analyzer -->
-  <div class="layer swiper-slide sales-analyzer-slide">
-    <div class="item">
+/* ---------------- PROJECTS ---------------- */
 
-      <h3 class="pro_title">
-        [AI SALES ANALYZER]<br>
-        CSV 기반 매출 데이터 분석 시스템
-      </h3>
+"project-section": `
 
-      <div class="swiper-center">
+<!-- 00. AI Sales Analyzer -->
+<div class="layer swiper-slide sales-analyzer-slide">
 
-        <div class="desc">
-          <div class="desc-card">
+  <div class="item">
 
-            <span class="badge">개요</span><br>
+    <h3 class="pro_title">
+      [AI SALES ANALYZER]<br>
+      CSV 기반 매출 데이터 분석 시스템
+    </h3>
 
-            <strong>
-              CSV 파일을 업로드하면 Python과 Pandas를 활용해
-              매출 데이터를 자동 분석하고 시각화하는 데이터 분석 시스템
-            </strong>
+    <div class="swiper-center">
 
-            <br><br>
+      <!-- 1. 기본 정보 -->
+      <div class="desc">
 
-            <span class="badge">역할 & 기여도</span><br>
+        <div class="desc-card">
 
-            <strong>
-              개발자 (기여도 100%)
-            </strong>
+          <span class="badge">개요</span><br>
 
-            <br><br>
+          <strong>
+            CSV 파일을 업로드하면 Python과 Pandas를 활용해
+            매출 데이터를 분석하고,
+            FastAPI를 통해 분석 결과를 전달하여
+            Vue 3 화면에서 시각화하는 데이터 분석 시스템
+          </strong>
 
-            <span class="badge">주요 기술 스택</span><br>
+          <br><br>
 
-            <strong>
-              Vue 3, Python, FastAPI, Pandas, Chart.js
-            </strong>
+          <span class="badge">역할 & 기여도</span><br>
 
-          </div>
+          <strong>
+            개발자 (100%)
+          </strong>
+
+          <br><br>
+
+          <span class="badge">주요 기술 스택</span><br>
+
+          <strong>
+            Vue 3, Python, FastAPI, Pandas, Chart.js
+          </strong>
+
         </div>
 
-        <!-- Sales Analyzer 실제 실행 영역 -->
-        <div class="desc sales-analyzer-demo">
-          <div class="desc-card">
+      </div>
 
-            <span class="badge">💻 LIVE DEMO</span>
 
-            <div id="sales-analyzer-mount"></div>
+      <!-- 2. 실제 실행 영역 -->
+      <div class="desc sales-analyzer-demo">
 
-          </div>
+        <div class="desc-card">
+
+          <span class="badge">💻 LIVE DEMO</span>
+
+          <div id="sales-analyzer-mount"></div>
+
         </div>
 
-        <div class="desc">
-          <div class="desc-card">
+      </div>
 
-            <span class="badge">🏗️ 데이터 처리 흐름</span>
 
-            <div class="diagram-wrap">
+      <!-- 3. 데이터 처리 흐름 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🏗️ 데이터 처리 흐름
+          </span>
+
+          <div class="diagram-wrap">
+
 <pre>
 [CSV Upload]
       │
@@ -270,111 +321,386 @@ export default {
       ▼
 [Chart.js Visualization]
 </pre>
-            </div>
 
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </div>
-   <!-- 01. 의원/클리닉 대표 웹사이트 & 관리자 시스템 -->
-<div class="layer swiper-slide">
-  <div class="item">
-    <h3 class="pro_title">[apps/snow-gangnam]<br>의원/클리닉 대표 웹사이트 & 관리자 시스템</h3>
-    
-    <div class="swiper-center">
-      <!-- 1. 기본 정보 -->
-      <div class="desc">
-        <div class="desc-card">
-          <span class="badge">개요</span><br>
-          <strong>EMR 차트 연동, 시술 전후 비교, 다국어 및 권한 제어를 포함한 클리닉 종합 웹/관리자 플랫폼</strong><br><br>
-          <span class="badge">역할 & 기여도</span> <strong>개발자 (100%)</strong><br><br>
-          <span class="badge">주요 기술 스택</span> <strong>React, Remix, TypeScript, CodeIgniter 4 (PHP), MySQL</strong>
-        </div>
-      </div>
 
-      <!-- 2. 핵심 구현 1: 번들 격리 및 Hydration Guard -->
-      <div class="desc">
-        <div class="desc-card">
-          <span class="badge">💻 Remix 번들 격리 & Hydration Guard (React)</span><br>
-          <small>서버 모듈 동적 임포트로 번들을 분리하고, Client Mount 후 안전하게 UI를 바인딩하여 SSR 미스매치 차단</small>
-          <div class="code-block-wrap">
-            <pre>
-            export const loader = async ({ request }: LoaderFunctionArgs) => {
-              const { getEventData } = await import('~/services/event.server'); // 서버 번들 격리
-              return json({ events: await getEventData(request) });
-            };
-
-            export default function EventComponent() {
-              const [isClient, setIsClient] = useState(false);
-              useEffect(() => setIsClient(true), []); // 클라이언트 마운트 감지
-
-              if (!isClient) return &lt;EventSkeleton /&gt;;
-              return &lt;div className="event-grid"&gt;{/* 이벤트 목록 렌더링 */}&lt;/div&gt;;
-            }
-            </pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. 핵심 구현 2: UI/UX 리뉴얼 및 레이아웃 최적화 -->
-      <div class="desc">
-        <div class="desc-card">
-          <span class="badge">🎨 예약 Flow & 마이페이지 UI/UX 리뉴얼 (Before & After)</span><br>
-          <small>복잡했던 캘린더 Picker, 상품 선택 및 예약 변경 레이아웃을 카드형으로 정돈하여 정보 시인성 확보 및 이탈률 감소</small>
-          
-          <div class="img-wrap" style="margin-top: 12px; text-align: center;">
-            <img src="/images/wavecode_ui.png" alt="UI 개선 전후 비교" style="max-width: 90%; height: auto; border-radius: 8px; border: 1px solid #eee;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
-    <!-- 02. REDIS RANKING -->
-    <div class="layer swiper-slide">
-      <div class="item">
-        <h3 class="pro_title">[REDIS RANKING]<br>Sorted Set 기반 실시간 랭킹 시스템</h3>
-        
-        <div class="swiper-center">
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">개요</span><br>
-              <strong> Redis Sorted Set(ZSET)을 활용하여
-  점수 업데이트와 순위 조회가 가능한
-  실시간 랭킹 시스템
-</strong>
-              <br><br>
-              <span class="badge">역할 & 기여도</span><br>
-              <strong>개발자 (기여도 100%)</strong><br><br>
-              <span class="badge">주요 기술 스택</span><br>
-              <strong>Java 17, Spring Boot 3.x, Redis (ZSET), Docker, AWS Lightsail</strong>
-            </div>
+
+<!-- 01. Wavecode -->
+<div class="layer swiper-slide">
+
+  <div class="item">
+
+    <h3 class="pro_title">
+      [웨이브코드]<br>
+      의원/클리닉 대표 웹사이트 & 관리자 시스템
+    </h3>
+
+    <div class="swiper-center">
+
+
+      <!-- 1. 프로젝트 개요 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">개요</span><br>
+
+          <strong>
+            의원/클리닉 사용자 및 관리자 서비스를 개발하고
+            게시판, 예약, 다국어 등 서비스 기능의
+            유지보수 및 신규 기능 개발을 담당했습니다.
+          </strong>
+
+          <br><br>
+
+          <span class="badge">역할 & 기여도</span><br>
+
+          <strong>
+            프론트엔드 개발자
+          </strong>
+
+          <br><br>
+
+          <span class="badge">주요 기술 스택</span><br>
+
+          <strong>
+            React, Remix, Zustand, MySQL, Redis,
+            OpenAI API, pnpm, Monorepo
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 2. 주요 구현 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🔧 주요 구현
+          </span>
+
+          <br><br>
+
+          <strong>
+            • Remix 기반 SSR 환경의 화면 및 데이터 처리<br>
+            • Zustand를 활용한 장바구니·예약·모달 상태 관리<br>
+            • 다국어 게시글 자동 번역을 위한 OpenAI API 연동<br>
+            • Cookie와 Redis Session을 활용한 다국어 상태 동기화<br>
+            • pnpm Monorepo 기반 @repo/ui 공통 UI 패키지 관리
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 3. SSR / Hydration -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            💻 Remix SSR & Hydration 문제 해결
+          </span>
+
+          <br>
+
+          <small>
+            서버와 클라이언트의 초기 데이터 상태 차이로 발생하는
+            Hydration 문제를 확인하고 클라이언트 마운트 이후
+            필요한 UI가 안전하게 렌더링되도록 처리했습니다.
+          </small>
+
+          <div class="code-block-wrap">
+
+<pre>
+export default function EventComponent() {
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return &lt;EventSkeleton /&gt;;
+  }
+
+  return (
+    &lt;div className="event-grid"&gt;
+      {/* 이벤트 목록 렌더링 */}
+    &lt;/div&gt;
+  );
+}
+</pre>
+
           </div>
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">🏗️ 데이터 구조 및 파이프라인</span>
-              <div class="diagram-wrap">
-<pre>
-[User Action / Score Event]
-  │
-[Spring Boot Service]
-  │──> ZADD leaderboards:daily &lt;score&gt; &lt;user_id&gt;  (Score 업데이트)
-  │──> ZREVRANK leaderboards:daily &lt;user_id&gt;     (실시간 랭킹 조회)
-  └─> └─> ZREVRANGE leaderboards:daily 0 N-1 WITHSCORES (Top N 랭킹 리스트 집계)
-</pre>
-              </div>
-            </div>
-          </div>
         </div>
+
       </div>
+
+
+      <!-- 4. 다국어 상태 동기화 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🌐 다국어 상태 동기화
+          </span>
+
+          <br>
+
+          <small>
+            페이지 이동이나 새로고침 이후 선택한 언어가
+            유지되지 않는 문제를 해결했습니다.
+          </small>
+
+          <br><br>
+
+          <strong>
+            Cookie에 선택한 언어를 저장하고
+            Redis Session과 동기화하여
+            서버와 클라이언트에서 동일한 언어 상태를
+            사용할 수 있도록 개선했습니다.
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 5. OpenAI API -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🤖 OpenAI API 자동 번역
+          </span>
+
+          <br>
+
+          <small>
+            게시글을 여러 언어로 반복 번역해야 하는 업무를
+            API를 활용해 자동화했습니다.
+          </small>
+
+          <br><br>
+
+          <strong>
+            게시글 데이터를 OpenAI API에 전달하고
+            응답받은 번역 결과를 서비스에 반영하는
+            자동 번역 기능을 구현했습니다.
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 6. Monorepo -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            📦 pnpm Monorepo & 공통 UI
+          </span>
+
+          <br>
+
+          <small>
+            여러 서비스에서 반복적으로 사용되는
+            UI 컴포넌트를 공통 패키지로 관리했습니다.
+          </small>
+
+          <br><br>
+
+          <strong>
+            pnpm Workspace 기반 Monorepo에서
+            @repo/ui 패키지를 분리하여
+            여러 서비스가 공통 UI 컴포넌트를 사용할 수 있도록 구성했습니다.
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 7. UI/UX -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🎨 예약 Flow & 마이페이지 UI/UX 개선
+          </span>
+
+          <br>
+
+          <small>
+            예약 과정에서 사용되는 캘린더, 상품 선택,
+            예약 변경 등의 화면 구조를 정리하여
+            정보가 명확하게 전달되도록 UI를 개선했습니다.
+          </small>
+
+          <div
+            class="img-wrap"
+            style="margin-top: 12px; text-align: center;"
+          >
+
+            <img
+              src="/images/wavecode_ui.png"
+              alt="UI 개선 전후 비교"
+              style="max-width: 90%; height: auto; border-radius: 8px; border: 1px solid #eee;"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-<!-- 03. iGaming 플랫폼 & 어드민 관리 시스템 -->
+  </div>
+
+</div>
+
+
+<!-- 02. REDIS RANKING -->
 <div class="layer swiper-slide">
+
+  <div class="item">
+
+    <h3 class="pro_title">
+      [REDIS RANKING]<br>
+      Sorted Set 기반 실시간 랭킹 시스템
+    </h3>
+
+    <div class="swiper-center">
+
+
+      <!-- 1. 기본 정보 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">개요</span><br>
+
+          <strong>
+            Redis Sorted Set(ZSET)을 활용하여
+            사용자 점수를 저장하고
+            점수에 따른 순위 및 상위 랭킹을 조회할 수 있는
+            랭킹 시스템을 구현했습니다.
+          </strong>
+
+          <br><br>
+
+          <span class="badge">역할 & 기여도</span><br>
+
+          <strong>
+            개발자 (100%)
+          </strong>
+
+          <br><br>
+
+          <span class="badge">주요 기술 스택</span><br>
+
+          <strong>
+            Java 17, Spring Boot 3.x,
+            Redis (ZSET), Docker, AWS Lightsail
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- 2. 데이터 구조 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🏗️ Redis Sorted Set 데이터 처리
+          </span>
+
+          <div class="diagram-wrap">
+
+<pre>
+[User Action / Score Event]
+          │
+          ▼
+[Spring Boot Service]
+          │
+          ├─ ZADD
+          │   점수 업데이트
+          │
+          ├─ ZREVRANK
+          │   사용자 순위 조회
+          │
+          └─ ZREVRANGE
+              Top N 랭킹 조회
+</pre>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- 3. 구현 내용 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🔧 주요 구현
+          </span>
+
+          <br><br>
+
+          <strong>
+            • Redis Sorted Set을 이용한 사용자 점수 관리<br><br>
+
+            • ZADD를 활용한 점수 업데이트<br><br>
+
+            • ZREVRANK를 활용한 사용자 순위 조회<br><br>
+
+            • ZREVRANGE를 활용한 상위 랭킹 데이터 조회
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- 03. DoubleDown Games -->
+<div class="layer swiper-slide">
+
   <div class="item">
 
     <h3 class="pro_title">
@@ -384,74 +710,94 @@ export default {
 
     <div class="swiper-center">
 
-      <!-- 01. 개요 -->
+
+      <!-- 1. 기본 정보 -->
       <div class="desc">
+
         <div class="desc-card">
 
           <span class="badge">개요</span><br>
 
           <strong>
-            대규모 실시간 게임·베팅 데이터를 처리하는
+            게임 운영에 필요한 관리자 화면을 개발하고
+            대량 데이터 조회와 실시간 이벤트 처리를 구현한
             iGaming 플랫폼 및 어드민 시스템
           </strong>
 
           <br><br>
 
           <span class="badge">역할</span><br>
-          <strong>프론트엔드 개발자</strong>
+
+          <strong>
+            프론트엔드 개발자
+          </strong>
 
           <br><br>
 
           <span class="badge">기술 스택</span><br>
+
           <strong>
-            React, TypeScript, Vite, Native WebSocket,
-            Zustand, React Query, Tabulator.js
+            React, TypeScript, Vite,
+            Native WebSocket, Zustand,
+            React Query, Tabulator.js
           </strong>
 
         </div>
+
       </div>
 
 
-      <!-- 02. 대용량 데이터 -->
+      <!-- 2. 대용량 데이터 -->
       <div class="desc">
+
         <div class="desc-card">
 
-          <span class="badge">🏗️ 대용량 데이터 렌더링</span>
+          <span class="badge">
+            🏗️ 대용량 데이터 렌더링
+          </span>
 
           <div class="diagram-wrap">
+
 <pre>
-[10,000+ Rows JSON Data]
-        │
-        ▼
-[Tabulator Virtual DOM]
-        │
-        ├─ 필요한 Row만 DOM 렌더링
-        ├─ 스크롤에 따른 동적 렌더링
-        └─ Format / Filter 처리
+[관리자 데이터]
+       │
+       ▼
+[Tabulator]
+       │
+       ▼
+[Virtual DOM]
+       │
+       ├─ 필요한 Row 중심 렌더링
+       ├─ 스크롤에 따른 동적 렌더링
+       └─ Format / Filter 처리
 </pre>
+
           </div>
 
           <strong>
-            대규모 관리자 데이터를 Tabulator Virtual DOM으로
-            렌더링하여 UI 렌더링 부담을 줄이고
-            대용량 데이터 환경에 대응
+            관리자에서 많은 데이터를 표시할 때 발생하는
+            렌더링 부담을 줄이기 위해
+            Tabulator Virtual DOM을 적용했습니다.
           </strong>
 
         </div>
+
       </div>
 
 
-      <!-- 03. 실시간 통신 -->
+      <!-- 3. 실시간 통신 -->
       <div class="desc">
+
         <div class="desc-card">
 
-          <span class="badge">⚡ 실시간 통신 구조 개선</span>
+          <span class="badge">
+            ⚡ 실시간 통신 구조
+          </span>
 
           <div class="diagram-wrap">
+
 <pre>
 [SockJS / STOMP]
-        ↓
-  통신 구조 개선
         ↓
 [Native WebSocket]
         ↓
@@ -461,144 +807,276 @@ export default {
         ↓
 [실시간 UI 업데이트]
 </pre>
+
           </div>
 
           <strong>
-            기존 SockJS/STOMP 기반 통신을
-            Native WebSocket으로 전환하여
-            게임 결과·베팅 데이터를 직접 처리하고
-            실시간 통신 구조를 단순화
+            기존 SockJS/STOMP 기반 통신 구조를
+            Native WebSocket으로 전환하고
+            서버에서 전달되는 실시간 이벤트를
+            관리자 화면에 반영했습니다.
           </strong>
 
         </div>
+
       </div>
 
 
-      <!-- 04. 상태 관리 -->
+      <!-- 4. 상태 관리 -->
       <div class="desc">
+
         <div class="desc-card">
 
-          <span class="badge">🧩 상태 관리</span>
+          <span class="badge">
+            🧩 상태 관리
+          </span>
 
           <div class="diagram-wrap">
-<pre>
-[REST API] ──→ [React Query] ──→ [UI]
-                  Server State
 
-[WebSocket] ──→ [Zustand] ──→ [UI]
-                 Client State
+<pre>
+[REST API]
+     │
+     ▼
+[React Query]
+     │
+     ▼
+[UI]
+
+[WebSocket]
+     │
+     ▼
+[Zustand]
+     │
+     ▼
+[UI]
 </pre>
+
           </div>
 
           <strong>
             React Query와 Zustand를 활용해
-            서버 상태와 클라이언트 상태를 분리하고
-            데이터 흐름을 효율적으로 관리
+            서버에서 받아오는 데이터와
+            클라이언트에서 관리하는 상태를 구분하여
+            데이터 흐름을 관리했습니다.
           </strong>
 
         </div>
+
       </div>
 
 
-      <!-- 05. 주요 역할 및 성과 -->
+      <!-- 5. 주요 역할 -->
       <div class="desc">
+
         <div class="desc-card">
 
-          <span class="badge">주요 역할</span>
+          <span class="badge">
+            주요 역할
+          </span>
 
           <br><br>
 
           <strong>
-            • React 기반 컴포넌트 및 기능별 모듈 구조 설계
+            • React 기반 관리자 화면 및 기능 개발
           </strong>
 
           <br><br>
 
           <strong>
-            • 10,000+ Row 대용량 데이터 그리드 구현 및 최적화
+            • Tabulator 기반 대량 데이터 그리드 구현
           </strong>
 
           <br><br>
 
           <strong>
-            • SockJS/STOMP → Native WebSocket 전환 및
-            실시간 이벤트 처리 구현
+            • SockJS/STOMP에서 Native WebSocket으로
+            통신 구조 전환
           </strong>
 
           <br><br>
 
           <strong>
             • Zustand / React Query를 활용한
-            클라이언트·서버 상태 분리
+            상태 관리
           </strong>
 
         </div>
+
       </div>
 
     </div>
+
   </div>
+
 </div>
-<!-- 04. 에듀컴퍼니 웹사이트 & SEO -->
-    <div class="layer swiper-slide">
-      <div class="item">
-        <h3 class="pro_title">[에듀컴퍼니]<br>기업 웹사이트 & 검색 엔진 최적화 (SEO)</h3>
-        
-        <div class="swiper-center">
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">개요</span><br>
-              <strong>시맨틱 마크업 개편 및 검색 엔진 웹마스터 도구 연동을 통한 기업 웹사이트 유입량 개선</strong><br><br>
-              <span class="badge">역할</span><br>
-              <strong>개발자 (기여도 100%)</strong><br><br>
-              <span class="badge">주요 기술 스택</span><br>
-              <strong>HTML5, CSS3, JavaScript, PHP, Naver Search Advisor</strong><br><br>
-              <a href="http://www.educompany.co.kr/" target="_blank" rel="noopener noreferrer" class="btn-gopage">
-                Go Page 🔗
-              </a>
-            </div>
-          </div>
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">🏗️ 아키텍처 흐름: 시맨틱 구조화 & 검색 색인 도구 수집 최적화</span>
-              <div class="diagram-wrap">
-<pre>
-[HTML5 웹사이트 레이아웃]
-  │
-  ├─ 1. &lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;nav&gt; 시맨틱 태그 구조 재설계
-  ├─ 2. sitemap.xml & robots.txt 표준 규격 생성
-  │
-[네이버 서치어드바이저 (Webmaster Tools)]
-  ├─ 3. 사이트 소유 확인 (HTML Tag Injection) 및 사이트맵 제출
-  └─ 4. 수집 현황 모니터링 & 색인 생성 요청 ──&gt; 네이버 검색 유입량 증대
-</pre>
-              </div>
-            </div>
-          </div>
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">📄 검색 크롤러 수집 규칙 (robots.txt)</span><br>
-              <small>네이버 및 주요 검색 엔진 크롤러가 최신 페이지를 올바르게 색인할 수 있도록 접근 규칙 및 사이트맵을 구축했습니다.</small>
-            </div>
-          </div>
+<!-- 04. EduCompany -->
+<div class="layer swiper-slide">
 
-          <div class="desc">
-            <div class="desc-card">
-              <span class="badge">💡 주요 개선 성과</span><br>
-              <strong>- 시맨틱 마크업 전환: 비표준 태그 수정을 통해 웹 접근성 및 검색 크롤러의 문서 구조 파악 용이성 확보</strong><br>
-              <strong>- 네이버 서치어드바이저 연동: 사이트맵 제출, robots.txt 최적화, 수집 요청 관리를 통해 네이버 검색 색인 등록</strong>
-            </div>
-          </div>
+  <div class="item">
+
+    <h3 class="pro_title">
+      [에듀컴퍼니]<br>
+      기업 웹사이트 & 검색 엔진 최적화 (SEO)
+    </h3>
+
+    <div class="swiper-center">
+
+
+      <!-- 1. 기본 정보 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">개요</span><br>
+
+          <strong>
+            기업 웹사이트의 구조를 개선하고
+            검색엔진이 페이지 콘텐츠를 쉽게 이해할 수 있도록
+            시맨틱 마크업과 검색엔진 도구를 적용했습니다.
+          </strong>
+
+          <br><br>
+
+          <span class="badge">역할</span><br>
+
+          <strong>
+            개발자 (100%)
+          </strong>
+
+          <br><br>
+
+          <span class="badge">주요 기술 스택</span><br>
+
+          <strong>
+            HTML5, CSS3, JavaScript, PHP,
+            Naver Search Advisor
+          </strong>
+
+          <br><br>
+
+          <a
+            href="http://www.educompany.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gopage"
+          >
+            Go Page 🔗
+          </a>
+
         </div>
+
       </div>
+
+
+      <!-- 2. SEO 구조 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            🏗️ SEO 구조 개선
+          </span>
+
+          <div class="diagram-wrap">
+
+<pre>
+[HTML5 웹사이트]
+      │
+      ├─ Semantic HTML
+      │
+      ├─ sitemap.xml
+      │
+      └─ robots.txt
+      │
+      ▼
+[Naver Search Advisor]
+      │
+      ├─ 사이트 소유 확인
+      ├─ 사이트맵 제출
+      └─ 수집 현황 확인
+      │
+      ▼
+[검색엔진 색인]
+</pre>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- 3. 검색 크롤러 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            📄 검색 크롤러 수집 구조
+          </span>
+
+          <br><br>
+
+          <small>
+            검색엔진 크롤러가 페이지 구조와
+            주요 콘텐츠를 이해할 수 있도록
+            Semantic HTML 구조를 적용하고
+            sitemap.xml과 robots.txt를 구성했습니다.
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <!-- 4. 주요 개선 -->
+      <div class="desc">
+
+        <div class="desc-card">
+
+          <span class="badge">
+            💡 주요 개선 내용
+          </span>
+
+          <br><br>
+
+          <strong>
+            • header, main, article, nav 등
+            Semantic HTML 구조 적용
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • sitemap.xml 및 robots.txt 구성
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • Naver Search Advisor 사이트 등록 및
+            사이트맵 제출
+          </strong>
+
+          <br><br>
+
+          <strong>
+            • 검색엔진 수집 및 색인 상태 확인
+          </strong>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- 보안 및 자산 보호 정책 안내 -->
-    <div class="security-notice">
-      🔒 <strong>보안 및 자산 보호 정책 안내:</strong> 본 프로젝트들은 보안 규정에 따라 실제 운영 화면 대신 직접 설계·작성한 핵심 아키텍처 다이어그램 및 문제 해결 코드 스니펫으로 기술적 역량을 표현하였습니다.
-    </div>
-  `,
+  </div>
+
+</div>
+
+`,
 
 
   /* ---------------- LAB ---------------- */
@@ -636,3 +1114,4 @@ export default {
      </div>
 `,
 };
+

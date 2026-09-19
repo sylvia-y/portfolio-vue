@@ -561,7 +561,9 @@ section {
 .tech .tech-img22 { background-image: url(../images/jsp/aws.png); }
 .tech .tech-img23 { background-image: url(../images/jsp/linux.png); }
 .tech .tech-img24 { background-image: url(../images/jsp/notion.png); }
-
+.tech .tech-img25 { background-image: url(../images/jsp/gpt.png); }
+.tech .tech-img26 { background-image: url(../images/jsp/cursor.jpeg); }
+.tech .tech-img27 { background-image: url(../images/jsp/claude.png); }
 
 /* trouble-section */
 .trouble-list {display: flex; flex-direction: column; gap: 30px;}
